@@ -504,4 +504,5 @@ $$
 \pmb{m}=\frac{1}{2}\int\mathrm{d}^3x\ \pmb{x}\times\pmb{j}(\pmb{x}).
 $$
 
-#### 2.1.4 Localized current distribution
+#### 2.1.4 Localized current distribution under external field
+
