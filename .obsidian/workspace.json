@@ -98,7 +98,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -180,7 +180,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "de7521257ab7afad",
+  "active": "af606e195ed5ce0a",
   "lastOpenFiles": [
     "Mathematics/Vector analysis.md",
     "Physics/Electrodynamics.md",
