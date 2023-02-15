@@ -505,4 +505,3 @@ $$
 $$
 
 #### 2.1.4 Localized current distribution under external field
-
