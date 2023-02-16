@@ -7,6 +7,7 @@
   ],
   "readableLineLength": true,
   "newLinkFormat": "relative",
-  "useMarkdownLinks": true,
-  "attachmentFolderPath": "./"
+  "useMarkdownLinks": false,
+  "attachmentFolderPath": "./",
+  "alwaysUpdateLinks": true
 }

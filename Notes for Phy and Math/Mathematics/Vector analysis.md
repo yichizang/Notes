@@ -37,7 +37,7 @@ u_x & u_y & u_z
 &=v^au^b\epsilon_{abc}\pmb{e}^c.
 \end{aligned}
 $$
-Note that the cross product of two vectors is actually a [[Linear algebra#1.5.1 Dual space|dual vector]].
+Note that the cross product of two vectors is actually a [[Linear algebra#5.1 Dual space|dual vector]].
 
 The Levi-Civita symbol $\epsilon_{abc}$ has the following properties
 $$

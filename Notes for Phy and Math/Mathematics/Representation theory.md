@@ -4,7 +4,7 @@ banner_y: 0.184
 ---
 
 >[!abstract]- Pre-knowledge
->- [[Group theory]]
+>- [[Abstract group theory]]
 >- [[Linear algebra]]
 
 # Representation theory
@@ -14,13 +14,13 @@ In this chapter, groups are finite by default.
 ---
 ### 1.1 Representation of finite group
 #### 1.1.1 Definition of representation
-A *representation* of a group $G$ on a finite dimensional complex vector space $V$ is defined as a [[Group theory#1.2.1 Definition|homomorphism]] $\rho$
+A *representation* of a group $G$ on a finite dimensional complex vector space $V$ is defined as a [[Abstract group theory#2.1 Definition|homomorphism]] $\rho$
 $$\rho:G\to\mathrm{GL}(V).$$
 We say that $\rho$ gives $V$ a *$G$-module* structure.
 
-Sometimes we call $V$ itself the representation of $G$, in which case we denote $\rho(g)(\ket{v})$ as $g\cdot\ket{v}$ or $g\ket{v}$. The [[Linear algebra#1.1.5 Dimensionality|dimension]] of $V$ is sometimes called the *degree* of the representation.
+Sometimes we call $V$ itself the representation of $G$, in which case we denote $\rho(g)(\ket{v})$ as $g\cdot\ket{v}$ or $g\ket{v}$. The [[Linear algebra#1.5 Dimensionality|dimension]] of $V$ is sometimes called the *degree* of the representation.
 
-For two representations $V$ and $W$, a map $\varphi:V\to W$ is called a *$G$-linear map* if it [[Group theory#1.1.4 Abelian group|commutes]] with all $g\in G$.
+For two representations $V$ and $W$, a map $\varphi:V\to W$ is called a *$G$-linear map* if it [[Abstract group theory#1.4 Abelian group|commutes]] with all $g\in G$.
 
 A *subrepresentation* of $V$ is the representation on $V$'s $G$-invariant subspace $W$. If $V$ has no proper non-zero subrepresentation, then it is an *irreducible* representation.
 
@@ -28,7 +28,7 @@ A *subrepresentation* of $V$ is the representation on $V$'s $G$-invariant subspa
 For two representations $V$ and $W$, their [[Linear algebra#^fd1ad8|direct sum]] and [[Linear algebra#0.1.1 Tensor product|tensor product]] are also representations of the group, the latter defined as
 $$g(\ket{v}\otimes\ket{w})\doteq g\ket{v}\otimes g\ket{w}.$$
 
-The [[Linear algebra#1.5.1 Dual space|dual vector space]] $V^*\doteq\mathrm{Hom}(V,\mathbb{C})$ is also a representation, defined in the way that the natural pairing $\braket{u|v}$ between $V^*$ and $V$ is preserved. So the dual homomorphism $\rho^*$ satisfies
+The [[Linear algebra#5.1 Dual space|dual vector space]] $V^*\doteq\mathrm{Hom}(V,\mathbb{C})$ is also a representation, defined in the way that the natural pairing $\braket{u|v}$ between $V^*$ and $V$ is preserved. So the dual homomorphism $\rho^*$ satisfies
 $$\braket{u|g^*g|v}=\braket{u|v},$$
 where $\bra{u}g^*=\rho^*(g)(\bra{u})$. To satisfy that, $\rho^*$ has to be defined as
 $$\rho^*(g)\doteq{}^t\rho(g^{-1}),$$
@@ -40,13 +40,13 @@ it's easy to show that
 $$(g\varphi)\ket{v}=\sum_ig\ket{w_i}\bra{v_i}g^{-1}\ket{v}=g\ \varphi\ g^{-1}\ket{v}.$$
 
 #### 1.1.3 Regular representation
-The [[Group theory#1.3.1 Left group action|left group action]] of $G$ on a set $X$ naturally generates a representation called the *permutation representation*. The representation space is the vector space [[Linear algebra#1.1.3 Span|spanned]] from a set of [[Linear algebra#^b3f615|basis]] $\{\ket{e_x}\}$ marked by elements in $X$. The representation is defined as
+The [[Abstract group theory#3.1 Left group action|left group action]] of $G$ on a set $X$ naturally generates a representation called the *permutation representation*. The representation space is the vector space [[Linear algebra#1.3 Span|spanned]] from a set of [[Linear algebra#^b3f615|basis]] $\{\ket{e_x}\}$ marked by elements in $X$. The representation is defined as
 $$g\ket{v}=g\sum_xv_x\ket{e_x}\doteq\sum_xv_x\ket{e_{gx}}.$$
 
 When the set $X$ is $G$ itself, this representation is called the *regular representation*, denoted as $R$ or $R_G$.
 
 #### 1.1.4 Complete reducibility
-For any subrepresentation $W\subset V$ of group $G$, there is a complementary $G$-[[Linear algebra#1.6.1 Invarient subspace|invarient subspace]] $U\subset V$ that makes $V=U\oplus W$. This can be proved by constructing a $G$-invarient inner product and then taking the orthogonal subspace of $W$ as $U$.
+For any subrepresentation $W\subset V$ of group $G$, there is a complementary $G$-[[Linear algebra#6.1 Invarient subspace|invarient subspace]] $U\subset V$ that makes $V=U\oplus W$. This can be proved by constructing a $G$-invarient inner product and then taking the orthogonal subspace of $W$ as $U$.
 
 Any representation can be written as a direct sum of irreducible representations. This property is called *complete reducibility* or *semisimplicity*. Complete reducibility can be generalized to representation of compact groups.
 
@@ -64,7 +64,7 @@ Note that the decomposition of the $n$th term into $a_n$ copies of $V_n$ is not 
 #### 1.2.1 Definition of character
 For a representation $V$ of $G$, its *character* $\chi_V$ is defined as a function on $G$
 $$\chi_V(g)\doteq\mathrm{Tr}\ \rho(g).$$
-Character is a [[Group theory#^e1a076|class function]], and $\chi_V(1_G)=\dim V$.
+Character is a [[Abstract group theory#^e1a076|class function]], and $\chi_V(1_G)=\dim V$.
 
 For two representations $V$ and $W$ of $G$, their characters satisfy
 $$
@@ -79,9 +79,9 @@ $$
 #### 1.2.2 Character table
 A *character table* is a table with information about different representations of a group.
 
-Take the [[Group theory#1.4.1 Symmetric group|symmetric group]] $S_3$ as an example. It has three irreducible representations, namely,
+Take the [[Abstract group theory#4.1 Symmetric group|symmetric group]] $S_3$ as an example. It has three irreducible representations, namely,
 - the *trivial representation* $U$;
-- the *alternating representation* $U'$, which maps like the [[Group theory#^3aa69c|sign homomorphism]];
+- the *alternating representation* $U'$, which maps like the [[Abstract group theory#^3aa69c|sign homomorphism]];
 - the *standard representation* $V$, which is a two dimensional representation decomposed from the permutation representation. It maps according to the permutation of $\{\ket{e_1},\ket{e_2},-(\ket{e_1}+\ket{e_2})\}$.
 
 The character table of $S_3$ looks like
@@ -107,7 +107,7 @@ This is the direct sum of all trivial subrepresentations of $V$. To find $V^G$, 
 $$
 \mathrm{End}(V)\ni\varphi\doteq\frac{1}{|G|}\sum_{g\in G}g.
 $$
-It is a $G$-linear map that projects $V$ to $V^G$. To prove this note that according to [[Group theory#^4e9ddd|rearrangement lemma]], one have
+It is a $G$-linear map that projects $V$ to $V^G$. To prove this note that according to [[Abstract group theory#^4e9ddd|rearrangement lemma]], one have
 $$
 h\sum g=\sum g.
 $$
@@ -223,7 +223,7 @@ a_i=\braket{\chi_R,\chi_i}=\frac{1}{|G|}\chi_i(1_G)\cdot|G|=\dim V_i.
 $$
 
 #### 1.2.8 Representation ring
-The *representation ring* $R(G)$ of group $G$ is a ring structure generated by representations of $G$. The addition structure of $R(G)$ is a [[Group theory#1.5.2 Free group|free]] abelian group generated by irreducible representations $V_i$ of $G$. Namely the elements of $R(G)$ can be written in the form of
+The *representation ring* $R(G)$ of group $G$ is a ring structure generated by representations of $G$. The addition structure of $R(G)$ is a [[Abstract group theory#5.2 Free group|free]] abelian group generated by irreducible representations $V_i$ of $G$. Namely the elements of $R(G)$ can be written in the form of
 $$
 \sum_ia_iV_i,\quad a_i\in\mathbb{Z}.
 $$
@@ -254,7 +254,7 @@ On the opposite, for a representation $V$ of $G$ and an $H$-invarient subspace $
 $$
 g\cdot W\doteq\{g\ket{w}\}
 $$
-only depends on the [[Group theory#1.6.1 Coset|left coset]] $gH$. One can denote the subspace as $\sigma\cdot W$ with a coset $\sigma\in G/H$. Then $V$ is called *induced* by $W$ if it can be written as
+only depends on the [[Abstract group theory#6.1 Coset|left coset]] $gH$. One can denote the subspace as $\sigma\cdot W$ with a coset $\sigma\in G/H$. Then $V$ is called *induced* by $W$ if it can be written as
 $$
 V=\bigoplus_{\sigma_i\in G/H}\sigma_i\cdot W.
 $$
