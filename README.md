@@ -1,4 +1,6 @@
 # Notes
+http://yichizang.github.io
+
 These are notes I take on physics and mathematics. The banner pictures are not uploaded, so it may cause some trouble viewing. This can be fixed by removing the frontmatter in each `.md` file.
 
 # Table of content
