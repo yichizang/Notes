@@ -12,7 +12,7 @@ The *tensor product* of two vector spaces $U$ and $V$ is a vector space equipped
 
 ### 0.2 Adjoint map
 The *adjoint map* of $\varphi$ is defined as the map ${}^t\varphi$ that satisfies
-$$\braket{{}^t\varphi(u)|v}=\braket{u|\varphi(v)}.$$
+$$\braket{ {}^t\varphi(u)|v}=\braket{u|\varphi(v)}.$$
 
 If map $\varphi$ is its own adjoint map, then it is called a *self-adjoint map*.
 
