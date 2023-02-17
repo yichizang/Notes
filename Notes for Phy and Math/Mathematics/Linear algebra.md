@@ -11,8 +11,8 @@ banner_y: 0.312
 The *tensor product* of two vector spaces $U$ and $V$ is a vector space equipped with a bilinear map from $U\times V$ to it. It can be viewed as the vector spaces spanned from $\ket{e_u^i}\otimes\ket{e_v^j}$, where $\{\ket{e_u^i}\}$ and $\{\ket{e_v^j}\}$ are basis of $U$ and $V$ respectively.
 
 ### 0.2 Adjoint map
-The *adjoint map* of $\varphi$ is defined as the map ${}^t\varphi$ that satisfies
-$$\braket{ {}^t\varphi(u)|v}=\braket{u|\varphi(v)}.$$
+The *adjoint map* of $\varphi$ is defined as the map $^t\varphi$ that satisfies
+$$\braket{^t\varphi(u)|v}=\braket{u|\varphi(v)}.$$
 
 If map $\varphi$ is its own adjoint map, then it is called a *self-adjoint map*.
 
