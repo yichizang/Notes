@@ -1,6 +1,4 @@
 # Notes
-http://yichizang.github.io
-
 These are notes I take on physics and mathematics. The banner pictures are not uploaded, so it may cause some trouble viewing. This can be fixed by removing the frontmatter in each `.md` file.
 
 I tried to deploy a GitHub page with it but failed, as many of the markdown grammar I used here were based on Obsidian and it's not an open source editor so many of the formats can't be displayed properly. And I don't want to bother change them manually as this would interrupt my note-taking process. I will try other possible ways in the future.
