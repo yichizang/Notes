@@ -28,9 +28,11 @@ url: "https://yichizang.github.io" # the base hostname & protocol for your site,
 github_username:  yichizang
 
 # Build settings
-theme: minima
+theme: slate
 plugins:
   - jekyll-feed
+
+markdown: kramdown
 
 # Exclude from processing.
 # The following items will not be processed, by default.
