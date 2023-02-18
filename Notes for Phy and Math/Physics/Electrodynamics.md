@@ -796,3 +796,25 @@ $$
 &\pmb{g}\doteq\pmb{D}\times\pmb{B}.
 \end{aligned}
 $$
+
+---
+### 3.3 Quasi-static process
+#### 3.3.1 Induction
+According to Maxwell's equation, a time-dependent magnetic field will?
+
+>[!note]
+>Since time is running short for final exam, I'll skip this part for now. Sorry about that.
+
+---
+## 4 Electromagnetic wave
+### 4.1 Wave equation
+#### 4.1.1 Green function for wave equation
+To solve a wave equation
+$$
+\Delta\psi-\frac{1}{c^2}\frac{\partial^2\psi}{\partial t^2}=f(\pmb{x},t),
+$$
+one perform a Fourior transformation to write
+$$
+\left(\Delta-k^2\right)\tilde{\psi}=-4\pi\tilde{f},
+$$
+where $k\doteq\omega/c$.
