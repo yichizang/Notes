@@ -45,9 +45,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "6a9fc7406084084b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Mathematics/Vector analysis.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -77,7 +89,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mathematics/Linear algebra.md"
+                "file": "Physics/Electrodynamics.md"
               }
             }
           },
@@ -140,7 +152,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mathematics/Linear algebra.md",
+                "file": "Physics/Electrodynamics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -157,7 +169,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mathematics/Linear algebra.md",
+                "file": "Physics/Electrodynamics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -202,12 +214,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "3bdfe6add8758380",
+  "active": "de7521257ab7afad",
   "lastOpenFiles": [
+    "Mathematics/Vector analysis.md",
+    "Physics/Electrodynamics.md",
     "Mathematics/Matrix theory.md",
     "Mathematics/Linear algebra.md",
-    "Physics/Electrodynamics.md",
-    "Mathematics/Vector analysis.md",
     "Mathematics/Representation theory.md",
     "Mathematics/Abstract group theory.md",
     "Rep test/Representation theory 1.md",

@@ -8,6 +8,9 @@ banner_y: 0.516
 >- [[Vector analysis]]
 >- Special function
 
+>[!error]- Complaint
+>The book *Classical Electrodynamics* written by J. D. Jackson is not recommanded for learning electrodynamics since there are many fuzzy parts and skipped contents.
+
 # Electrodynamics
 ## 1 Electrostatics
 ---
@@ -362,7 +365,7 @@ E_x\\
 E_y
 \end{pmatrix}.
 $$
-Since the polarized charge on the boundary plane is similar to those in the case of conductive plane, similar method of image can also be applied.
+Since the polarization charge on the boundary plane is similar to those in the case of conductive plane, similar method of image can also be applied.
 
 The field on the $\epsilon_1$ side can be considered as the superposition of field of the point charge (after correction) and an image charge $q_1$ at the symmetrical position. So does the field on the $\epsilon_2$ side except that the image charge is on the same side as the point charge. Thus the potential gives
 $$
@@ -375,7 +378,7 @@ Using the boundary condition, one can work out
 $$
 q_1=\frac{\epsilon_1-\epsilon_2}{\epsilon_1+\epsilon_2}\frac{\epsilon_0}{\epsilon_1}q_0.
 $$
-The polarized charge distribution on the boundary can also be given as
+The polarization charge distribution on the boundary can also be given as
 $$
 \sigma_{\text{p}}=\frac{q_0}{2\pi}\frac{\epsilon_0(\epsilon_1-\epsilon_2)}{\epsilon_1(\epsilon_1+\epsilon_2)}\frac{R}{(\rho^2+R^2)^{3/2}}.
 $$
@@ -554,17 +557,17 @@ $$
 The vector potential is then
 $$
 \begin{aligned}
-\pmb{A}(\pmb{x})&=\frac{\mu_0}{4\pi}\int\mathrm{d}^3\xi\left[\frac{\pmb{j}(\pmb{\xi})}{|\pmb{x}-\pmb{\xi}|}+\pmb{M}(\pmb{\xi})\times\nabla_\xi\frac{1}{|\pmb{x}-\pmb{\xi}|}\right]\\
-&=\frac{\mu_0}{4\pi}\int\mathrm{d}^3\xi\frac{\pmb{j}(\pmb{\xi})+\nabla_\xi\times\pmb{M}(\pmb{\xi})}{|\pmb{x}-\pmb{\xi}|}.
+\pmb{A}(\pmb{x})&=\frac{\mu_0}{4\pi}\int\mathrm{d}^3\xi\left[\frac{\pmb{j}_{f+p}(\pmb{\xi})}{|\pmb{x}-\pmb{\xi}|}+\pmb{M}(\pmb{\xi})\times\nabla_\xi\frac{1}{|\pmb{x}-\pmb{\xi}|}\right]\\
+&=\frac{\mu_0}{4\pi}\int\mathrm{d}^3\xi\frac{\pmb{j}_{f+p}(\pmb{\xi})+\nabla_\xi\times\pmb{M}(\pmb{\xi})}{|\pmb{x}-\pmb{\xi}|}.
 \end{aligned}
 $$
-It can be considered that $\nabla\times\pmb{M}$ contributes to an *effective current density*
+Here the $\pmb{j}_{f+p}$ is the current density of free charge and polarization charge. It can be considered that $\nabla\times\pmb{M}$ contributes to an *effective current density*
 $$
-\pmb{j}_{\text{eff}}\doteq\nabla\times\pmb{M}.
+\pmb{j}_m\doteq\nabla\times\pmb{M}.
 $$
-Taking this effective current into consideration, $\nabla\times\pmb{B}=\mu_0\pmb{j}$ can be written as
+Taking these currents into consideration, $\nabla\times\pmb{B}=\mu_0\pmb{j}$ can be written as
 $$
-\nabla\times\pmb{B}=\mu_0(\pmb{j}+\nabla\times\pmb{M}).
+\nabla\times\pmb{B}=\mu_0(\pmb{j}_{f+p}+\nabla\times\pmb{M}).
 $$
 In the similar way electric displacement is defined, one can define the *magnetic field*
 $$
@@ -572,8 +575,9 @@ $$
 $$
 It satisfies
 $$
-\nabla\times\pmb{H}=\pmb{j}.
+\nabla\times\pmb{H}=\pmb{j}_{f+p}.
 $$
+In magnetostatics, $\pmb{j}_p$ is usually ignored.
 
 #### 2.2.3 Types of media
 In the simplest case of linear medium, one have
@@ -591,11 +595,11 @@ Here the function $f$ is usually not even a single-valued function. It could dep
 #### 2.2.4 Methods for magnetostatics problems
 When $\pmb{j}\ne\pmb{0}$, the general method is to use vector potential. If given $\pmb{H}=\pmb{H}(\pmb{B})$, then one can write
 $$
-\nabla\times\pmb{H}(\nabla\times\pmb{A})=\pmb{j}.
+\nabla\times\pmb{H}(\nabla\times\pmb{A})=\pmb{j}_f.
 $$
 In the case of linear medium, the equation becomes
 $$
-\nabla\times\left(\frac{1}{\mu}\nabla\times\pmb{A}\right)=\pmb{j}.
+\nabla\times\left(\frac{1}{\mu}\nabla\times\pmb{A}\right)=\pmb{j}_f.
 $$
 When the medium is also uniform, the equation is similar to the [[Electrodynamics#2.1.2 Vector potential|vacuum case]] except that $\mu_0$ becomes $\mu$.
 
@@ -617,7 +621,7 @@ $$
 
 When it is attached with the condition $\pmb{j}=\pmb{0}$, both methods of vector potential and scalar potential can be used. When using vector potential, the fixed $\pmb{M}$ can be treated as effective current by
 $$
-\Delta\pmb{A}=-\mu_0\pmb{j}_{\text{eff}}.
+\Delta\pmb{A}=-\mu_0\pmb{j}_m.
 $$
 
 When using scalar potential, the fixed $\pmb{M}$ can be treated as *effective magnetic-charge density*
@@ -636,7 +640,7 @@ W=\frac{1}{2}\int\mathrm{d}^3x\ \pmb{H}\cdot\pmb{B}.
 $$
 In the case of linear medium, it can also be written as
 $$
-W=\frac{1}{2}\int\mathrm{d}^3x\ \pmb{j}\cdot\pmb{A}.
+W=\frac{1}{2}\int\mathrm{d}^3x\ \pmb{j}_f\cdot\pmb{A}.
 $$
 
 Similar to the electrostatic case, the energy of a medium placed in an external field is
@@ -655,21 +659,33 @@ $$
 Consider the time dependence of field and charge distribution, the field equations mentioned above need to be corrected into the *Maxwell's equations*
 $$
 \begin{aligned}
-\nabla\cdot\pmb{D}&=\rho_f,\\
+\nabla\cdot\pmb{E}&=\frac{\rho}{\epsilon_0},\\
 \nabla\times\pmb{E}&=-\frac{\partial\pmb{B}}{\partial t},\\
 \nabla\cdot\pmb{B}&=\pmb{0},\\
-\nabla\times\pmb{H}&=\pmb{j}+\frac{\partial\pmb{D}}{\partial t}.
+\nabla\times\pmb{B}&=\mu_0\left(\pmb{j}+\epsilon_0\frac{\partial\pmb{E}}{\partial t}\right).
 \end{aligned}
 $$
-The free charges satisfies the *flow conservation equation*
+The charges satisfies the *flow conservation equation*
 $$
-\nabla\cdot\pmb{j}+\frac{\partial\rho_f}{\partial t}=0,
+\nabla\cdot\pmb{j}+\frac{\partial\rho}{\partial t}=0,
 $$
 which can be derived from Maxwell's equations.
 
-The $\partial_t\pmb{D}$ term is called the *displacement current*, which reflects no actual charge movement but contributes to the curl of magnetic field as well.
+The $\epsilon_0\partial_t\pmb{E}$ term is called the *displacement current* $\pmb{j}_{\text{disp}}$, which reflects no actual charge movement but contributes to the curl of magnetic field as well.
 
-#### 3.1.2 Potential
+#### 3.1.2 Maxwell's equation in media
+When considering media, the Maxwell's equation can also be written as
+$$
+\begin{aligned}
+\nabla\cdot\pmb{D}&=\rho_f,\\
+\nabla\times\pmb{E}&=-\frac{\partial\pmb{B}}{\partial t},\\
+\nabla\cdot\pmb{B}&=\pmb{0},\\
+\nabla\times\pmb{H}&=\pmb{j}_f+\frac{\partial\pmb{D}}{\partial t}.
+\end{aligned}
+$$
+From this one can derive the flow conservation equation of free charge. And one also have $\partial_t\pmb{D}=\pmb{j}_p+\pmb{j}_{\text{disp}}$.
+
+#### 3.1.3 Potential
 In the time-dependent case, $\nabla\cdot\pmb{B}=0$ still holds, thus one can still use vector potential to describe magnetic field
 $$
 \pmb{B}=\nabla\times\pmb{A}.
@@ -683,6 +699,15 @@ $$
 \pmb{E}=-\nabla\varphi-\frac{\partial\pmb{A}}{\partial t}.
 $$
 
+The field equation of potential is
+$$
+\begin{aligned}
+\Delta\varphi+\frac{\partial}{\partial t}\nabla\cdot\pmb{A}&=-\frac{\rho}{\epsilon_0},\\
+\Delta\pmb{A}-\frac{1}{c^2}\frac{\partial^2\pmb{A}}{\partial t^2}-\nabla\left(\nabla\cdot\pmb{A}+\frac{1}{c^2}\frac{\partial\varphi}{\partial t}\right)&=-\mu_0\pmb{j}.
+\end{aligned}
+$$
+
+#### 3.1.4 Gauge choice
 The gauge degree of freedom remains here. One can choose the *Lorenz gauge*
 $$
 \nabla\cdot\pmb{A}-\frac{\partial\varphi}{\partial t}=0
@@ -690,7 +715,84 @@ $$
 to obtain the following field equation of potentials
 $$
 \begin{aligned}
-\Delta\varphi-\frac{1}{c^2}\frac{\partial^2\varphi}{\partial t^2}&=-\frac{\rho_f}{\epsilon_0},\\
+\Delta\varphi-\frac{1}{c^2}\frac{\partial^2\varphi}{\partial t^2}&=-\frac{\rho}{\epsilon_0},\\
 \Delta\pmb{A}-\frac{1}{c^2}\frac{\partial^2\pmb{A}}{\partial t^2}&=-\mu_0\pmb{j}.
+\end{aligned}
+$$
+
+---
+### 3.2 Energy and momentum
+#### 3.2.1 Energy of field and Poynting vector
+Since magnetic force does not contribute to energy, the total work of a field on matter per unit time per unit volumn is given by
+$$
+\frac{\partial w_{\text{mat}}}{\partial t}=\pmb{E}\cdot\pmb{j}.
+$$
+Using Maxwell's equation, one can write the right-hand-side as
+$$
+\pmb{E}\cdot\pmb{j}=-\frac{1}{\mu_0}\nabla\cdot(\pmb{E}\times\pmb{B})-\frac{1}{2}\frac{\partial}{\partial t}\left(\epsilon_0E^2+\frac{1}{\mu_0}B^2\right).
+$$
+Comparing this to the energy density given in [[Electrodynamics#1.1.5 Energy and energy density|electrostatics]] and [[Electrodynamics#2.1.4 Energy of magnetic field|magnetostatics]], one can have the *energy flow density* $\pmb{S}$ and *energy density* $w$ as
+$$
+\begin{aligned}
+&\pmb{S}\doteq\frac{1}{\mu_0}\pmb{E}\times\pmb{B},\\
+&w\doteq\frac{1}{2}\left(\epsilon_0E^2+\frac{1}{\mu_0}B^2\right).
+\end{aligned}
+$$
+Here $\pmb{S}$ is also called the *Poynting vector*. Clearly
+$$
+\frac{\partial w_{\text{mat}}}{\partial t}+\frac{\partial w}{\partial t}+\nabla\cdot\pmb{S}=0.
+$$
+
+#### 3.2.2 Momentum of field and Maxwell stress tensor
+In analogue to the above derivation process, one can write the expression of momentum density of matter
+$$
+\frac{\partial\pmb{g}_{\text{mat}}}{\partial t}=\rho\pmb{E}+\pmb{j}\times\pmb{B}=\pmb{f}.
+$$
+Using Maxwell's equation again, one can write the right-hand-side as
+$$
+f^b=-\partial_a\left[\frac{1}{2}\left(\epsilon_0E^2+\frac{1}{\mu_0}B^2\right)\delta^{ab}-\epsilon_0E^aE^b-\frac{1}{\mu_0}B^aB^b\right]-\frac{1}{c^2}\partial_tS^b.
+$$
+Similar to the analyse of energy, one have the *momentum flow density tensor* $T^{ab}$ and *momentum density* $\pmb{g}$ as
+$$
+\begin{aligned}
+&T^{ab}\doteq\frac{1}{2}\left(\epsilon_0E^2+\frac{1}{\mu_0}B^2\right)\delta^{ab}-\epsilon_0E^aE^b-\frac{1}{\mu_0}B^aB^b,\\
+&\pmb{g}\doteq\frac{1}{c^2}\pmb{S}=\epsilon_0\pmb{E}\times\pmb{B}.
+\end{aligned}
+$$
+The tensor $T^{ab}$ is also called *Maxwell stress tensor*. Consider a piece of matter in an electromagnatic field and a closed surface $\Sigma$ around it. The force applied on it is then given by
+$$
+f^b=\int_V\mathrm{d}^3x\frac{\partial g_{\text{mat}}^b}{\partial t}=-\oint_\Sigma\mathrm{d}s_aT^{ab}-\int_V\mathrm{d}^3x\frac{\partial g^b}{\partial t}.
+$$
+
+#### 3.2.3 Energy and momentum in media
+With the presence of medium, there are additional polarization charges/currents and effective currents of magnetization. The interaction of electromagnetic field on these charges/currents also carry energy and momentum so that
+$$
+\begin{aligned}
+\frac{\partial w_{\text{mat}}}{\partial t}&=(\pmb{j}_f+\pmb{j}_p+\pmb{j}_m)\cdot\pmb{E},\\
+\frac{\partial\pmb{g}_{\text{mat}}}{\partial t}&=(\rho_f+\rho_p)\pmb{E}+(\pmb{j}_f+\pmb{j}_p+\pmb{j}_m)\times\pmb{B}.
+\end{aligned}
+$$
+But this process is invertible, which means these energy and momentum are just stored in the medium temporarily. In this case, one can consider them still as energy and momentum of the field.
+
+By this means, one can write the energy equation
+$$
+\frac{\partial w_{\text{mat}}}{\partial t}=\pmb{j}_f\cdot\pmb{E}=-\nabla\cdot\pmb{S}-\frac{\partial w}{\partial t},
+$$
+where
+$$
+\begin{aligned}
+&\pmb{S}\doteq\pmb{E}\times\pmb{H},\\
+&w\doteq\frac{1}{2}(\epsilon E^2+\mu H^2).
+\end{aligned}
+$$
+The momentum equation can also be written as
+$$
+\frac{\partial g_{\text{mat}}^b}{\partial t}=(\rho_f\pmb{E}+\pmb{j}_f\times\pmb{B})^b=-\partial_aT^{ab}-\partial_tg^b,
+$$
+where
+$$
+\begin{aligned}
+&T^{ab}\doteq\frac{1}{2}(E^cD_c+B^dH_d)\delta^{ab}-D^aE^b-B^aH^b,\\
+&\pmb{g}\doteq\pmb{D}\times\pmb{B}.
 \end{aligned}
 $$
