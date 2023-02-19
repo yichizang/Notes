@@ -13,7 +13,6 @@ banner_y: 0.516
 
 # Electrodynamics
 ## 1 Electrostatics
----
 ### 1.1 Basic electrostatics
 #### 1.1.1 Field equation
 The *electric field* is a vector field $\pmb{E}$ that satisfies
@@ -251,6 +250,7 @@ $$
 q_{lm}=\int\mathrm{d}\pmb{x}Y_{lm}^\ast(\theta,\phi)r^l\rho(\pmb{x}),
 $$
 called *multipole moment*. The first few coefficients under Cartesian coordinate are listed here.
+
 | $l,m$ | $q_{lm}$                                                     | $q_{l,-m}$                                                   |
 | ----- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | $0,0$ | $\frac{1}{\sqrt{4\pi}}q$                                     |                                                              |
@@ -259,6 +259,7 @@ called *multipole moment*. The first few coefficients under Cartesian coordinate
 | $2,2$ | $\frac{1}{12}\sqrt{\frac{15}{2\pi}}(Q_{11}-2iQ_{12}-Q_{22})$ | $\frac{1}{12}\sqrt{\frac{15}{2\pi}}(Q_{11}+2iQ_{12}-Q_{22})$ |
 | $2,1$ | $-\frac{1}{3}\sqrt{\frac{15}{8\pi}}(Q_{13}-iQ_{23})$         | $\frac{1}{3}\sqrt{\frac{15}{8\pi}}(Q_{13}+iQ_{23})$          |
 | $2,0$ | $\frac{1}{2}\sqrt{\frac{5}{4\pi}}Q_{33}$                     |                                                              |
+
 Here $q$ is the total charge, $\pmb{p}$ is the dipole moment
 $$
 \pmb{p}\doteq\int\mathrm{d}^3x\ \pmb{x}\rho(\pmb{x})
@@ -348,7 +349,7 @@ This implies that a point charge $q$ in an uniform medium can be corrected as a 
 Consider two semi-infinite dielectrics $\epsilon_1$ and $\epsilon_2$ placed at $z>0$ and $z<0$ respectively. A point charge $q_0$ is placed at $z=+R$. The electric field then satisfies the field equation
 $$
 \begin{aligned}
-\epsilon_1\nabla\cdot\pmb{E}&=q\delta(\pmb{x}-\pmb{R}),&&z>0\\
+\epsilon_1\nabla\cdot\pmb{E}&=q\delta^{(3)}(\pmb{x}-\pmb{R}),&&z>0\\
 \epsilon_2\nabla\cdot\pmb{E}&=0,&&z<0\\
 \nabla\times\pmb{E}&=\pmb{0},
 \end{aligned}

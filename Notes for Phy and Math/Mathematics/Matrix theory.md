@@ -8,7 +8,6 @@ banner_y: 0.172
 >- [[Linear algebra]]
 
 # Matrix theory
----
 ## 1 Basic concepts
 ### 1.1 Definition of matrix
 An *$m\times n$ matrix* is an array of numbers in $\mathbb{F}$ with $m$ rows and $n$ columns that looks like

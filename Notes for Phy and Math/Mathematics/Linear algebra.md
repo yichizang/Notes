@@ -17,7 +17,6 @@ $$\braket{^t\varphi(u)|v}=\braket{u|\varphi(v)}.$$
 If map $\varphi$ is its own adjoint map, then it is called a *self-adjoint map*.
 
 # Linear algebra
----
 ## 1 Vector space
 ### 1.1 Definition
 A *vector space* is a set $V$ equipped with an *addition* $+:V\times V\to V$ and a *scalar multiplication* $\cdot:\mathbb{F}\times V\to V$ on a field $\mathbb{F}$. It's an [[ Abstract group theory#1.4 Abelian group|Abelian]] [[ Abstract group theory#1.2 Group|group]] under addition operation. It also satisfies that $\forall \lambda,\xi\in\mathbb{F},\forall\ket{u},\ket{v}\in V$
