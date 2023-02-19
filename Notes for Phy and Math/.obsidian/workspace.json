@@ -8,19 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "de7521257ab7afad",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Physics/Electrodynamics.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "3bdfe6add8758380",
             "type": "leaf",
             "state": {
@@ -47,19 +34,20 @@
             }
           },
           {
-            "id": "6a9fc7406084084b",
+            "id": "4d2d756d4c38c320",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/Vector analysis.md",
+                "file": "Mathematics/Abstract group theory.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -89,7 +77,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/Electrodynamics.md"
+                "file": "Mathematics/Matrix theory.md"
               }
             }
           },
@@ -152,7 +140,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/Electrodynamics.md",
+                "file": "Mathematics/Matrix theory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -169,7 +157,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/Electrodynamics.md",
+                "file": "Mathematics/Matrix theory.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -214,14 +202,14 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "de7521257ab7afad",
+  "active": "ff27238ca15e3de5",
   "lastOpenFiles": [
-    "Mathematics/Vector analysis.md",
-    "Mathematics/Matrix theory.md",
-    "Mathematics/Linear algebra.md",
-    "Physics/Electrodynamics.md",
-    "Mathematics/Representation theory.md",
     "Mathematics/Abstract group theory.md",
+    "Mathematics/Matrix theory.md",
+    "Mathematics/Vector analysis.md",
+    "Physics/Electrodynamics.md",
+    "Mathematics/Linear algebra.md",
+    "Mathematics/Representation theory.md",
     "Rep test/Representation theory 1.md",
     "Rep test/Finite group.md",
     "Rep test/Representation of finite group.md",

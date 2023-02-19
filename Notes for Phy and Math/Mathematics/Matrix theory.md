@@ -7,6 +7,9 @@ banner_y: 0.172
 >- [[Abstract group theory]]
 >- [[Linear algebra]]
 
+>[!note]
+>This will be a very shallow introduction to matrix theory.
+
 # Matrix theory
 ## 1 Basic concepts
 ### 1.1 Definition of matrix
@@ -40,14 +43,15 @@ $$\ket{v}=\sum_iv_{1i}\ket{e_i}.$$
 This is called the *matrix of vector* $\ket{v}$ under this basis, denoted as $\mathcal{M}(\ket{v})$. This matrix is $\dim V\times 1$, so the index $1$ is usually omitted $v_i\doteq v_{1i}$.
 
 ### 1.4 Matrix operation
-The addition and scalar multiplication of matrix is simply adding or multiplying on each number individually. *Matrix multiplication* is defined between an $m\times n$ matrix $A$ and an $n\times p$ matrix $B$ as
+The addition and scalar multiplication of matrix is simply adding or multiplying a scalar on each number individually. *Matrix multiplication* is defined between an $m\times n$ matrix $A$ and an $n\times p$ matrix $B$ as
 $$(AB)_{ij}=\sum_{k=1}^nA_{ik}B_{kj}.$$
-The outcome is an $m\times p$ matrix.
+The outcome is therefore an $m\times p$ matrix.
 
 The *inverse* of an $n\times n$ square matrix $A$ is another $n\times n$ square matrix $A^{-1}$ that
 $$
 AA^{-1}=A^{-1}A=\mathbb{1}_n.
 $$
+A square matrix is called *invertible* if its inverse exists.
 
 These matrix operations satisfy
 $$
@@ -76,3 +80,23 @@ For a matrix $A\in\mathbb{F}^{m,n}$, its *row rank* is the [[Linear algebra#1.5 
 It can be proved that the row rank and the column rank are equal. Its value is called the *rank* of $A$.
 
 The dimension of $\mathrm{Im}\ T$ is equal to the rank of $\mathcal{M}(T)$.
+
+### 1.7 Trace
+The *trace* of a square matrix $A$ is defined as the sum of diagnal elements of $A$
+$$
+\mathrm{Tr}\ A\doteq\sum_iA_{ii}.
+$$
+It can be proved that the trace of a matrix of an operator does not depend on the choice of basis. And it is equal to the trace of the operator.
+
+The trace of a matrix has the following properties.
+- For two square matrices $A$ and $B$ of the same order, $\mathrm{Tr}(AB)=\mathrm{Tr}(BA)$.
+- For two square matrices $A$ and $B$ of the same order, $\mathrm{Tr}(A+B)=\mathrm{Tr}\ A+\mathrm{Tr}\ B$.
+
+### 1.8 Determinant
+A permutation of $n$ is an element of [[Abstract group theory#4.1 Symmetric group|symmetric group]] $S_n$. Its sign is given by [[Abstract group theory#^3aa69c|sign homomorphism]] $\epsilon_{a_1a_2\cdots a_n}$. With this one can define the *determinant* of a square matrix $A$ of order $n$ as
+$$
+\det A\doteq\sum\epsilon_{a_1a_2\cdots a_n}A_{a_1,1}A_{a_2,2}\cdots A_{a_n,n}.
+$$
+The determinant of a matrx of an operator is also independent of the choice of basis.
+
+A matrix
