@@ -5,10 +5,12 @@ I tried to deploy a GitHub page with it but failed, as many of the markdown gram
 
 # Table of content
 - Mathematics
-  - group theory
+  - abstract group theory
   - linear algebra
   - representation theory
   - vector analysis
+  - matrix theory
+  - complex function
 - Physics
   - electrodynamics
 
