@@ -2,8 +2,11 @@
 banner: "![[../pics/efff78ba0e222093cd67905dbb60ee001644897154196.jpeg]]"
 banner_y: 0.356
 ---
+
+>[!abstract]- Pre knowledge
+>- Set theory
+
 # Abstract group theory
----
 ## 1 Basic concepts
 ### 1.1 Equivalence relation
 For any set $X$, an *equivalence relation* is a binary relation $\sim$ that satisfies
@@ -79,14 +82,7 @@ If the map is one-one and onto, then it is called an *isomorphism*. If $\phi$ is
 
 The set of all homomorphisms from $G$ to $H$ is denoted as $\mathrm{Hom}(G,H)$. In the same way is $\mathrm{Iso}\ (G,H)$, $\mathrm{End}(G)$ and $\mathrm{Aut}(G)$ defined.
 
-### 2.2 The great $\mathbb{R}^2$ isomorphic theorem
-This is an significant achievement of myself. I came up with it one night returning to my dorm with my roommate. This theorem defines the boundary of mathematics human could reach. *The great $\mathbb{R}^2$ isomorphic theorem* states that any math or physics theorem or statement is isomorphic to $\mathbb{R}^2$.
-
-The proof is trivial. Since any math or physics theorem and statement human could study is written on scratch paper, and the surface of a paper is isomorphic to $\mathbb{R}^2$, the proof is therefore finished.
-
-In recent years, this theorem faces challenge due to the wide use of computer technology.
-
-### 2.3 Representation
+### 2.2 Representation
 A (linear) *representation* of a group $G$ is a homomorphism from $G$ to a general linear group
 $$\rho:G\to\mathrm{GL}(V),$$
 where $V$ is called the *representation space*. For instance, the homomorphism
@@ -95,7 +91,7 @@ offers a representation of $\mathrm{SU}(2)$ on $\mathbb{R}^3$.
 
 More detailed discussion on representation theory can refer to [[Representation theory]].
 
-### 2.4 Fiber product
+### 2.3 Fiber product
 For two groups $G_1$ and $G_2$ that are homomorphic to a same group $H$
 $$\begin{aligned}&\phi_1:G_1\to H\\&\phi_2:G_2\to H,\end{aligned}$$
 a subgroup of $G_1\times G_2$ can be constructed as
@@ -209,7 +205,7 @@ Two left-cosets are either identical or disjoint, and every group element is in 
 The set of cosets of $H$ in $G$ is called a *homogeneous space*, denoted as $G/H$. This is the orbit under right $H$ action on $G$. The order of $G/H$ is called the *index of $H$ in $G$*, denoted as $[G:H]$.
 
 ### 6.2 Order of a group, again
-For a finite group $G$ and its subgroup $H$, their orders satisfy $|G|/|H|\in\mathbb{N}$. This is called the *Lagrange theorem*. As a corollary, a group with prime order p is isomorphic to Zp and has no non-trivial subgroup.
+For a finite group $G$ and its subgroup $H$, their orders satisfy $|G|/|H|\in\mathbb{N}$. This is called the *Lagrange theorem*. As a corollary, a group with prime order $p$ is isomorphic to $\mathbb{Z}_p$ and has no non-trivial subgroup.
 
 For a prime number $p$, if $|G|/p^k\in\mathbb{N}$, then $G$ has a subgroup $H$ of order $p^k$. This is called the *Sylow's (first) theorem*.
 
@@ -218,11 +214,12 @@ Two group elements $g_1$ and $g_2$ are called *conjugate* if there is an $h\in G
 
 Two subgroups $H$ and $K$ of $G$ are called *conjugate* if there is a $g\in G$ that
 $$K=gHg^{-1}\doteq\{ghg^{-1}\}.$$
-Two isomorphisms from $H$ to $G$ are called *conjugate* if there is a $g\in G$ that$$
+Two isomorphisms from $H$ to $G$ are called *conjugate* if there is a $g\in G$ that
+$$
 \forall h\in H,\quad \phi(h)=g\cdot\varphi(h)\cdot g^{-1}.
-$$^4b8273
+$$
 
-### Normal subgroups and quotient group
+### 6.4 Normal subgroups and quotient group
 A *normal subgroup* or *invarient subgroup* is a subgroup $N$ that satisfies
 $$\forall g\in G,\quad gNg^{-1}=N.$$
 Sometimes this is denoted as $N\triangleleft G$.
@@ -232,3 +229,30 @@ $$(gN)\ast(hN)\doteq(g\cdot h)N.$$
 This is called a *quotient group*.
 
 A group with no nontrivial normal subgroup is called a *simple group*.
+
+For any subgroup $H\subset G$, the *normalizer* of $H$ in $G$ is the largest subgroup $N\subset G$ that $H\triangleleft N$. It is given by
+$$
+N=\{g:gHg^{-1}=H\}.
+$$
+
+### 6.5 Commutator subgroup
+For two elements $g_1$ and $g_2$ in a group $G$, the *group commutator* is defined as
+$$
+[g_1,g_2]\doteq g_1g_2g_1^{-1}g_2^{-1}.
+$$
+It satisfies $[g_1,g_2]^{-1}=[g_2,g_1]$.
+
+The set of all group commutators is a subgroup of $G$ called the *commutator subgroup*, denoted as $[G,G]$. This is a normal subgroup of $G$ and $G/[G,G]$ is an abelian group. This is called the *abelianization* of $G$.
+
+A *perfect* group is a group that satisfies $G=[G,G]$.
+
+### 6.6 An example: Elliptic curve
+Consider $\mathbb{C}$ as an addition group and $\tau\in\mathbb{C}$ with nonzero imaginary part, then $\mathbb{Z}+\tau\mathbb{Z}$ is a subgroup of $\mathbb{C}$ in the form of a 2-dimensional lattice.
+
+Since $\mathbb{C}$ is abelian, one have the quotient group $\mathbb{C}/(\mathbb{Z}+\tau\mathbb{Z})$ in the form of a torus. This quotient group is isomorphic to $U(1)\times U(1)$.
+
+On the other hand, consider the algebraic equation
+$$
+y^2=x^3+fx+g,
+$$
+where $(x,y)\in\mathbb{C}^2$ and $f,g\in\mathbb{C}$. The solution space of this equation can be identified as the torus minus the origin $\mathbb{C}/(\mathbb{Z}+\tau\mathbb{Z})-\{0\}$.

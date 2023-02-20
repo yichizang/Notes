@@ -8,46 +8,19 @@
         "type": "tabs",
         "children": [
           {
-            "id": "3bdfe6add8758380",
+            "id": "5b0bb1209ab62462",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/Linear algebra.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ff27238ca15e3de5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Mathematics/Matrix theory.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4d2d756d4c38c320",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Mathematics/Abstract group theory.md",
+                "file": "Mathematics/The great C isomorphism theorem.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -77,7 +50,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mathematics/Matrix theory.md"
+                "file": "Mathematics/The great C isomorphism theorem.md"
               }
             }
           },
@@ -104,8 +77,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "ec2a585c0e71f23d",
@@ -140,7 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mathematics/Matrix theory.md",
+                "file": "Mathematics/The great C isomorphism theorem.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -157,7 +129,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mathematics/Matrix theory.md",
+                "file": "Mathematics/The great C isomorphism theorem.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -202,17 +174,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ff27238ca15e3de5",
+  "active": "5b0bb1209ab62462",
   "lastOpenFiles": [
-    "Mathematics/Abstract group theory.md",
     "Mathematics/Matrix theory.md",
-    "Mathematics/Vector analysis.md",
-    "Physics/Electrodynamics.md",
-    "Mathematics/Linear algebra.md",
     "Mathematics/Representation theory.md",
+    "Mathematics/Abstract group theory.md",
+    "Mathematics/The great C isomorphism theorem.md",
+    "Mathematics/Complex function.md",
+    "Physics/Electrodynamics.md",
+    "Mathematics/Vector analysis.md",
+    "Mathematics/Linear algebra.md",
     "Rep test/Representation theory 1.md",
-    "Rep test/Finite group.md",
-    "Rep test/Representation of finite group.md",
-    "Rep test/Character.md"
+    "Rep test/Finite group.md"
   ]
 }

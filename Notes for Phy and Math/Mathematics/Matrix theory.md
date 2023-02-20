@@ -99,4 +99,4 @@ $$
 $$
 The determinant of a matrx of an operator is also independent of the choice of basis.
 
-A matrix
+For two square matrices $A$ and $B$ of the same order, $\det(AB)=\det A\det B$.
