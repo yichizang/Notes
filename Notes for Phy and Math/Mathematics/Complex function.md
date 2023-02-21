@@ -73,8 +73,6 @@ $$
 $$
 Apparently $|z|^2=zz^\ast$. The norm of a complex number is actually the distance to the origin on the complex plane.
 
-The *argument* of a complex number $z$ is defined as
-$$
-\arg z\doteq\arctan\frac{y}{x}(+k\pi).
-$$
-The additional $k\pi$ term will be determined later. This is the angle 
+The *argument* of a complex number $z$ is defined as the angle it takes to rotate the complex number to the real axis clockwisely, denoted as $\arg z$. Note that there is some arbiguity of $2k\pi$ that will be determined later.
+
+### 1.5 Complex function

@@ -247,7 +247,7 @@ The set of all group commutators is a subgroup of $G$ called the *commutator sub
 A *perfect* group is a group that satisfies $G=[G,G]$.
 
 ### 6.6 An example: Elliptic curve
-Consider $\mathbb{C}$ as an addition group and $\tau\in\mathbb{C}$ with nonzero imaginary part, then $\mathbb{Z}+\tau\mathbb{Z}$ is a subgroup of $\mathbb{C}$ in the form of a 2-dimensional lattice.
+Consider $\mathbb{C}$ as an addition group and $\tau\in\mathbb{C}$ with nonzero imaginary part, then $\Lambda\doteq\mathbb{Z}+\tau\mathbb{Z}$ is a subgroup of $\mathbb{C}$ in the form of a 2-dimensional lattice.
 
 Since $\mathbb{C}$ is abelian, one have the quotient group $\mathbb{C}/(\mathbb{Z}+\tau\mathbb{Z})$ in the form of a torus. This quotient group is isomorphic to $U(1)\times U(1)$.
 
@@ -255,4 +255,12 @@ On the other hand, consider the algebraic equation
 $$
 y^2=x^3+fx+g,
 $$
-where $(x,y)\in\mathbb{C}^2$ and $f,g\in\mathbb{C}$. The solution space of this equation can be identified as the torus minus the origin $\mathbb{C}/(\mathbb{Z}+\tau\mathbb{Z})-\{0\}$.
+where $(x,y)\in\mathbb{C}^2$ and $f,g\in\mathbb{C}$. The solution space of this equation can be identified as the torus minus the origin $\mathbb{C}/(\mathbb{Z}+\tau\mathbb{Z})-\{0\}$. This identification is done through the following holomorphic function known as the *Weierstrass function*
+$$
+\wp(z|\tau)\doteq\frac{1}{z^2}+\sum_{w\in(\Lambda-\{0\})}\left[\frac{1}{(z-w)^2}-\frac{1}{w^2}\right].
+$$
+Here $z\notin\Lambda$. This series converges absolutely and it is doubly-periodic as
+$$
+\forall m,n\in\mathbb{Z},\quad\wp(z+m+n\tau|\tau)=\wp(z|\tau).
+$$
+Therefore, it is a meromorphic function on $\mathbb{C}/(\mathbb{Z}+\tau\mathbb{Z})$ with a second order pole on $z=0$.
