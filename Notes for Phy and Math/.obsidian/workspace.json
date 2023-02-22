@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e4effe9e2c89e32b",
+            "id": "14d10365665b130e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/Complex function.md",
+                "file": "Mathematics/Set theory.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,33 +21,19 @@
             }
           },
           {
-            "id": "cc0e1b5e835728ab",
+            "id": "241bae04fb20d454",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/Abstract group theory.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "eb72dae534ec5197",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Mathematics/Brief intro on elliptic curve.md",
+                "file": "Mathematics/Mathematical logic.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -77,7 +63,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mathematics/Brief intro on elliptic curve.md"
+                "file": "Mathematics/Set theory.md"
               }
             }
           },
@@ -140,7 +126,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mathematics/Brief intro on elliptic curve.md",
+                "file": "Mathematics/Set theory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -157,7 +143,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mathematics/Brief intro on elliptic curve.md",
+                "file": "Mathematics/Set theory.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -202,17 +188,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "eb72dae534ec5197",
+  "active": "14d10365665b130e",
   "lastOpenFiles": [
+    "Mathematics/Mathematical logic.md",
+    "Mathematics/Set theory.md",
     "Mathematics/Abstract group theory.md",
-    "Mathematics/Brief intro on elliptic curve.md",
-    "Mathematics/Complex function.md",
-    "Mathematics/The great C isomorphism theorem.md",
-    "Mathematics/Matrix theory.md",
-    "Mathematics/Representation theory.md",
-    "Physics/Electrodynamics.md",
-    "Mathematics/Vector analysis.md",
     "Mathematics/Linear algebra.md",
-    "Rep test/Representation theory 1.md"
+    "Mathematics/Brief intro on elliptic curve.md",
+    "Mathematics/Measure theory.md",
+    "Mathematics/Complex function.md",
+    "Mathematics/Vector analysis.md",
+    "Mathematics/The great C isomorphism theorem.md",
+    "Mathematics/Representation theory.md"
   ]
 }

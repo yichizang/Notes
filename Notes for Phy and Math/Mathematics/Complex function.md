@@ -3,7 +3,7 @@ banner: "![[../pics/e89c13e28827073cc0d224fca09aa8011661042690083.png]]"
 banner_y: 0.46
 ---
 
->[!abstract]- Pre knowledge
+>[!abstract]- Pre-knowledge
 >- Mathematical analysis
 
 # Complex function

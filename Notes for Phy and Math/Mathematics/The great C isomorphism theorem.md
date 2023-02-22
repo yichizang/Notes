@@ -3,7 +3,7 @@ banner: "![[pics/99662780_p0.jpg]]"
 banner_y: 0.424
 ---
 
->[!abstract]- Pre knowledge
+>[!abstract]- Pre-knowledge
 >- [[Abstract group theory]]
 >- [[Complex function]]
 

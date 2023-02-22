@@ -3,8 +3,8 @@ banner: "![[../pics/efff78ba0e222093cd67905dbb60ee001644897154196.jpeg]]"
 banner_y: 0.356
 ---
 
->[!abstract]- Pre knowledge
->- Set theory
+>[!abstract]- Pre-knowledge
+>- [[Set theory]]
 
 # Abstract group theory
 ## 1 Basic concepts
