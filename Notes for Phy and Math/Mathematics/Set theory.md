@@ -189,7 +189,7 @@ $$
 $$
 
 ---
-### 1.3 Relations and functions
+### 1.3 Relation
 #### 1.3.1 Cartesian product
 For two sets $a$ and $b$, their *ordered pair* is defined as the set
 $$
@@ -235,18 +235,80 @@ $$
 S\circ R\doteq\{(x,z):\exists y((x,y)\in R\land(y,z)\in S)\}.
 $$
 
-#### 1.3.3 Map
-If a binary relation $f$ satisfies
-$$
-((x,y)\in f\land(x,z)\in f)\Rightarrow y=z,
-$$
-then it is called *univalent* or *right-unique*. If $f$ satisfies
-$$
-\forall x\in X\exists y\in Y((x,y)\in f),
-$$
-then it is called *total*.
+#### 1.3.3 Possible properties of binary relation
+For a set $X$ and a binary relation $R$ on $X$, the following are the possible properties of $R$. The precondition is $\forall x,y,z\in X$.
 
-An univalent binary relation is called a *partial function*. A binary relation that is both univalent and total is called a *map* or *function*. Here $y$ is called the *value* of $f$ at $x$. One usually denote $(x,y)\in f$ as $f(x)=y$.
+| Name                     | Expression                             |
+| ------------------------ | -------------------------------------- |
+| Reflexivity              | $R(x,x)$                               |
+| Irreflexivity            | $\lnot R(x,x)$                         |
+| Symmetry                 | $R(x,y)\Rightarrow R(y,x)$             |
+| Asymmetry                | $\lnot (R(x,y)\land R(y,x))$           |
+| Anti-symmetry            | $R(x,y)\land R(y,x)\Rightarrow x=y$    |
+| Transitivity             | $R(x,y)\land R(y,z)\Rightarrow R(x,z)$ |
+| Total                    | $R(x,y)\lor R(y,x)$                    |
+| Connected                | $R(x,y)\lor R(y,x)\lor x=y$            | 
+| Univalent (Right-unique) | $R(x,y)\land R(x,z)\Rightarrow y=z$    |
+
+#### 1.3.4 Equivalence relation
+For a set $X$, an *equivalence relation* is a binary relation $R\subset X^2$ that satisfies [[#1.3.3 Possible properties of binary relation|reflexivity, symmetry and transitivity]]. An equivalence relation is often denoted as $\sim$. Note that equivalence relation is not always equality.
+
+For a set $X$ and $\mathcal{I}\subset\mathcal{P}(X)$, if $\mathcal{I}$ satisfies
+$$
+\begin{aligned}
+&\varnothing\in\mathcal{I},\\
+&(A\subset B\land B\in\mathcal{I})\Rightarrow A\in\mathcal{I},\\
+&A,B\in\mathcal{I}\Rightarrow A\cup B\in\mathcal{I},
+\end{aligned}
+$$
+then it is called an *ideal* on $X$. If $X\notin\mathcal{I}$ then it is called a *proper ideal*. The following binary relation defined by an ideal is an equivalence relation
+$$
+R\doteq\{(A,B)\in\mathcal{P}(\mathcal{I})^2:A\bigtriangleup B\in\mathcal{I}\}.
+$$
+
+#### 1.3.5 Equivalence class
+With an equivalence relation $\sim$ on a set $X$, one can define *equivalence class* $[a]$
+$$[a]\doteq\{x:x\in X,x\sim a\}.$$
+Note that an equivalence class is a set instead of a proper class. The set of all equivalence classes of $R$ is called the *quotient set* of $X$ by $R$, denoted as
+$$
+X/R\doteq\{[x]:x\in X\}.
+$$
+
+For a set $X$, a family of nonempty disjoint subsets $X_i\subset X$ that satisfies
+$$
+\begin{aligned}
+&\forall i,j\in I,i\ne j\Rightarrow X_i\cap X_j=\varnothing,\\
+&\bigcup\{X_i\}_I=X,
+\end{aligned}
+$$
+is called a *partition* of $X$. The equivalence classes on $X$ is a partition of $X$ and any partition of $X$ defines an equivalence relation.
+
+#### 1.3.6 Order
+For a set $X$, a *partial order* is a binary relation $\le$ that satisfies [[#1.3.3 Possible properties of binary relation|reflexivity, anti-symmetry and transitivity]]. If its also [[#1.3.3 Possible properties of binary relation|total]], then it is called a *total order*. If $\le$ is a partial order (total order) on $X$, then it is denoted as $(X,\le)$. The set $X$ is called a *partial ordered set* (*total ordered set*).
+
+For a set $X$, a *strict partial order* is a binary relation $<$ that satisfies [[#1.3.3 Possible properties of binary relation|irreflexivity, asymmetry and transitivity]]. If it is also [[#1.3.3 Possible properties of binary relation|connected]], then it is called a *strict total order*.
+
+For any order $\le$, there is an *associated strict order* $<$ defined as
+$$
+(x\le y\land x\ne y)\Rightarrow x<y.
+$$
+And vise versa.
+
+One also denote $<^{-1}$ as $>$ and $\le^{-1}$ as $\ge$.
+
+#### 1.3.7 Extremal, extremum and bound
+For $(X,\le)$, an element $x\in X$ is called a *minimal* if $\forall y\in X$ there is $\lnot(x>y)$, and it's called a *maximal* if $\lnot(x<y)$.
+
+The element $x\in X$ is called a *minimum* if $\forall y\in X$ there is $x\le y$, and is called a *maximum* if $x\ge y$. The extremums are unique if exists.
+
+In the case of total ordered set, the minimal is the minimum and the maximal is the maximum.
+
+For a subset $X_0\subset X$, if there is a $y\in X$ that $\forall x\in X_0$ there is $y\ge x$, then $y$ is called an *upper bound* of $X_0$. The minimum in the set of all upper bounds of $X_0$, if exists, is called the *supremum* of $X_0$, denoted as $\sup X_0$. Conversely one can define the *lower bound* and *infimum* of $X_0$, the later denoted as $\inf X_0$.
+
+---
+### 1.4 Map
+#### 1.4.1 Map
+An [[#1.3.3 Possible properties of binary relation|univalent]] binary relation is called a *partial function*. A binary relation that is both [[#1.3.3 Possible properties of binary relation|univalent and total]] is called a *map* or *function*. Here $y$ is called the *value* of $f$ at $x$. One usually denote $(x,y)\in f$ as $f(x)=y$.
 
 If $\mathrm{dom}(f)=X$ and $\mathrm{ran}(f)\subset Y$ and one have $f(x)=y$, then it is also denoted as
 $$
@@ -268,7 +330,7 @@ For a map $f:X\to Y$, if for any two $x_1,x_2\in X$, $x_1\ne x_2\Rightarrow f(x_
 
 If the inverse of a map is also a map, then this map is called *invertible*. A map is invertible if and only if it is injective.
 
-#### 1.3.4 Restriction and expansion
+#### 1.4.2 Restriction and expansion
 For a map $f$ and a set $A$, define the *restriction* of $f$ on $A$ as
 $$
 f\restriction A\doteq\{(x,y)\in f:x\in A\}.
@@ -277,7 +339,7 @@ If $g=f\restriction A$, then $f$ is called the *extension* of $g$.
 
 For two maps $f$ and $g$, they are called *compatible* if for all $x\in(\mathrm{dom}(f)\cap\mathrm{dom}(g))$ one have $f(x)=g(x)$. The intersection of two maps is also a map. The union of two compatible maps is also a map. It is a extension of both maps.
 
-#### 1.3.5 Index system
+#### 1.4.3 Index system
 A map $i\mapsto X_i$ with $X_i$ being a set and $i\in I$ is called an *index system* of sets. $I$ is called an *index set*. Such an index system is usually written as $X\doteq\{X_i\}_{i\in I}$ or $\{X_i\}_I$.
 
 For an index system $X=\{X_i\}_I$, its *general Cartesian product* is defined as
@@ -290,4 +352,20 @@ $$
 p_i:&&\prod_{j\in I}X_j&\to X_i\\
 &&f&\mapsto f(i).
 \end{aligned}
+$$
+
+---
+## 2 Number
+### 2.1 Natural number
+#### 2.1.1 Induction
+Remember that *successor* of set $X$ is defined as $S(X)\doteq X\cup\{X\}$. If a set $X$ that satisfies
+$$
+\varnothing\in X\land\forall x(x\in X\Rightarrow S(x)\in X),
+$$
+then it is called an *inductive set*. Therefore the [[#1.1.7 Axiom of infinity|axiom of infinity]] can be concluded as *an inductive set exists*.
+
+#### 2.1.2 Natural number
+The *set of all natural number* is defined as
+$$
+\mathbb{N}\doteq\{n:\forall X(X\text{ is inductive}\Rightarrow n\in X)\}.
 $$

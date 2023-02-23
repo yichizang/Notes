@@ -8,18 +8,7 @@ banner_y: 0.356
 
 # Abstract group theory
 ## 1 Basic concepts
-### 1.1 Equivalence relation
-For any set $X$, an *equivalence relation* is a binary relation $\sim$ that satisfies
-$$\begin{aligned}\forall a,b,c\in X,\quad&a\sim a;\\
-&a\sim b\Rightarrow b\sim a;\\
-&(a\sim b)\land(b\sim c)\Rightarrow a\sim c.\end{aligned}$$
-Notice that equivalence relation is not always equality.
-
-With an equivalence relation $\sim$ on a set $X$, one can define *equivalence class* $[a]$
-$$[a]\doteq\{x:x\in X,x\sim a\}.$$
-It can be proved that equivalence classes divide a set into disjoint subsets. And with a given disjoint decomposition of the set one can naturally construct an equivalence relation.
-
-### 1.2 Group
+### 1.1 Group
 A *group* is a set $G$ equipped with a *multiplication map* $\ast:G\times G\to G$, an *inverse map* $(\cdot)^{-1}:G\to G$ and an *identity element* $1_G\in G$. They sadisfy that $\forall g_1,g_2,g_3\in G$,
 $$\begin{aligned}&g_1\ast g_1^{-1}=g_1^{-1}\ast g_1=1_G;\\
 &1_G\ast g_1=g_1\ast 1_G=g_1;\\
@@ -31,12 +20,12 @@ A *subgroup* of $G$ is a subset $H$ that multiplication and inverse map preserve
 The *direct product* of two groups $G(\cdot)$ and $H(\ast)$ is also a group $G\times H$ with multiplication map $\star$
 $$(g_1,h_1)\star(g_2,h_2)\doteq(g_1\cdot g_2,h_1\ast h_2).$$
 
-### 1.3 Order of a group
+### 1.2 Order of a group
 The *order* of a group $G$ is the cardinality of $G$ as a set, denoted as $|G|$. That is roughly the number of elements in it. A group with its order $|G|<\infty$ is called a *finite group*, otherwise it is called an *infinite group*.
 
 The *order* of a group element $g$ is defined as the smallest natural number $n$ that makes $g^n=1_G$. Note that for a finite group $g^{|G|}=1_G$, so $|G|/n\in\mathbb{N}$. An element with order $2$ is called an *involution*.
 
-### 1.4 Abelian group
+### 1.3 Abelian group
 Two group elements $a$ and $b$ are *commute* if they satisfy
 $$a\cdot b=b\cdot a.$$
 A group with every element commute with each other is called an *Abelian group*.
@@ -45,7 +34,7 @@ The *center* of a group is the set of elements that commute with all elements in
 $$Z(G)\doteq\{z\in G:\forall g\in G,z\cdot g=g\cdot z\}.$$
 The center of a group is an abelian subgroup of it.
 
-### 1.5 General linear group
+### 1.4 General linear group
 *General linear group* is an important example of non-abelian group. It is defined as the group of all invertible linear transformation of a given vector space $V$, denoted as $\mathrm{GL}(V)$.
 
 For a finite dimensional $V$, there's an equivalent definition. Since $V$ is isomorphic to $\mathbb{F}^n$ where $\mathbb{F}$ is a field, one can define the general linear group as the group of all invertible $n\times n$ matrix on field $\mathbb{F}$. Under this definition, $\mathrm{GL}(V)$ is also denoted as $\mathrm{GL}(n,\mathbb{F})$.
@@ -62,7 +51,7 @@ $$\mathrm{Sp}(2n,\mathbb{F})\doteq\{A\in\mathrm{GL}(2n,\mathbb{F}):A^TJA=\mathbb
 where $J$ is *standard symplectic form* on $\mathbb{R}^{2n}$, defined as
 $$J\doteq\begin{pmatrix}0 & \mathbb{1}_n\\-\mathbb{1}_n & 0\end{pmatrix}.$$
 
-### 1.6 Examples of groups
+### 1.5 Examples of groups
 Some common groups are listed here.
 - The *cyclic group* of order $N$, denoted as $\mathbb{Z}_N$, is a group defined on $\{0,1,\cdots,N-1\}$, with the group multiplication defined as
 $$a\cdot b\doteq(a+b)\mod N;$$
@@ -120,9 +109,9 @@ In this way, the restrictions become $\Phi(g_1)\circ\Phi(g_2)=\Phi(g_1\ast g_2)$
 If $G$ can act on $X$, then $X$ is called a *$G$-set*.
 
 ### 3.2 Orbit
-If $X$ is a $G$-set, then one can define an equivalence relation $\sim$ on $X$
+If $X$ is a $G$-set, then one can define an [[Set theory#1.3.4 Equivalence relation|equivalence relation]] $\sim$ on $X$
 $$a\sim b\quad\Leftrightarrow\quad\exists g\in G,g\cdot a=b.$$
-The equivalence class of this relation $[x]$ is called the *orbit* of $G$ through point $x$. The set of orbits is denoted as $X/G$.
+The [[Set theory#1.3.5 Equivalence class|equivalence class]] of this relation $[x]$ is called the *orbit* of $G$ through point $x$. The set of orbits is denoted as $X/G$.
 
 ### 3.3 Group action on associated function space
 If $X$ is a $G$-set and $Y$ is any set, then there is naturally a left group action on the function space $\mathcal{F}[X\to Y]$, defined as

@@ -11,7 +11,7 @@ banner_y: 0.28
 ## 1 Measure and external measure
 ### 1.1 Defination of measure
 #### 1.1.1 Ring of sets
-For an arbitary set $X$, a *collection* is a set whose elements are subsets of $X$.
+For an arbitary set $X$, a *collection* is a set whose elements are [[Set theory#1.2.5 Subset|subsets]] of $X$.
 
 For a collection $R$, it is called a *ring* if it satisfies that $\forall E,F\in R$,
 $$
@@ -40,14 +40,14 @@ $$
 A *$\sigma$-ring* is also a ring.
 
 #### 1.1.3 Measure
-For a *ring* $R$ on $X$, a *measure* on the ring is a map $\mu$ defined as
+For a *ring* $R$ on $X$, a *measure* on the ring is a [[Set theory#1.4.1 Map|map]] $\mu$ defined as
 $$
 \mu:R\to\mathbb{R}+\{+\infty\}.
 $$
 
 This map should satisfies the following.
 - For any $E\in R$, its measure is nonnegative $\mu(E)\geqslant0$;
-- The empty set has zero measure $\mu\{\varnothing\}=0$;
+- The [[Set theory#1.2.1 Empty set|empty set]] has zero measure $\mu\{\varnothing\}=0$;
 - For a countable list of disjoint sets $\{E_n\}_{n\in\mathbb{N}}$, if $\bigcup_nE_n\in R$, then $\mu\left(\bigcup_nE_n\right)=\sum_n\mu(E_n)$.
 The last property is called *$\sigma$-additivity*.
 
@@ -78,7 +78,7 @@ For a ring $R$ on $X$, define the *Caratheodory expansion* of $R$ as
 $$
 H(R)\doteq\left\{E\subset X:\exists\{E_n\}_\mathbb{N}\subset R,E\subset\bigcup_{n=1}^\infty E_n\right\}.
 $$
-This is a *$\sigma$-ring*. For a measure $\mu$ of $R$, one can construct an outer measure $\mu^\ast:H(R)\to\mathbb{R}+\{+\infty\}$ as
+This is a *$\sigma$-ring*. For a measure $\mu$ of $R$, one can construct an outer measure $\mu^\ast:H(R)\to\mathbb{R}+\{+\infty\}$ as the [[Set theory#1.3.7 Extremal, extremum and bound|infimum]]
 $$
 \mu^\ast(E)\doteq\inf\left\{\sum_{n=1}^\infty\mu(E_n):E\subset\bigcup_{n=1}^\infty E_n\right\}.
 $$
