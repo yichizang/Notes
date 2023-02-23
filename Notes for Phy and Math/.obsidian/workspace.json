@@ -8,51 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "14d10365665b130e",
+            "id": "9d2d8602a6bde017",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/Set theory.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "241bae04fb20d454",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Mathematics/Mathematical logic.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "757605e6693811f3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Mathematics/Abstract group theory.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b7b3bf0e3b048389",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Mathematics/Measure theory.md",
+                "file": "Physics/Quantum field theory.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -89,7 +50,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mathematics/Set theory.md"
+                "file": "Physics/Quantum field theory.md"
               }
             }
           },
@@ -152,7 +113,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mathematics/Set theory.md",
+                "file": "Physics/Quantum field theory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -169,7 +130,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mathematics/Set theory.md",
+                "file": "Physics/Quantum field theory.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -214,10 +175,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "14d10365665b130e",
+  "active": "9d2d8602a6bde017",
   "lastOpenFiles": [
-    "Mathematics/Measure theory.md",
+    "Physics/Quantum field theory.md",
     "Mathematics/Set theory.md",
+    "Mathematics/Measure theory.md",
     "Mathematics/Abstract group theory.md",
     "Mathematics/Mathematical logic.md",
     "Mathematics/Linear algebra.md",
