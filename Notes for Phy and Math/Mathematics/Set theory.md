@@ -369,3 +369,12 @@ The *set of all natural number* is defined as
 $$
 \mathbb{N}\doteq\{n:\forall X(X\text{ is inductive}\Rightarrow n\in X)\}.
 $$
+The elements of $\mathbb{N}$ is called *natural number*. This is a set according to the [[#1.1.3 Axiom schema of separation|axiom schema of separation]] and the [[#1.1.7 Axiom of infinity|axiom of infinity]]. One can prove that $\mathbb{N}$ is inductive and is a subset of any inductive set.
+
+In $\mathbb{N}$, $\varnothing$ is usually denoted as $0$ and for any $n\in\mathbb{N}$, $S(n)$ is usually denoted as $n+1$.
+
+#### 2.1.3 Induction principle
+For any property $\varphi(p)$, if it satisfies
+- $\varphi(0)$,
+- $\varphi(n)\Rightarrow\varphi(n+1)$,
+then for any natural number $n\in\mathbb{N}$, $\varphi(n)$. This is called the *induction principle* on $\mathbb{N}$.
