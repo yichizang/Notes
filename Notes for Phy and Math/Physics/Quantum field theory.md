@@ -160,3 +160,35 @@ $$
 \sum_\lambda\epsilon_\mu\epsilon_\nu^\ast=-g_{\mu\nu}+\frac{p_\mu p_\nu}{m^2}.
 $$
 The mass on the denominator shows that this theory can't be smoothly transformed into massless theory.
+
+#### 2.2.3 Quantumization
+Write the Fourior decomposition of field operator as
+$$
+A_\mu=\int\frac{\mathrm{d}^3p}{(2\pi)^3}\frac{1}{\sqrt{2\omega_{\pmb{p}}}}\sum_{\lambda=1}^3\left[\epsilon_\mu(\pmb{p},\lambda)a_{\pmb{p},\lambda}e^{-i\pmb{p}\cdot\pmb{x}}+\epsilon_\mu^\ast(\pmb{p},\lambda)a_{\pmb{p},\lambda}^\dagger e^{i\pmb{p}\cdot\pmb{x}}\right].
+$$
+The exited state is then
+$$
+\ket{\pmb{p},\lambda}\doteq\sqrt{2\omega_{\pmb{p}}}a_{\pmb{p},\lambda}^\dagger\ket{0}.
+$$
+The commutator of annihilation and creation operator is
+$$
+\left[a_{\pmb{p},\lambda},a_{\pmb{p}',\lambda'}^\dagger\right]=(2\pi)^3\delta_{\lambda\lambda'}\delta^{(3)}(\pmb{p}-\pmb{p}').
+$$
+From this one can derive the commutator
+$$
+[A_\mu(x),A_\nu(y)]=\left(-g_{\mu\nu}-\frac{1}{m^2}\partial_\mu\partial_\nu\right)D(x-y),
+$$
+where $D(x-y)=[\phi(x),\phi(y)]$ for scalar field.
+
+#### 2.2.4 Hamiltonian
+The hamiltonian of the theory is given by
+$$
+\mathcal{H}=\sum_{\lambda=1}^3\int\mathrm{d}^3p\ \omega_{\pmb{p}}a_{\pmb{p},\lambda}a_{\pmb{p},\lambda}^\dagger.
+$$
+Similarly, the momentum operator is
+$$
+P^i=\sum_{\lambda=1}^3\int\mathrm{d}^3p\ p^ia_{\pmb{p},\lambda}a_{\pmb{p},\lambda}^\dagger.
+$$
+
+>[!warning]
+>I'm too sleepy right now. Finish the note later zzz.
