@@ -6,12 +6,25 @@ I tried to deploy a GitHub page with it but failed, as many of the markdown gram
 # Table of content
 - Mathematics
   - abstract group theory
-  - linear algebra
-  - representation theory
-  - vector analysis
-  - matrix theory
+  - brief intro on elliptic curve
   - complex function
+  - differential geometry
+  - linear algebra
+  - mathematical logic
+  - matrix theory
+  - measure theory
+  - representation theory
+  - set theory
+  - the great C isomorphism theorem
+  - topology
+  - vector analysis
 - Physics
   - electrodynamics
+  - Lie superalgebra
+  - quantum field theory
+  - representation of Lorentz algebra
+  - SUSY
+- Paper reading
+  - Supersymmetry and Morse theory
 
 Some of my earlier notes are taken in the format of `.tex`. I put them on my homepage http://phylab.fudan.edu.cn/doku.php?id=home:students:21300190008. I will translate them into markdown in the future.
