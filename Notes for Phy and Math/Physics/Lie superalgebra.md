@@ -17,7 +17,7 @@ A *supervectorspace* is a vector space $V$ that can be decomposed as
 $$
 V=V_0\oplus V_1,
 $$
-where the indice $0$ and $1$ are called the *grade* of the vector space. One can naturally define a *grading function*
+where the indices $0$ and $1$ are called the *grade* of the vector space. One can naturally define a *grading function*
 $$
 \eta(x)=i,\quad\text{if}\ x\in V_i.
 $$
@@ -64,7 +64,7 @@ $$
 ### 1.5 Supersymmetry algebra
 To associate elements in $\mathfrak{g}$ with actual physical symmetries, one consider $\mathfrak{g}=\mathfrak{g}_0+\mathfrak{g}_1$.
 
-According to Coleman Mandula theorem, $\mathfrak{g}_0$ can only represent [[Representation of Lorentz algebra#1.1 Poincare group|Poincare symmetry]] $P^\mu$ and $M^{\mu\nu}$ and internal symmetry $B_l$.
+According to Coleman Mandula theorem, $\mathfrak{g}_0$ can only represent [[Representation of Lorentz algebra#1.3 Lorentz Lie algebra|Poincare symmetry]] $P^\mu$ and $J^{\mu\nu}$ and internal symmetry $B_l$.
 
 Since $\mathfrak{g}_1$ is a representation of $\mathfrak{g}_0$, it has to be a representation of Lorentz Lie algebra $(N,M)$. According to the requirement of supersymmetry, its generators must be
 $$
@@ -73,7 +73,7 @@ $$
 where the bar means Hermitian conjugate. They are called *supercharge*. Actually, one can prove that $\mathfrak{g}_1$ must be the spinner representation of Lorentz group.
 
 >[!note]- Proof
->To work out the exact representation, one write down the indice explicitly as
+>To work out the exact representation, one write down the indices explicitly as
 >$$
 >\{Q_{nm}^{(N,M)}\},\ \{\bar{Q}_{nm}^{(M,N)}\}.
 >$$
@@ -97,7 +97,7 @@ where the bar means Hermitian conjugate. They are called *supercharge*. Actually
 >$$
 >X^{(N+M,N+M)}_{N+M,N+M}=\pm\{Q_{nm},\bar{Q}_{\tilde{n}\tilde{m}}].
 >$$
->According to requirement of supersymmetry, the right-hand-side is nonzero. Therefore the highest indice for $X$, which is $(N+M,N+M)$.
+>According to requirement of supersymmetry, the right-hand-side is nonzero. Therefore the highest indices for $X$, which is $(N+M,N+M)$.
 >
 >On the other hand, one have $\{Q_{nm},\bar{Q}_{\tilde{n}\tilde{m}}]\in\mathfrak{g}_0$. Therefore, the $X$ above is both an element in $\mathfrak{g}_0$ and a representation of it. Since $\mathfrak{g}_0$ can only represent Poincare or internal symmetry, which limits $(N+M,N+M)$ to the following.
 >- Poincare: $(1/2,1/2)$ or $(1,0)\oplus(0,1)$;

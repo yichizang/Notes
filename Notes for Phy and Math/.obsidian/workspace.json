@@ -8,45 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c09bb6a54c9c33c6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Mathematics/Differential geometry.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c523c45c14623b16",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Mathematics/Topology.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0b45e77fbb1bd4ed",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Physics/SUSY.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "06f6cb282d7739af",
             "type": "leaf",
             "state": {
@@ -84,9 +45,48 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "568d56ec63e34491",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Physics/Dirac algebra.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8c705efba6fe2eca",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Physics/Classical field theory.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e814a07ac6fa24cc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Mathematics/Measure theory.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -116,7 +116,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/Lie superalgebra.md"
+                "file": "Mathematics/Measure theory.md"
               }
             }
           },
@@ -143,7 +143,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "ec2a585c0e71f23d",
@@ -178,7 +179,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/Lie superalgebra.md",
+                "file": "Mathematics/Measure theory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -195,7 +196,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/Lie superalgebra.md",
+                "file": "Mathematics/Measure theory.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -240,12 +241,18 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "06f6cb282d7739af",
+  "active": "e814a07ac6fa24cc",
   "lastOpenFiles": [
+    "Mathematics/Set theory.md",
+    "Mathematics/Measure theory.md",
     "Physics/Representation of Lorentz algebra.md",
-    "Mathematics/Abstract group theory.md",
+    "Untitled.md",
+    "Physics/Dirac algebra.md",
+    "Conventions.md",
+    "Physics/Classical field theory.md",
     "Physics/Lie superalgebra.md",
     "Physics/Quantum field theory.md",
+    "Mathematics/Abstract group theory.md",
     "Physics/SUSY.md",
     "Mathematics/Differential geometry.md",
     "Mathematics/Topology.md",
@@ -253,8 +260,6 @@
     "Paper_reading/Supersymmetry and Morse theory.md",
     "test.md",
     "Paper_reading",
-    "Mathematics/Set theory.md",
-    "Mathematics/Measure theory.md",
     "Mathematics/Mathematical logic.md",
     "Mathematics/Linear algebra.md",
     "Mathematics/Brief intro on elliptic curve.md",

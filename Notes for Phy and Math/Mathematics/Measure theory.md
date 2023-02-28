@@ -8,8 +8,8 @@ banner_y: 0.28
 >- [[Linear algebra]]
 
 # Measure theory
-## 1 Measure and external measure
-### 1.1 Defination of measure
+## 1 Measure and outer measure
+### 1.1 Definition of measure
 #### 1.1.1 Ring of sets
 For an arbitary set $X$, a *collection* is a set whose elements are [[Set theory#1.2.5 Subset|subsets]] of $X$.
 
@@ -34,52 +34,107 @@ For a collection $R$, it is called a *$\sigma$-ring* if it satisfies
 $$
 \begin{aligned}
 &\forall E,F\in R,&&E-F\in R,\\
-&\forall\{E_n\}_{n\in\mathbb{N}}\subset R,&&\bigcup_nE_n\in R.
+&\forall\{E_n\}_{\mathbb{N}}\subset R,&&\bigcup\{E_n\}\in R.
 \end{aligned}
 $$
 A *$\sigma$-ring* is also a ring.
 
 #### 1.1.3 Measure
-For a *ring* $R$ on $X$, a *measure* on the ring is a [[Set theory#1.4.1 Map|map]] $\mu$ defined as
+For a *ring* $R$ on $X$, a *pre-measure* on the ring is a [[Set theory#1.4.1 Map|map]] $\mu$ defined as
 $$
-\mu:R\to\mathbb{R}+\{+\infty\}.
+\mu:R\to[0,+\infty].
 $$
 
 This map should satisfies the following.
-- For any $E\in R$, its measure is nonnegative $\mu(E)\geqslant0$;
 - The [[Set theory#1.2.1 Empty set|empty set]] has zero measure $\mu\{\varnothing\}=0$;
-- For a countable list of disjoint sets $\{E_n\}_{n\in\mathbb{N}}$, if $\bigcup_nE_n\in R$, then $\mu\left(\bigcup_nE_n\right)=\sum_n\mu(E_n)$.
+- For a countable list of disjoint sets $\{E_n\}_{\mathbb{N}}$, if $\bigcup\{E_n\}\in R$, then $\mu\left(\bigcup\{E_n\}\right)=\sum_n\mu(E_n)$.
 The last property is called *$\sigma$-additivity*.
 
+A pre-measure on a $\sigma$-ring is called a *measure*.
+
 #### 1.1.4 Outer measure
-For a *$\sigma$-ring* $S$ on $X$, an *outer meeasure* is defined as a map
+For a *$\sigma$-ring* $S$ on $X$, an *outer measure* is defined as a map
 $$
-\mu^\ast:S\to\mathbb{R}+\{+\infty\},
+\mu^\ast:S\to[0,+\infty]
 $$
 that satisfies the following.
-- For any $E\in S$, its measure is nonnegative $\mu^\ast(E)\geqslant0$;
 - The empty set has zero measure $\mu^\ast\{\varnothing\}=0$;
 - For $E\subset F$, $\mu^\ast(E)\leqslant\mu^\ast(F)$;
-- For a $\{E_n\}_{n\in\mathbb{N}}\subset S$, $\mu^\ast\left(\bigcup_nE_n\right)\leqslant\sum_n\mu^\ast(E_n)$.
+- For a $\{E_n\}_{\mathbb{N}}\subset S$, $\mu^\ast\left(\bigcup\{E_n\}\right)\leqslant\sum_n\mu^\ast(E_n)$.
 
-#### 1.1.5 Caratheodory collection
-A measure has a batter property than an outer measure, and here is a way to turn an outer measure into a measure.
+### 1.2 Caratheodory extension
+#### 1.2.1 Caratheodory-measurable
+For a *$\sigma$-ring* $S$ with an outer measure $\mu^\ast$, its *Caratheodory-measurable* is a set $M$ that
+$$
+M\doteq\{E\in S:\forall F\in S,\mu^\ast(F)=\mu^\ast(F\cap E)+\mu^\ast(F-E)\}.
+$$
+This defination means that an element $E$ in $M$ can separately measure any element $F$ in $S$.
 
-For a *$\sigma$-ring* $S$, its *Caratheodory collection* is defined as
-$$
-S^\ast\doteq\{E\in S:\forall F\in S,\mu^\ast(F)=\mu^\ast(F\cap E)+\mu^\ast(F-E)\}.
-$$
-This defination means that an element $E$ in $S^\ast$ can separately measure any element $F$ in $S$.
+One can prove that the Caratheodory-measurable $M$ is also a $\sigma$-ring and $\mu^\ast$ is a measure on it.
 
-One can prove that the Caratheodory collection $S^\ast$ is also a $\sigma$-ring and $\mu^\ast$ is a measurement on it.
+#### 1.2.2 Caratheodory extension
+For a ring $R$ on $X$, a subset $E\subset X$ is called *$R$-covered* if
+$$
+\exists\{E_n\}_\mathbb{N}\subset R,E\subset\bigcup\{E_n\}_{\mathbb{N}}.
+$$
+The set of all $R$-covered subsets forms a $\sigma$-ring
+$$
+\sigma(R)\doteq\left\{E\subset X:\exists\{E_n\}_\mathbb{N}\subset R,E\subset\bigcup\{E_n\}_{\mathbb{N}}\right\}.
+$$
+For a pre-measure $\mu$ of $R$, one can construct an outer measure $\mu^\ast:\sigma(R)\to[0,+\infty]$ as the [[Set theory#1.3.7 Extremal, extremum and bound|infimum]]
+$$
+\mu^\ast(E)\doteq\inf\left\{\sum_{n=1}^\infty\mu(E_n):E\subset\bigcup\{E_n\}_{\mathbb{N}}\right\}.
+$$
+Denote the Caratheodory-measurable of $\sigma(R)$ as $R^\ast$. One can prove that $\mu^\ast$ is a measure on $R^\ast$. Such a measure is called an *extension* of $\mu$ since $R\subset R^\ast$ and $\mu^\ast=\mu$ on $R$.
 
-#### 1.1.6 Caratheodory expansion
-For a ring $R$ on $X$, define the *Caratheodory expansion* of $R$ as
+### 1.3 Lebesgue-Stieltjes measure
+#### 1.3.1 A ring structure on $\mathbb{R}$
+Consider $X=\mathbb{R}$. Define a ring on $X$ as
 $$
-H(R)\doteq\left\{E\subset X:\exists\{E_n\}_\mathbb{N}\subset R,E\subset\bigcup_{n=1}^\infty E_n\right\}.
+R\doteq\left\{\bigcup\{E_i\}_N:\{E_i\}_N\subset P\right\}
 $$
-This is a *$\sigma$-ring*. For a measure $\mu$ of $R$, one can construct an outer measure $\mu^\ast:H(R)\to\mathbb{R}+\{+\infty\}$ as the [[Set theory#1.3.7 Extremal, extremum and bound|infimum]]
+where
 $$
-\mu^\ast(E)\doteq\inf\left\{\sum_{n=1}^\infty\mu(E_n):E\subset\bigcup_{n=1}^\infty E_n\right\}.
+P\doteq\{(a,b]:\forall a,b\in\mathbb{R}\}.
 $$
-Then using the concept of Caratheodory collection, $\mu^\ast$ is a measure on $H(R)^\ast$.
+One can prove that any $E\in R$ can be finitely decomposed into $E=\bigcup\{E_i\}$ where
+$$
+\begin{aligned}
+&\{E_i\}\subset R,\\
+\forall i\ne j,\ &E_i\cap E_j=\varnothing.
+\end{aligned}
+$$
+
+#### 1.3.2 Pre-measure of $R$
+A monotone right-continuous function $g(x)$ naturally generates the following map on $P$
+$$
+\begin{aligned}
+\mu_P:& &P&\to\mathbb{R}\\
+&&(a,b]&\mapsto g(b)-g(a).
+\end{aligned}
+$$
+Using the decomposition of $E\in R$, one can extend the definition of $\mu_P$ onto $R$ as
+$$
+\begin{aligned}
+\mu:& &R&\to\mathbb{R}\\
+&&\bigcup\{E_i\}&\mapsto\sum_i\mu_P(E_i).
+\end{aligned}
+$$
+This is a well-defined map despite that there are more than one way to decomposite a given $E\in R$. One can prove that $\mu$ is a pre-measure on $R$.
+
+#### 1.3.3 Lebesgue-Stieltjes measure
+As a general process of Caratheodory extension, one construct a $\sigma$-ring
+$$
+\sigma(R)\doteq\left\{E\subset X:\exists\{E_n\}_\mathbb{N}\subset R,E\subset\bigcup_{n=1}^\infty E_n\right\}.
+$$
+One can prove that this is just the [[Set theory#1.1.6 Axiom of power set|power set]] $\mathcal{P}(\mathbb{R})$. The outer measure generated is
+$$
+\mu^\ast(E)\doteq\inf\left\{\sum_{n=1}^\infty\mu(E_n):E\subset\bigcup\{E_n\}_{\mathbb{N}}\right\}.
+$$
+This is a measure of Caratheodory measurable $R^\ast$ called *Lebesgue-Stieltjes measure*.
+
+>[!example]
+>- Closed interval $\mu([a,b])=g(b)-g(a-0)$;
+>- Open interval $\mu((a,b))=g(b-0)-g(a)$;
+>- Point set $\mu(\{a\})=g(a)-g(a-0)$;
+>- etc.
