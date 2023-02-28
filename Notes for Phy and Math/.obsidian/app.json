@@ -1,0 +1,13 @@
+{
+  "showFrontmatter": false,
+  "showLineNumber": false,
+  "spellcheck": false,
+  "spellcheckLanguages": [
+    "en"
+  ],
+  "readableLineLength": true,
+  "newLinkFormat": "relative",
+  "useMarkdownLinks": false,
+  "attachmentFolderPath": "./",
+  "alwaysUpdateLinks": true
+}

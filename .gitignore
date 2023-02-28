@@ -1,0 +1,11 @@
+Notes for Phy and Math/pics/
+Notes for Phy and Math/pics/**
+Notes for Phy and Math/banner_icon.jpg
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
+_site
+Gemfile.lock
+*.gem
