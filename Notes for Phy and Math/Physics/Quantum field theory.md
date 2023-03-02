@@ -192,3 +192,232 @@ $$
 
 >[!warning]
 >I'm too sleepy right now. Finish the note later zzz.
+
+### 2.3 Massless spin-1?
+#### 2.3.1 Vector field
+For a vector field
+$$
+\mathcal{L}=-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}-j_\mu A^\mu,
+$$
+the EOM is
+$$
+\partial_\mu F^{\mu\nu}=j^\nu.
+$$
+It has a gauge invarience under gauge transformation
+$$
+A^\mu\to A^\mu+\partial^\mu\Lambda.
+$$
+One can check this by working out
+$$
+j_\mu A^\mu\to j_\mu(A^\mu+\partial^\mu\Lambda)=j_\mu A^\mu+\partial^\mu(j_\mu\Lambda)-\Lambda\partial\cdot j=j_\mu A^\mu.
+$$
+The last equality holds for $j\to0$ at infinity.
+
+#### 2.3.2 Different gauge
+The Lorentz gauge is
+$$
+\partial_\mu A^\mu=0,
+$$
+which leaves some unphysical state to be get rid of. A better gauge in this sense is *Coulomb gauge*
+$$
+\nabla\cdot\pmb{A}=0.
+$$
+Another possible gauge is *Axial gauge*
+$$
+A_z=0.
+$$
+
+Focusing on the Coulomb gauge, one write the zeroth component of EOM as
+$$
+\partial_i F^{i0}=j^0,
+$$
+which can be transformed into
+$$
+-\Delta A^0=j^0
+$$
+by gauge condition. The solution is then
+$$
+A^0(t,\pmb{x})=\int\mathrm{d}^3y\frac{j^0(t,\pmb{y})}{4\pi|\pmb{x}-\pmb{y}|}.
+$$
+
+On the other hand, for an arbitrary $\pmb{A}$, one can construct a gauge transformation to match the Coulomb gauge by
+$$
+\pmb{A}'=\pmb{A}-\nabla\Lambda,
+$$
+where
+$$
+\Lambda(t,\pmb{x})=-\int\mathrm{d}^3y\frac{\nabla_y\cdot\pmb{A}(t,\pmb{y})}{4\pi|\pmb{x}-\pmb{y}|}.
+$$
+One can then decomposite $\pmb{A}$ into a physical DOF $\pmb{A}_\perp$ and a nonphysical DOF $\pmb{A}_{//}$
+$$
+\pmb{A}=(P_\perp+P_{//})\pmb{A}
+$$
+where
+$$
+\begin{aligned}
+&(P_\perp)_{ij}\doteq\delta_{ij}-\partial_i\frac{1}{\Delta}\partial_j,\\
+&(P_{//})_{ij}\doteq\partial_i\frac{1}{\Delta}\partial_j.
+\end{aligned}
+$$
+
+#### 2.3.3 Polarization
+Write two polarizations as
+$$
+\begin{aligned}
+&\epsilon^\mu(\pmb{k},1)=(0,\pmb{\epsilon}(\pmb{k},1)),\\
+&\epsilon^\mu(\pmb{k},2)=(0,\pmb{\epsilon}(\pmb{k},2))
+\end{aligned}
+$$
+with constrain
+$$
+\pmb{k}\cdot\pmb{\epsilon}=0,\quad\pmb{\epsilon}(\pmb{k},\lambda_1)\pmb{\epsilon}(\pmb{k},\lambda_2)=\delta_{\lambda_1\lambda_2}.
+$$
+Only considering $\pmb{A}=\pmb{A}_\perp$, one can quantumize the field as
+$$
+[A^i(t,\pmb{x}),\pi^j(t,\pmb{y})]=-i\delta_{\perp ij}^{(3)}(\pmb{x}-\pmb{y}),
+$$
+where
+$$
+\delta_{\perp ij}^{(3)}\doteq(P_\perp)_{ij}\delta^{(3)}.
+$$
+After writting the plane-wave decomposition, one can obtain the commutator
+$$
+[a_{p_1,\lambda_1},a_{p_2,\lambda_2}^\dagger]=(2\pi)^3\delta_{\lambda_1\lambda_2}\delta^{(3)}(\pmb{p}_1-\pmb{p}_2).
+$$
+When doing plane-wave decomposition, it involves the completeness relation
+$$
+\sum_\lambda\epsilon^i\epsilon^j=\delta^{ij}-\frac{k^ik^j}{|\pmb{k}|^2}
+$$
+where the RHS is $\delta_\perp$ in momentum space.
+
+#### 2.3.4 Propogator
+The propogator is
+$$
+D^{\mu\nu}_F(x-y)\doteq\braket{0|TA^\mu(x)A^\nu(y)|0}.
+$$
+The physical components are
+$$
+D^{ij}_F(x-y)=\theta(x^0-y^0)\left(\delta^{ij}-\frac{\partial^i\partial^j}{\Delta}\right)D(x-y)
+$$
+according to completeness relation. Then one can write
+$$
+D^{\mu\nu}_F(x-y)=\int\frac{\mathrm{d}^4k}{(2\pi)^4}\frac{iP^{\mu\nu}(k)}{k^2+i\epsilon}e^{-ik\cdot(x-y)},
+$$
+where
+$$
+P^{ij}\doteq\delta^{ij}-\hat{k}^i\hat{k}^j,\quad P^{0\mu}=0.
+$$
+To regain Lorentz covarience of $D_F$, one introduce unphysical polarization
+$$
+\begin{aligned}
+&\epsilon^\mu(\pmb{k},0)=(1,\pmb{0}),\\
+&\epsilon^\mu(\pmb{k},3)=(0,\hat{k}).
+\end{aligned}
+$$
+Then the completeness relation becomes
+$$
+\sum_{\lambda_1,\lambda_2}\epsilon_\mu\epsilon_\nu^\ast g_{\lambda_1\lambda_2}=g_{\mu\nu}.
+$$
+By substracting the unphysical polarizations again, one can write
+$$
+P_{\mu\nu}=-g_{\mu\nu}-\frac{k_\mu k_\nu-(k_\mu n_\nu+k_\nu n_\mu)k\cdot n+n_\mu n_\nu k^2}{(k\cdot n)^2-k^2}
+$$
+where $n^\mu=\epsilon^\mu(0)$. Note that a propogator is always coupled with a conserved current, for instance $j^\mu$. Therefore any term with $k_\mu$ will be turned into a derivative and becomes zero applying on $j^\mu$.
+
+What's left can be written as
+$$
+\begin{aligned}
+D^{\mu\nu}_F(x-y)&=\int\frac{\mathrm{d}^4k}{(2\pi)^4}\frac{i}{k^2+i\epsilon}\left(-g_{\mu\nu}-\frac{n_\mu n_\nu k^2}{|\pmb{k}|^2}\right)e^{-ik\cdot(x-y)}\\
+&=(D_F^{\text{eff}})^{\mu\nu}+(D_F^{\text{Coul}})^{\mu\nu}.
+\end{aligned}
+$$
+Here the Coulomb proporgator gives
+$$
+(D_F^{\text{Coul}})^{\mu\nu}=-ig^{\mu0}g^{\nu0}\delta(x^0-y^0)\frac{1}{4\pi|\pmb{x}-\pmb{y}|}.
+$$
+
+#### 2.3.5 Hamiltonian
+Write the Lagrangian as
+$$
+\mathcal{L}_0=\frac{1}{2}(E_{//}^2+E_\perp^2-B^2)
+$$
+with
+$$
+\pmb{E}_{//}=-\dot{\pmb{A}},\quad\pmb{E}_\perp=-\nabla A^0.
+$$
+The Hamiltonian is then
+$$
+\mathcal{H}=\mathcal{H}_0+\mathcal{V}=\mathcal{H}_0+\frac{1}{2}A^0j^0-\pmb{j}\cdot\pmb{A}=\mathcal{H}_0+\mathcal{V}_{\text{Coul}}+\bar{V}.
+$$
+
+Expanding the interaction
+$$
+\begin{aligned}
+&\braket{0|T\exp\left[-i\int\mathrm{d}\tau V_I(t)\right]|0}\\
+=&\braket{0|1-i\int\mathrm{d}tV_{\text{Coul}}(t)+\frac{(-i)^2}{2!}\int\mathrm{d}^4x\mathrm{d}^4y(\cdots)|0}.
+\end{aligned}
+$$
+
+### 2.4 Symmetry
+Consider a theory with 2 Dirac fermion
+$$
+\mathcal{L}=\bar{\psi}_1(i\not\partial-m_1)\psi_1+\bar{\psi}_2(i\not\partial-m_2)\psi_2.
+$$
+It has two $U(1)$ symmetries. If taken $m_1=m_2$, then the symmetry is expanded to $U(2)$ by writing
+$$
+\mathcal{L}=\bar{\Psi}(i\not\partial-m)\mathbb{1}_2\Psi,
+$$
+where
+$$
+\Psi\doteq\begin{pmatrix}
+\psi_1\\
+\psi_2
+\end{pmatrix}.
+$$
+Note that $U(2)=SU(2)\times U(1)$.
+
+#### 2.4.1 Rep. of SU(N)
+Fundamental rep. and adjoint rep.. For fundamental rep.
+$$
+\psi_i\to\psi_i+ig\alpha^a(T_{\text{fund}}^a)_{ij}\psi_j,
+$$
+where $a,b,\cdots$ label generators and $i,j,k,\cdots$ label flavors/colors.
+
+| group name | generator         |
+| ---------- | ----------------- |
+| SU(2)      | $T^1=\sigma^a/2$  |
+| SU(3)      | $T^a=\lambda^a/2$ |
+
+$$
+\sum_{c,d}f^{acd}f^{bcd}=N\delta^{ab},\quad\mathrm{Tr}(T^aT^b)=\frac{1}{2}\delta^{ab}.
+$$
+For adjoint rep.
+$$
+(T_{\text{adj}}^a)^{bc}=-if^{abc}.
+$$
+
+### 2.5 Yang-Mills
+Consider $N$ fields with same mass
+$$
+\Psi=\begin{pmatrix}
+\psi_1\\
+\vdots\\
+\psi_N
+\end{pmatrix}.
+$$
+The symmetry is $SU(N)$ that
+$$
+\Psi(x)\to V(x)\Psi(x).
+$$
+Consider a gauge transition function such that
+$$
+U(y,x)\to V(y)U(y,x)V^\dagger(x).
+$$
+Write it in the infinitesimal form
+$$
+U(x+\epsilon n,x)=1+ig\epsilon n^\mu A_\mu(x)+\cdots
+$$
+where $A_\mu$ are traceless unitary matrices. One can derive that $A_\mu$ transforms as
+$$
+A_\mu(x)\to V(x)\left(A_\mu(x)+\frac{i}{g}\partial_\mu\right)V^\dagger(x).
+$$

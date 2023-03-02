@@ -11,17 +11,32 @@ banner_y: 0.304
 ## 1 Introduction
 *Dirac algebra* is a subalgebra of Clifford algebra $\mathrm{Cl}_{1,3}(\mathbb{C})$. The basis of Dirac algebra is listed as follow.
 
-| Type          | Element(s)                                                         |
-| ------------- | ------------------------------------------------------------------ |
-| Scalar        | $1_\gamma$                                                       |
-| Vectors       | $\gamma^\mu:\{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu}\times1_\gamma$ |
-| Pseudoscalar  | $\gamma^5\doteq i\gamma^0\gamma^1\gamma^2\gamma^3$                 |
-| Pseudovectors | $\gamma^\mu\gamma^5$                                               |
-| Tensors       | $\sigma^{\mu\nu}\doteq\dfrac{i}{2}[\gamma^\mu,\gamma^\nu]$         |
+| Type          | Element(s)                                                          | Total number |
+| ------------- | ------------------------------------------------------------------- | ------------ |
+| Scalar        | $1_\gamma$                                                          | $1$          |
+| Vectors       | $\gamma^\mu:\{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu}\times1_\gamma$ | $4$          |
+| Pseudoscalar  | $\gamma^5\doteq i\gamma^0\gamma^1\gamma^2\gamma^3$                  | $1$          |
+| Pseudovectors | $\gamma^\mu\gamma^5$                                                | $4$          |
+| Tensors       | $\sigma^{\mu\nu}\doteq\dfrac{i}{2}[\gamma^\mu,\gamma^\nu]$          | $6$          | 
 
-These $\gamma^\mu$ and $\gamma^5$ are also called *Dirac matrix*.
+The $\gamma^\mu$ and $\gamma^5$ are also called *Dirac matrix*.
 
-## 2 Properties
+## 2 Fierz identity
+Denote the 16 elements as $\Gamma^i$. They form a complete basis of $4\times 4$ matrix with two [[Representation of Lorentz algebra#2.4 Spinor representation|Dirac spinor]] indices. That is
+$$
+\Gamma=\sum_iA_i\Gamma^i.
+$$
+There is also the orthogonality relation
+$$
+\mathrm{Tr}(\Gamma^i\Gamma^j)=4\delta^{ij}.
+$$
+Therefore, one have
+$$
+\Gamma=\sum_i\mathrm{Tr}(\Gamma\Gamma^i)\Gamma^i,
+$$
+which is called the *Fierz identity*.
+
+## 3 Properties
 The multiplication of Dirac matrix satisfies
 $$
 (\gamma^\mu)^2=\eta^{\mu\mu}\times1_\gamma,\quad(\gamma^5)^2=1_\gamma.
@@ -32,7 +47,7 @@ $$
 \{\gamma^5,\gamma^\mu\}=0,\quad[\gamma^5,\sigma^{\mu\nu}]=0.
 $$
 
-## 3 Trace
+## 4 Trace
 The trace of Dirac matrix satisfies
 $$
 \mathrm{Tr}(1_\gamma)=4,\quad\mathrm{Tr}(\gamma^\mu)=\mathrm{Tr}(\gamma^5)=0.
@@ -50,7 +65,7 @@ $$
 \end{aligned}
 $$
 
-## 4 Contraction
+## 5 Contraction
 The contraction of Dirac matrix satisfies
 $$
 \begin{aligned}
@@ -61,7 +76,7 @@ $$
 \end{aligned}
 $$
 
-## 5 Instance
+## 6 Instance
 An instance of Dirac matrix is
 $$
 \gamma^\mu\mapsto\begin{pmatrix}

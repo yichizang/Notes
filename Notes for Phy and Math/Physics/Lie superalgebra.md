@@ -1,5 +1,8 @@
 ---
 banner: "![[../pics/371054ab98143e770df64f1b57e11fcb1662130033085.jpeg]]"
+---
+---
+banner: "![[../pics/371054ab98143e770df64f1b57e11fcb1662130033085.jpeg]]"
 banner_y: 0.236
 ---
 

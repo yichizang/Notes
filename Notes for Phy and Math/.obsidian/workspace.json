@@ -8,19 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "06f6cb282d7739af",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Physics/Lie superalgebra.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "a359407b07cef3ef",
             "type": "leaf",
             "state": {
@@ -71,22 +58,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "e814a07ac6fa24cc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Mathematics/Measure theory.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -116,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/Lie superalgebra.md"
+                "file": "Physics/Classical field theory.md"
               }
             }
           },
@@ -143,7 +117,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "ec2a585c0e71f23d",
@@ -178,7 +153,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/Lie superalgebra.md",
+                "file": "Physics/Classical field theory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -195,7 +170,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/Lie superalgebra.md",
+                "file": "Physics/Classical field theory.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -240,18 +215,18 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "1307d553fa585883",
+  "active": "8c705efba6fe2eca",
   "lastOpenFiles": [
-    "Mathematics/Set theory.md",
-    "Mathematics/Measure theory.md",
     "Physics/Representation of Lorentz algebra.md",
-    "Untitled.md",
-    "Physics/Dirac algebra.md",
-    "Conventions.md",
     "Physics/Classical field theory.md",
-    "Physics/Lie superalgebra.md",
+    "Physics/Dirac algebra.md",
     "Physics/Quantum field theory.md",
     "Mathematics/Abstract group theory.md",
+    "Physics/Lie superalgebra.md",
+    "Mathematics/Set theory.md",
+    "Mathematics/Measure theory.md",
+    "Untitled.md",
+    "Conventions.md",
     "Physics/SUSY.md",
     "Mathematics/Differential geometry.md",
     "Mathematics/Topology.md",
