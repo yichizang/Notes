@@ -6,6 +6,7 @@ banner_y: 0.304
 >[!abstract]- Pre-knowledge
 >- [[../Mathematics/Linear algebra|Linear algebra]]
 >- [[../Mathematics/Matrix theory|Matrix theory]]
+>- [[Representation of Lorentz algebra]]
 
 # Dirac algebra
 ## 1 Introduction
@@ -21,7 +22,8 @@ banner_y: 0.304
 
 The $\gamma^\mu$ and $\gamma^5$ are also called *Dirac matrix*.
 
-## 2 Fierz identity
+## 2 Calculation rules
+### 2.1 Fierz identity
 Denote the 16 elements as $\Gamma^i$. They form a complete basis of $4\times 4$ matrix with two [[Representation of Lorentz algebra#2.4 Spinor representation|Dirac spinor]] indices. That is
 $$
 \Gamma=\sum_iA_i\Gamma^i.
@@ -36,7 +38,7 @@ $$
 $$
 which is called the *Fierz identity*.
 
-## 3 Properties
+### 2.2 Multiplication
 The multiplication of Dirac matrix satisfies
 $$
 (\gamma^\mu)^2=\eta^{\mu\mu}\times1_\gamma,\quad(\gamma^5)^2=1_\gamma.
@@ -47,7 +49,7 @@ $$
 \{\gamma^5,\gamma^\mu\}=0,\quad[\gamma^5,\sigma^{\mu\nu}]=0.
 $$
 
-## 4 Trace
+### 2.3 Trace
 The trace of Dirac matrix satisfies
 $$
 \mathrm{Tr}(1_\gamma)=4,\quad\mathrm{Tr}(\gamma^\mu)=\mathrm{Tr}(\gamma^5)=0.
@@ -65,7 +67,7 @@ $$
 \end{aligned}
 $$
 
-## 5 Contraction
+### 2.4 Contraction
 The contraction of Dirac matrix satisfies
 $$
 \begin{aligned}
@@ -76,7 +78,14 @@ $$
 \end{aligned}
 $$
 
-## 6 Instance
+## 3 Lorentz transformation
+There is an important identity for the Lorentz transformation of Dirac matrix
+$$
+(\Lambda_{\frac{1}{2}}^{-1})^a{}_b(\gamma^\mu)^b{}_c(\Lambda_{\frac{1}{2}})^c{}_d=\Lambda^\mu{}_\nu(\gamma^\nu)^a{}_d.
+$$
+This shows that the Dirac matrix has one vector index and two (inverse) spinor indices, which means that the Dirac matrix as a whole is invarient under Lorentz transformation.
+
+## 4 Instance
 An instance of Dirac matrix is
 $$
 \gamma^\mu\mapsto\begin{pmatrix}
@@ -97,8 +106,8 @@ $$
 0 & 1\\
 1 & 0
 \end{pmatrix},\quad\sigma^2\doteq\begin{pmatrix}
-i & 0\\
-0 & -i
+0 & -i\\
+i & 0
 \end{pmatrix},\quad\sigma^3\doteq\begin{pmatrix}
 1 & 0\\
 0 & -1

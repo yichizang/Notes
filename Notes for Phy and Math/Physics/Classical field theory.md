@@ -40,6 +40,7 @@ one can get the equation of motion for field
 $$
 \frac{\partial}{\partial x^\mu}\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi_\alpha)}-\frac{\partial\mathcal{L}}{\partial\phi_\alpha}=0.
 $$
+This is called the *Eular-Lagrangian equation*.
 
 ### 1.4 Hamiltonian
 From the Hamiltonian point of view, one can define the *conjugate momentum* of field as
@@ -138,3 +139,108 @@ $$
 J^{ij}=\int\mathrm{d}^3x\ \pi^\alpha\left[(x^i\partial^j-x^j\partial^i)\delta^\beta_\alpha+i(J^{ij})^\beta_\alpha\right]\phi_\beta,
 $$
 where the first term is the *orbital angular momentum* and the second term is the *spin angular momentum* of the field.
+
+## 3 Klein-Gorden Field
+### 3.1 Lorentz invarience of scalar
+The Lorentz invarient one can construct from a scalar field $\phi$ other than the power of $\phi$ is $\partial^2\phi$ and $(\partial\phi)^2$. 
+
+### 3.2 Lagrangian
+The Lagrangian for the Klein-Gordan field is
+$$
+\mathcal{L}=\frac{1}{2}\partial_\mu\phi\partial^\mu\phi-\frac{1}{2}m^2\phi^2.
+$$
+The equation of motion is given by
+$$
+(\partial_\mu\partial^\mu+m^2)\phi=0.
+$$
+
+### 3.3 Hamiltonian
+The conjugate momentum of this field is
+$$
+\pi(x)=\dot{\phi}(x).
+$$
+Therefore, the Hamiltonian and total momentum is given by
+$$
+\begin{aligned}
+H&=\int\mathrm{d}^3x\ \mathcal{H}=\int\mathrm{d}^3x\left[\frac{1}{2}\pi^2+\frac{1}{2}(\nabla\phi)^2+\frac{1}{2}m^2\phi^2\right],\\
+P^i&=-\int\mathrm{d}^3x\ \pi\partial^i\phi.
+\end{aligned}
+$$
+
+## 4 Dirac field
+### 4.1 Lorentz invarience of spinor
+For a Dirac spinor
+$$
+\psi=\begin{pmatrix}
+\psi_L\\
+\psi_R
+\end{pmatrix},
+$$
+one can define $\bar{\psi}\doteq\psi^\dagger\gamma^0$. Then, the following Lorentz invarient can be constructed from them
+$$
+\bar{\psi}\psi,\quad\bar{\psi}\gamma^\mu\psi A_\mu,\quad\bar{\psi}\gamma^\mu\partial_\mu\psi,\quad\bar{\psi}\gamma^5\psi,\quad\bar{\psi}\gamma^\mu\gamma^5\psi A_\mu,\quad\bar{\psi}\gamma^\mu\gamma^5\partial_\mu\psi,\quad\cdots
+$$
+
+### 4.2 Lagrangian
+For Dirac field, the Lagrangian is
+$$
+\mathcal{L}=\bar{\psi}(i\gamma^\mu\partial_\mu-m)\psi.
+$$
+The equation of motion is given by
+$$
+\begin{aligned}
+(i\gamma^\mu\partial_\mu-m)\psi&=0,\\
+-i\partial_\mu\bar{\psi}\gamma^\mu-m\bar{\psi}&=0.
+\end{aligned}
+$$
+This can be written in the form of Weyl spinor
+$$
+\psi=\begin{pmatrix}
+\psi_L\\
+\psi_R
+\end{pmatrix}.
+$$
+With the notation in [[Dirac algebra]], the equation of motion is
+$$
+\begin{pmatrix}
+-m & i\sigma^\mu\partial_\mu\\
+i\bar{\sigma}^\mu\partial_\mu & -m
+\end{pmatrix}\begin{pmatrix}
+\psi_L\\
+\psi_R
+\end{pmatrix}=0.
+$$
+When $m=0$, the equation of two Weyl spinors decouples into
+$$
+i\bar{\sigma}^\mu\partial_\mu\psi_L=0,\quad i\sigma^\mu\partial_\mu\psi_R=0.
+$$
+
+### 4.3 Plane-wave solution
+Expand the field under momentum representation, one get
+$$
+\psi=\int_{p^0\geqslant0}\frac{\mathrm{d}^3p}{(2\pi)^3}\left(u(\pmb{p})e^{-i\pmb{p}\cdot\pmb{x}}+v(\pmb{p})e^{i\pmb{p}\cdot\pmb{x}}\right).
+$$
+The Dirac equation can be written as
+$$
+(\not p-m)u(\pmb{p})=0,\quad-(\not p+m)v(\pmb{p})=0
+$$
+where $\not p\doteq\gamma^\mu p_\mu$. The solution can be written as
+$$
+u(\pmb{p})=\begin{pmatrix}
+\sqrt{p\cdot\sigma}\xi\\
+\sqrt{p\cdot\bar{\sigma}}\xi
+\end{pmatrix},\quad v(\pmb{p})=\begin{pmatrix}
+\sqrt{p\cdot\sigma}\eta\\
+-\sqrt{p\cdot\bar{\sigma}}\eta
+\end{pmatrix}
+$$
+where $\xi$ and $\eta$ are orthogonal Weyl spinors to denote the spin. One can denote the spin with an upper index $u^s$ and $v^r$. Some identities are given here.
+$$
+\begin{aligned}
+&\bar{u}{}^r(\pmb{p}_1)u^s(\pmb{p}_1)=2m\delta^{rs},&&u^{r\dagger}(\pmb{p}_1)u^s(\pmb{p}_1)=2p_1^0\delta^{rs},\\
+&\bar{v}{}^r(\pmb{p}_1)v^s(\pmb{p}_1)=-2m\delta^{rs},&&v^{r\dagger}(\pmb{p}_1)v^s(\pmb{p}_1)=2p_1^0\delta^{rs},\\
+&\sum_su^s(\pmb{p}_1)\bar{u}{}^s(\pmb{p}_1)=\not{p}_1+m\times1_\gamma,&&\sum_sv^s(\pmb{p}_1)\bar{v}{}^s(\pmb{p}_1)=\not{p}_1-m\times1_\gamma.
+\end{aligned}
+$$
+
+### 4.4 Helicity

@@ -8,7 +8,59 @@
         "type": "tabs",
         "children": [
           {
-            "id": "a359407b07cef3ef",
+            "id": "db7cc43433422908",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Mathematics/Topology.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "60b484362ff01a73",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Mathematics/Differential geometry.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "479e0b60c01300a3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Physics/SUSY.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "188739fd8f8691de",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Mathematics/Abstract group theory.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "5e7861bec5a01eb0",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -19,48 +71,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "8f328948da975e94",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Physics/Representation of Lorentz algebra.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "568d56ec63e34491",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Physics/Dirac algebra.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8c705efba6fe2eca",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Physics/Classical field theory.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -90,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/Classical field theory.md"
+                "file": "Mathematics/Differential geometry.md"
               }
             }
           },
@@ -153,7 +166,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/Classical field theory.md",
+                "file": "Mathematics/Differential geometry.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -170,7 +183,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/Classical field theory.md",
+                "file": "Mathematics/Differential geometry.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -212,30 +225,34 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "8c705efba6fe2eca",
+  "active": "60b484362ff01a73",
   "lastOpenFiles": [
-    "Physics/Representation of Lorentz algebra.md",
-    "Physics/Classical field theory.md",
-    "Physics/Dirac algebra.md",
-    "Physics/Quantum field theory.md",
-    "Mathematics/Abstract group theory.md",
-    "Physics/Lie superalgebra.md",
-    "Mathematics/Set theory.md",
-    "Mathematics/Measure theory.md",
-    "Untitled.md",
-    "Conventions.md",
     "Physics/SUSY.md",
     "Mathematics/Differential geometry.md",
+    "pics/106010900_p0.png",
+    "pics/105622306_p0.jpg",
+    "Mathematics/Abstract group theory.md",
+    "Mathematics/Set theory.md",
+    "Physics/Lie superalgebra.md",
     "Mathematics/Topology.md",
+    "Physics/Quantum field theory.md",
+    "Physics/Dirac algebra.md",
+    "Mathematics/Linear algebra.md",
+    "Physics/Classical field theory.md",
+    "Physics/Representation of Lorentz algebra.md",
+    "Untitled.md",
+    "Untitled 1.md",
+    "Mathematics/Measure theory.md",
+    "Conventions.md",
     "Untitled",
     "Paper_reading/Supersymmetry and Morse theory.md",
     "test.md",
     "Paper_reading",
     "Mathematics/Mathematical logic.md",
-    "Mathematics/Linear algebra.md",
     "Mathematics/Brief intro on elliptic curve.md",
     "Mathematics/Complex function.md",
     "Mathematics/Vector analysis.md",

@@ -421,3 +421,182 @@ where $A_\mu$ are traceless unitary matrices. One can derive that $A_\mu$ transf
 $$
 A_\mu(x)\to V(x)\left(A_\mu(x)+\frac{i}{g}\partial_\mu\right)V^\dagger(x).
 $$
+
+Using the gauge transition function, one can define a derivitive
+$$
+n^\mu D_\mu\psi\doteq\lim_{\epsilon\to0}\frac{1}{\epsilon}[\psi(x+\epsilon n)-U(x+\epsilon n,x)\psi(x)].
+$$
+Then
+$$
+(D_\mu\psi)_i=\partial_\mu\psi_i-ig(A_\mu)_{ij}\psi_j.
+$$
+One can see that under gauge transformation, one have
+$$
+D_\mu\psi\to V(x)D_\mu\psi,\quad[D_\mu,D_\nu]\psi\to V(x)[D_\mu,D_\nu]\psi.
+$$
+Define the commutator as
+$$
+[D_\mu,D_\nu]=-igF_{\mu\nu}=-ig(\partial_\mu A_\nu-\partial_\nu A_\mu-ig[A_\mu,A_\nu]).
+$$
+This provides a gauge invarient kinetic term for $A$, that is $\mathrm{Tr}(F_{\mu\nu}F^{\mu\nu})$. Then the Lagrangian gives
+$$
+\mathcal{L}=-\frac{1}{4}\mathrm{Tr}(F_{\mu\nu}F^{\mu\nu})+\bar{\psi}(i\not D-m)\psi.
+$$
+Note that one can't arbitrarily add mass terms since this will break the gauge invariance. Therefore the theory will give many massless gauge fields.
+
+Decompose the field under the generator of $SU(N)$, one get
+$$
+A_\mu=A_\mu^a T^a.
+$$
+Similar to the charge conservation given by $U(1)$ symmetry, one can write a conservation current
+$$
+j_\mu^a=-\bar{\psi}_i\gamma_\mu T_{ij}^a\psi_j+f^{abc}A^{b,\nu}F_{\mu\nu}^c.
+$$
+But note that such current is not gauge invariant, which means that it has no classical meaning.
+
+### 2.6 Wilson loop
+Consider a path $\gamma$ that connects $x$ and $y$, one can write the gauge transition function as
+$$
+\begin{aligned}
+U_\gamma(x,y)&=\lim_{n\to\infty}U(y,x_n)U(x_n,x_{n-1})\cdots U(x_1,x)\\
+&=\lim_{\Delta x\to0}\prod_j(1+igA_\mu(x_j)\Delta x^\mu)\\
+&=1+ig\int_0^1\mathrm{d}s_1A_\mu(x(s_1))\frac{\mathrm{d}x^\mu}{\mathrm{d}s_1}+(ig)^2\int_0^1\mathrm{d}s_1\int_0^{s_1}\mathrm{d}s_2[\cdots]+\cdots.
+\end{aligned}
+$$
+To calculate such function, one need to introduce the concept of path ordering, which is similar to the time ordering. Then, one can write the series as
+$$
+U_\gamma(x,y)=\mathbb{P}\exp\left[ig\int_0^1\mathrm{d}s\frac{\mathrm{d}x^\mu}{\mathrm{d}s}A_\mu(x(s))\right].
+$$
+Take a closed path as $y=x$, then the gauge transformation gives
+$$
+U_\Gamma(x,x)\to V(x)U_\Gamma(x,x)V^\dagger(x).
+$$
+To get a gauge invarient term, one can take a trace
+$$
+\mathrm{Tr}\ U_\Gamma(x,x)=\mathrm{Tr}\ \mathbb{P}\exp\left[ig\int\mathrm{d}x^\mu A_\mu\right].
+$$
+
+## 3 Path integral
+### 3.1 The path integral QM
+Write the connection between Heisenberg picture and Schordinger picture
+$$
+Q_H(t)=e^{iHt/\hbar}Q_Se^{-iHt/\hbar}.
+$$
+Then the instance eigenvector under Heisenberg picture satisfies
+$$
+Q_H(t)\ket{q,t}_H=q\ket{q,t}_H
+$$
+and under Schordinger picture one have
+$$
+\ket{q(t)}_S=e^{-iHt/\hbar}\ket{q,t}_H,
+$$
+then
+$$
+Q_H(t)\ket{q,t}_H=e^{iHt/\hbar}Q_Se^{-iHt/\hbar}\ket{g,t}_H=e^{iHt/\hbar}q\ket{q(t)}_S=q\ket{q,t}_H.
+$$
+There is also the completeness relation of instance eigenvector
+$$
+\int_{-\infty}^{+\infty}\mathrm{d}q\ket{q,t}_{HH}\bra{q,t}=1.
+$$
+
+#### 3.1.1 Feynman kernal
+Now define the transition amplitude as
+$$
+\begin{aligned}
+U(g_2,t_2;g_1,t_1)&={}_H\braket{q_2,t_2|q_1,t_1}_H\\
+&={}_S\braket{q_2(t_2)|e^{-iHt_2/\hbar+iHt_1/\hbar}|q_1(t_1)}_S.
+\end{aligned}
+$$
+This can be written as
+$$
+\begin{aligned}
+U&=\lim_{n\to\infty}\bra{q_2(t_2)}(1-iH\delta t/\hbar)^n\ket{q_1(t_1)},\quad\delta t=\frac{t_2-t_1}{n}\to0\\
+&=\lim_{n\to\infty}\prod_{i=1}^n\int\mathrm{d}q_i
+\end{aligned}
+$$
+
+### 3.2 Quantization of scalar field
+#### 3.2.1 Feynman kernal
+As an analogue to instance eigenstate $\ket{q,t}$, one can define the instance eigenstate of field operator
+$$
+\phi(t,\pmb{x})\ket{\phi_1,t}=\phi_1(t,\pmb{x})\ket{\phi_1,t}.
+$$
+Similar to the case in QM, one can write
+$$
+\begin{aligned}
+&\braket{\phi_f,t_f|\phi_i,t_i}\\
+=&\int[D\phi_1][D\pi_1]\exp\left[i\int_{t_i}^{t_f}\mathrm{d}t\int\mathrm{d}^3x\left(\pi_1\dot{\phi}_1-\mathcal{H}_1\right)\right]
+\end{aligned}
+$$
+
+Now consider the time-ordered Green function
+$$
+\begin{aligned}
+&\braket{\Omega|TO(x_1)O(x_2)\cdots|\Omega}\\
+=&\lim_{t_{i,f}\to\pm\infty}\int\mathrm{d}^3\phi_i(x)\mathrm{d}^3\phi_f(x)\braket{\Omega|\phi_i,t_i}\braket{\phi_f,t_f|TO\cdots|\phi_i,t_i}\braket{\phi_i,t_i|\Omega}
+\end{aligned}
+$$
+Here the $\braket{\phi_i,t_i|\Omega}$ is similar to the wave equation in QM. Therefore, the integral is similar to the plane-wave decomposition in QM. Write the Fourior expansion as
+$$
+\begin{aligned}
+\phi(x)|_{t\to-\infty}&=\int\frac{\mathrm{d}^3p_1}{(2\pi)^3}\frac{1}{\sqrt{2\omega_{p_1}}}\left(e^{-i\pmb{p}_1\cdot\pmb{x}}a_{p_1}^{\text{in}}+e^{i\pmb{p}_1\cdot\pmb{x}}a_{p_1}^{\text{in}\dagger}\right)\\
+\phi(x)|_{t\to+\infty}&=\int\frac{\mathrm{d}^3p_1}{(2\pi)^3}\frac{1}{\sqrt{2\omega_{p_1}}}\left(e^{-i\pmb{p}_1\cdot\pmb{x}}a_{p_1}^{\text{out}}+e^{i\pmb{p}_1\cdot\pmb{x}}a_{p_1}^{\text{out}\dagger}\right).
+\end{aligned}
+$$
+The expansion of annihilation operator is then
+$$
+a_{p_1}^{\text{in(out)}}=\lim_{t\to\mp\infty}\int\mathrm{d}^3x\ e^{-i\pmb{p}_1\cdot\pmb{x}}\sqrt{\frac{\omega_{p_1}}{2}}\left[\phi(\pmb{x})+\frac{i}{\omega_{p_1}}\pi(\pmb{x})\right].
+$$
+
+Plugging in the condition $a_{p_1}\ket{\Omega}=0$, one get
+$$
+\begin{aligned}
+&\braket{\phi_q,\mp\infty|a_{p_1}^{\text{in(out)}}|\Omega}\\
+=&\lim_{t\to\mp\infty}\int\mathrm{d}^3x\ e^{i\pmb{p}_1\cdot\pmb{x}}\sqrt{\frac{\omega_{p_1}}{2}}\braket{\phi_1,\mp\infty|\phi(\pmb{x})+\frac{i}{\omega_{p_1}}\pi(\pmb{x})|\Omega}\\
+=&\lim_{t\to\mp\infty}\text{const}\cdot\int\mathrm{d}^3x\ e^{-i\pmb{p}_1\cdot\pmb{x}}\left[\omega_{p_1}\phi_1(\pmb{x})+\frac{\delta}{\delta\phi_1(\pmb{x})}\right]\braket{\phi_1,\mp\infty|\Omega}\\
+=&0
+\end{aligned}
+$$
+where $\braket{\phi_1|\pi(x)|\psi}=-i\delta\braket{\phi_1|\psi}/\delta\phi_1(x)$ in analogue to the momentum operator in QM.
+
+To solve such an equation, note that the analogue equation $(\partial_x+x)f(x)=0$ has the solution $f(x)=\exp(-ax^2/2)$. Therefore, plug in the false solution
+$$
+\braket{\phi_1,\mp\infty|\Omega}=C\exp\left[-\frac{1}{2}\int\mathrm{d}^3\xi\mathrm{d}^3\eta\ K(\pmb\xi,\pmb\eta)\phi_1(\pmb\xi)\phi_1(\pmb\eta)\right]
+$$
+into the equation, one get
+$$
+\int\mathrm{d}^3x\ e^{-i\pmb{p}_1\cdot\pmb{x}}\left[-K(\pmb{x},\pmb{y})+\omega_{p_1}\delta^{(3)}(\pmb{x}-\pmb{y})\right]=0.
+$$
+The kernal is then
+$$
+K(\pmb{x},\pmb{y})=\int\frac{\mathrm{d}^3p_1}{(2\pi)^3}e^{i\pmb{p}_1\cdot(\pmb{x}-\pmb{y})}\omega_{p_1}.
+$$
+Then
+$$
+\braket{\Omega|\phi_1,+\infty}\braket{\phi_1,-\infty|\Omega}=|C|^2\exp\left[-\left.\frac{1}{2}\int\mathrm{d}^3x\mathrm{d}^3y\ K(\pmb{x},\pmb{y})\phi_1(\pmb{x})\phi_1(\pmb{y})\right|^{t=+\infty}_{t=-\infty}\right]
+$$
+Through some IMPRESSIVE derivation, one can obtain
+$$
+\braket{\Omega|T\cdots|\Omega}=|C|^2\int[D\phi_1][D\pi_1]\exp\left[i\int\mathrm{d}^4x\left(\pi_1(x)\dot{\phi}_1(x)-\mathcal{H}_1+\frac{i\epsilon}{2}\phi_1^2(x)\right)\right]\times(\cdots).
+$$
+This provides a shift on the mass term $m^2\to m^2-i\epsilon$. 
+
+#### 3.2.2 Lagrangian formalism
+To obtain the Lagrangian formalism, recall the Gauss integral
+$$
+\int_{-\infty}^{+\infty}\mathrm{d}z_1\cdots\mathrm{d}z_n\ e^{-Q(z)}=\left(\det\frac{A}{2\pi}\right)^{-1/2}\exp\left[\frac{1}{2}(A^{-1})_{mn}B_mB_n-C\right]
+$$
+When $O(x)$ are independent of $\pi(x)$ and the Hamiltonian has at most second power of $\pi$, one can use the Gauss integral to turn $\pi(x)$ from an integrated variable into a dynamic term and therefore obtain the Lagrangian formalism
+$$
+\braket{\Omega|T\cdots|\Omega}=|C|^2\int[D\phi_1]\exp\left[i\int\mathrm{d}^4x\mathcal{L}(\phi_1,\partial_\mu\phi_1)\right](\cdots)_1,
+$$
+which has better Lorentz invarient property. In the case when $(\cdots)=1$, the constant $|C|^2$ can be cancelled out by
+$$
+\braket{\Omega|T\cdots|\Omega}=\frac{\displaystyle\int[D\phi_1]\exp(iS[\phi_1(x)])(\cdots)}{\displaystyle\int[D\phi_1]\exp(iS[\phi_1(x)])}.
+$$
+
+#### 3.2.3 Perturbation theory
+Since the path integral formalism has only number functions on the RHS, one can simply write the expansion without considering the commutation relation
+$$
+\braket{\Omega|T\cdots|\Omega}=|N|^2\int[D\phi(x)]\exp\left(i\int\mathrm{d}^4\mathcal{L}_0\right)\sum\frac{1}{n!}\left(i\int\mathrm{d}^4y\mathcal{L}_{\text{int}}\right)^n(\cdots).
+$$

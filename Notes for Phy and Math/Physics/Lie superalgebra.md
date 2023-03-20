@@ -1,8 +1,5 @@
 ---
 banner: "![[../pics/371054ab98143e770df64f1b57e11fcb1662130033085.jpeg]]"
----
----
-banner: "![[../pics/371054ab98143e770df64f1b57e11fcb1662130033085.jpeg]]"
 banner_y: 0.236
 ---
 
@@ -125,9 +122,12 @@ One can prove that $X^{AB}$ commutes with all elements in $\mathfrak{g}_0$. It i
 
 Finally, there are some internal symmetry $B_l$ that don't commute with $Q_\alpha{}^A$, which are called *$R$-symmetry*.
 
-| $G_1$ | $G_2$ | $\{G_1,G_2]$ |
-| ----- | ----- | ------------ |
-|       |       |              |
+| $G_1$          | $G_2$                              | $\{G_1,G_2]$                                                                    |
+| -------------- | ---------------------------------- | ------------------------------------------------------------------------------- |
+| $P^\mu$        | $Q_\alpha^A$ or $\bar{Q}_\alpha^A$ | $0$                                                                             |
+| $J^{\mu\nu}$   | $Q_\alpha^A$                       | $(\sigma^{\mu\nu})_\alpha{}^\beta Q_\beta^A$                                    |
+|                | $\bar{Q}_{\dot{\alpha}A}$          | $-(\bar{\sigma}^{\mu\nu})_{\dot{\alpha}}{}^{\dot{\beta}}\bar{Q}_{\dot{\beta}A}$ |
+| $Q_\alpha{}^A$ |                                    |                                                                                 |
 
 ## 2 Representation of sypersymmetry algebra
 ### 2.1 Representation of supersymmetry algebra
