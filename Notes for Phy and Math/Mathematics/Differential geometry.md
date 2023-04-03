@@ -88,11 +88,14 @@ that satisfies the following.
 - For all $\alpha,\beta\in\mathbb{R}$ and $f,g\in C^\infty$, $X_p(\alpha f+\beta g)=\alpha X_p(f)+\beta X_p(g)$;
 - Leibniz rule $X_p(f\circ g)=f(p)X_p(g)+g(p)X_p(f)$.
 
-Considering a curve $\gamma(0)=p$, a corresponding tangent vector $X_p$ can be understood as
+Considering a curve $\gamma$ that $\gamma(0)=p$, a corresponding tangent vector $X_p$ is
 $$
-X_p:f\mapsto\left.\frac{\mathrm{d}}{\mathrm{d}t}(f(\gamma(t)))\right|_{t=0},
+X_p:f\mapsto\left.\frac{\mathrm{d}}{\mathrm{d}t}(f(\gamma(t)))\right|_{t=0}.
 $$
-or in the less rigorous sense the map is $V^\mu\nabla_\mu$. Such a tangent vector is also denoted as $\dot{\gamma}(0)$.
+Such a tangent vector is also denoted as $\dot{\gamma}(0)$.
+
+>[!note]+ Physicists' notation:
+>A vector $V$ acting on a scalar $f$ is $V^i\partial_if$.
 
 #### 1.2.2 Tangent space
 The set of tangent vectors at point $p$ forms a [[Linear algebra#1.1 Definition|vector space]], which is called the *tangent space* at $p$, denoted as $T_pM$. Considering a chart $(U,\varphi=(x^1,\cdots,x^n))$ at $p\in U$, one can define the following tangent vector
@@ -108,6 +111,9 @@ $$
 \frac{\partial}{\partial y^i}=\sum_j\frac{\partial x^j}{\partial y^j}\frac{\partial}{\partial x^j},
 $$
 where the matrix $\partial x^j/\partial y^i$ is called the *Jacobian* at $p$.
+
+>[!note]+ Physicists' notation:
+>A vector $V$ transforms as $V^i(y)=\dfrac{\partial y^i}{\partial x^j}V^j(x)$.
 
 #### 1.2.3 Tangent bundle
 The union of tangent spaces at each point of $M$ forms a *tangent bundle*
@@ -139,7 +145,10 @@ X:C^\infty(M)\to C^\infty(M)
 $$
 that satisfies the following.
 - For all $\alpha,\beta\in\mathbb{R}$ and $f,g\in C^\infty(M)$, $X(\alpha f+\beta g)=\alpha X(f)+\beta X(g)$;
-- Leibniz rule $X(f\circ g)=f\circ X(g)+X(f)\circ g$.
+- Leibniz rule $X(fg)=fX(g)+X(f)g$.
+
+>[!note]+ Physicists' notation:
+>Leibniz rule: $X^i\partial_i(fg)=X^i(\partial_if)g+X^if(\partial_ig)$.
 
 To understand the second definition, note that the map can be written as
 $$
@@ -150,6 +159,9 @@ One can prove that $\mathfrak{X}(M)$ forms a Lie algebra with the Lie bracket
 $$
 [X,Y]\doteq X\circ Y-Y\circ X.
 $$
+
+>[!note]+ Physicists' notation:
+>$[X,Y]^i=X^k(\partial_kY^i)-Y^k(\partial_kX^i)$.
 
 #### 1.2.5 Flow
 An *integral curve* of a vector field $X\in\mathfrak{X}(M)$ is a smooth curve $\gamma:(a,b)\to M$ that for any point on the curve $\gamma(t)$, there is
@@ -189,6 +201,9 @@ $$
 &&X_p&\mapsto X_p(f).
 \end{aligned}
 $$
+
+>[!note]+ Physicists' notation:
+>A covarient vector $W$ contracting with a (contravarient) vector $V$ gives $W_iV^i$. The covarient vector $\mathrm{d}f$ is just $\dfrac{\partial f}{\partial x^i}$.
 
 The set of all cotangent vectors forms another vector space called *cotangent space*, denoted as $T_p^\ast M$, which is the [[Linear algebra#5.1 Dual space|dual vector space]] of $T_pM$. One can prove that $\{\mathrm{d}x^i_p\}$ forms a basis of $T_p^\ast M$. There is the orthogonal relation
 $$
@@ -428,167 +443,3 @@ $$
 [\omega]\wedge[\eta]\doteq[\omega\wedge\eta]\in H^{k+l}_{\text{dR}}.
 $$
 Apparently there is $[\omega]\wedge[\eta]=(-1)^{k+l}[\eta]\wedge[\omega]$. Such a structure $(H^\ast_{\text{dR}},\wedge)$ is called the *de Rham ring*.
-
-### 3.2 Riemannian metrics
-#### 3.2.1 Definition of Riemannian metrics
-The *Riemannian metrics* $g$ on a manifold $M$ is a bilinear form $g:T_pM\times T_pM\to\mathbb{R}$ for any $p\in M$ that satisfies the following.
-- Symmetric, that is for all $X_p,Y_p\in T_pM$, there is $g(X_p,Y_p)=g(Y_p,X_p)$;
-- Positive-definite, that is for all $X_p\in T_pM$, there is $g(X_p,X_p)\geqslant0$;
-- Non-degenerate, which means ?
-If for any smooth $X,Y\in\mathfrak{X}(M)$, the map $p\mapsto g(X_p,Y_p)$ is also smooth, then $g$ is called *smooth*.
-
-The pair $(M,g)$ is called a *Riemannian manifold*.
-
-Note that in physics, a metrics isn't necessarily positive-definite. The number of negative eigenvalues of a metrics is called its *signature*.
-
-The component of a metrics is defined as
-$$
-g_{ij}\doteq g\left(\frac{\partial}{\partial x^i},\frac{\partial}{\partial x^j}\right).
-$$
-Treating $g_{ij}$ as (elements of) a matrix, one can denote (elements of) its inverse as $g^{ij}$.
-
-#### 3.2.2 Length
-With the metrics defined, one can define the *length* of a tangent vector $X_p\in T_pM$ as
-$$
-|X_p|\doteq\sqrt{g(X_p,X_p)}.
-$$
-Therefore, for a curve $\gamma:(-1,1)\to M$, the length of the curve can be defined as
-$$
-L(\gamma)=\int_{-1}^1\mathrm{d}t\ |\dot{\gamma}(t)|=\int_{-1}^1\mathrm{d}t\sqrt{g_{ij}\frac{\mathrm{d}x^i}{\mathrm{d}t}\frac{\mathrm{d}x^j}{\mathrm{d}t}}.
-$$
-
-#### 3.2.3 Killing vector field
-For two Riemannian manifolds $(M,g)$ and $(N,h)$, a map $f:M\to N$ is called an *isometry* if it is a diffeomorphism and that $f^\ast h=g$, which means
-$$
-h(f_\ast X_p,f_\ast Y_p)=g(X_p,Y_p).
-$$
-For two isometries $f_1,f_2$, their composition $f_1\circ f_2$ is also an isometry. Therefore, the set of isometries forms an *isometry group*.
-
-A vector field $X\in\mathfrak{X}(M)$ is called a *Killing vector field* if its flow is an isometry $\varphi_t^\ast g=g$, which means
-$$
-\mathcal{L}_Xg=0.
-$$
-This equation is called the *Killing equation*. When considering a local chart, it can be written as
-$$
-X^k\partial_kg_{ij}+g_{kj}\partial_iX^k+g_{ik}\partial_jX^k=0.
-$$
-
-#### 3.2.4 Isomorphism between cotangent and tangent vector
-The metrics naturally induces an isomorphism between vector field and one-form
-$$
-\hat{g}:\mathfrak{X}(M)\cong\Omega^1(M)
-$$
-such that
-$$
-\hat{g}(X):Y\mapsto g(X,Y).
-$$
-This provides an isomorphism $T_pM\cong T_p^\ast M$. Under a local chart, this map can be written as
-$$
-X^i\frac{\partial}{\partial x^i}\mapsto g_{ij}X^i\mathrm{d}x^j.
-$$
-Its inverse map can also be written as
-$$
-\omega_i\mathrm{d}x^i\mapsto g^{ij}\omega_i\frac{\partial}{\partial x^j}.
-$$
-
-For $f\in C^\infty(M)$, the *gradient vector field* of $f$ is the vector field mapped to $\mathrm{d}f$ by $\hat{g}$. That is to say
-$$
-\forall X\in\mathfrak{X}(M),\quad g(\nabla f,X)=\mathrm{d}f(X)=X(f).
-$$
-It can be written under a local chart as
-$$
-\nabla f=g^{ij}\frac{\partial f}{\partial x^i}\frac{\partial}{\partial x^j}.
-$$
-
-### 3.3 Hodge theorem
-One can define a *Laplacian* operator
-$$
-\Delta\doteq g^{ij}\partial_i\partial_j.
-$$
-This is a harmonic form, which corresponds to a de Rham cohomology. This is called the Hodge theorem.
-
-#### 3.3.1 Hodge $\ast$-operator
-Define the *Hodge $\ast$-operator* as the map
-$$
-\begin{aligned}
-\ast:&&\Omega^k(M)&\to\Omega^{n-k}(M)\\
-&&e^1\wedge\cdots\wedge e^k&\mapsto e^{k+1}\wedge\cdots\wedge e^n.
-\end{aligned}
-$$
-In particular, one can define the *volume form*
-$$
-\mathrm{vol}\doteq\ast1=e^1\wedge\cdots\wedge e^n.
-$$
-On a local chart, this can be written as
-$$
-\mathrm{vol}=\sqrt{\det g_{ij}}\ \mathrm{d}x^1\wedge\cdots\wedge\mathrm{d}x^n.
-$$
-For a general $k$-form
-$$
-\omega=\sum_I\omega_I\ e^{i_1}\wedge\cdots\wedge e^{i_k},
-$$
-its Hodge $\ast$-operator is given as
-$$
-\ast\omega=\sum_I\mathrm{Sgn}(I,J)\ \omega_I\ e^{j_1}\wedge\cdots\wedge e^{j_{n-k}},
-$$
-where $J$ is the complement set of index of $I$. Another way is to write
-$$
-\omega=\sum_I\omega_I\ \mathrm{d}x^{i_1}\wedge\cdots\wedge\mathrm{d}x^{i_k}.
-$$
-Then the Hodge $\ast$ is given as
-$$
-(\ast\omega)_{I_2}=\frac{1}{k!\sqrt{\det g}}\epsilon^{J_1,J_2}\omega_{J_1}g_{J_2,I_2}.
-$$
-
-#### 3.3.2 Laplace-Beltrami operator
-Define the map $\delta:\Omega^k(M)\to\Omega^{k-1}(M)$ as
-$$
-\delta:\omega\mapsto(-1)^{nk+k+1}\ast\mathrm{d}\ \ast.
-$$
-Such a map satisfies
-- $\delta^2=0$;
-- $\ast\ \delta\ \mathrm{d}=\mathrm{d}\ \delta\ \ast$;
-- $\delta\ast\mathrm{d}=\mathrm{d}\ast\delta=0$.
-
-With $\delta$ and $\mathrm{d}$ defined, one can define the *Laplace-Beltrami operator* as
-$$
-\Delta\doteq\delta\mathrm{d}+\mathrm{d}\delta:\Omega^k(M)\to\Omega^k(M).
-$$
-A form $\omega$ that satisfies $\Delta\omega=0$ is called a *harmonic form*. In particular, $f\in C^\infty(M)$ that $\Delta f=0$ is called a *harmonic function*. One can prove that
-$$
-\Delta\omega=0\quad\Leftrightarrow\quad(\delta\omega=0)\lor(\mathrm{d}\omega=0).
-$$
-
-#### 3.3.3 Inner product
-Since Hodge $\ast$ maps a $k$-form to an $(n-k)$-form, $\omega\wedge\ast\omega$ is an $n$-form. Therefore, one can define a positive-defined inner product on $\Omega^k(M)$ as
-$$
-(\omega,\eta)\doteq\int_M\omega\wedge\ast\eta=\int_M\eta\wedge\ast\omega.
-$$
-
-
-## 4 Riemannian geometry
-### 4.1 Covariant derivatives and parallel transport
-#### 4.1.1 Connection
-For two vector fields $X,Y\in\mathfrak{X}(M)$, one can define the *covariant derivative* of $Y$ on the flow of $X$ as the map
-$$
-\begin{aligned}
-\nabla:&&\mathfrak{X}(M)\times\mathfrak{X}(M)&\to\mathfrak{X}(M)\\
-&&(X,Y)&\mapsto\nabla_XY.
-\end{aligned}
-$$
-It needs to satisfy the following.
-- Linearity $\nabla_{fX+gY}Z=f\nabla_XZ+h\nabla_YZ$;
-- Additivity $\nabla_X(Y+Z)=\nabla_XY+\nabla_XZ$;
-- Leibnitz rule $\nabla_X(fY)=X(f)Y+f\nabla_XY$.
-Such $\nabla$ is called a *connection*.
-
-Under a local chart, it can be written as
-$$
-\nabla_{\partial_j}\partial_k=\Gamma^i{}_{jk}\partial_i,
-$$
-where the coefficient $\Gamma^i{}_{jk}$ is called the *Christoffel symbol*. Then for a general vector field, there is
-$$
-\nabla_XY=X^i\left(\frac{\partial Y^k}{\partial x^i}+\Gamma^k{}_{ij}Y^j\right)\frac{\partial}{\partial x^k}.
-$$
-
-#### 4.1.2 Derivative along the curve

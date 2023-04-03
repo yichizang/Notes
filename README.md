@@ -14,15 +14,20 @@ I tried to deploy a GitHub page with it but failed, as many of the markdown gram
   - matrix theory
   - measure theory
   - representation theory
+  - Riemannian geometry
   - set theory
+  - symplectic geometry
   - the great C isomorphism theorem
   - topology
   - vector analysis
 - Physics
+  - classical field theory
+  - Dirac algebra
   - electrodynamics
   - Lie superalgebra
   - quantum field theory
   - representation of Lorentz algebra
+  - string theory
   - SUSY
 - Paper reading
   - Supersymmetry and Morse theory

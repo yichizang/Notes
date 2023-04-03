@@ -4,7 +4,7 @@ banner_y: 0.476
 ---
 
 >[!abstract]- Pre-knowledge
->- [[Mathematical logic]]
+>- Mathematical logic
 
 # Set theory
 ## 1 Axioms and basic concepts

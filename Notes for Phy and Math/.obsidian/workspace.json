@@ -8,51 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "db7cc43433422908",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Mathematics/Topology.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "60b484362ff01a73",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Mathematics/Differential geometry.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "479e0b60c01300a3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Physics/SUSY.md",
-                "mode": "preview",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "188739fd8f8691de",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Mathematics/Abstract group theory.md",
                 "mode": "preview",
                 "backlinks": true,
                 "source": false
@@ -71,9 +32,48 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "07232430de17b87b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Physics/String theory.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e736654430d169e5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Mathematics/Riemannian geometry.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9f195eec4a496135",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Mathematics/Set theory.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -103,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mathematics/Differential geometry.md"
+                "file": "Mathematics/Set theory.md"
               }
             }
           },
@@ -130,8 +130,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "ec2a585c0e71f23d",
@@ -166,7 +165,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mathematics/Differential geometry.md",
+                "file": "Mathematics/Set theory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -183,7 +182,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mathematics/Differential geometry.md",
+                "file": "Mathematics/Set theory.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -229,25 +228,29 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "60b484362ff01a73",
+  "active": "9f195eec4a496135",
   "lastOpenFiles": [
-    "Physics/SUSY.md",
+    "Mathematics/Symplectic geometry.md",
     "Mathematics/Differential geometry.md",
+    "Mathematics/Riemannian geometry.md",
+    "Physics/String theory.md",
+    "Physics/Quantum field theory.md",
+    "Mathematics/Representation theory.md",
+    "Physics/Physicists' notation for Riemannian Geo.md",
+    "Mathematics/Abstract group theory.md",
+    "Conventions.md",
+    "Physics/SUSY.md",
     "pics/106010900_p0.png",
     "pics/105622306_p0.jpg",
-    "Mathematics/Abstract group theory.md",
     "Mathematics/Set theory.md",
     "Physics/Lie superalgebra.md",
     "Mathematics/Topology.md",
-    "Physics/Quantum field theory.md",
     "Physics/Dirac algebra.md",
     "Mathematics/Linear algebra.md",
     "Physics/Classical field theory.md",
     "Physics/Representation of Lorentz algebra.md",
-    "Untitled.md",
     "Untitled 1.md",
     "Mathematics/Measure theory.md",
-    "Conventions.md",
     "Untitled",
     "Paper_reading/Supersymmetry and Morse theory.md",
     "test.md",
@@ -256,7 +259,6 @@
     "Mathematics/Brief intro on elliptic curve.md",
     "Mathematics/Complex function.md",
     "Mathematics/Vector analysis.md",
-    "Mathematics/The great C isomorphism theorem.md",
-    "Mathematics/Representation theory.md"
+    "Mathematics/The great C isomorphism theorem.md"
   ]
 }

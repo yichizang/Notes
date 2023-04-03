@@ -600,3 +600,45 @@ Since the path integral formalism has only number functions on the RHS, one can 
 $$
 \braket{\Omega|T\cdots|\Omega}=|N|^2\int[D\phi(x)]\exp\left(i\int\mathrm{d}^4\mathcal{L}_0\right)\sum\frac{1}{n!}\left(i\int\mathrm{d}^4y\mathcal{L}_{\text{int}}\right)^n(\cdots).
 $$
+
+## 4 Symmetries in path integral
+For $n$ real scalar fields $\phi_n$, the partation function gives
+$$
+Z[J_n]=|N|^2\int[D\phi_n]\exp\left[iS[\phi_n]+i\int\mathrm{d}^4xJ_n\phi_n\right].
+$$
+Consider the following transformation
+$$
+\phi_n(x)\to\phi_n(x)+\epsilon F_n[\phi_m,x].
+$$
+The partation becomes
+$$
+\begin{aligned}
+Z[J_n]&=|N|^2\int[D\phi_n]\left|\det\frac{\partial\phi'_{n'}(y)}{\partial\phi_n(x)}\right|\\
+&\quad\times\exp\left\{iS[\phi_n]+i\int\mathrm{d}^4xJ_n\phi_n\right.\\
+&\qquad+\left.\epsilon\int\mathrm{d}^4x\left[i\frac{\delta S[\phi_n]}{\delta\phi_n(x)}F_n+iJ_n(x)F_n\right]+O(\epsilon^2)\right\}.
+\end{aligned}
+$$
+Use the identity $\ln(\det A)=\mathrm{Tr}(\ln A)$, the determinant of the Jacobian is
+$$
+\left|\det\frac{\partial\phi'_{n'}(y)}{\partial\phi_n(x)}\right|=1+\epsilon\int\mathrm{d}^4x\sum_n\frac{\delta F_n[\phi_m(x),x]}{\delta\phi_n(x)}+O(\epsilon^2).
+$$
+
+To get the partation invariant under symmetry action, it is required that
+$$
+\int[D\phi_n]\exp\left(iS[\phi_n]+i\int\mathrm{d}^4yJ_n\phi_n\right)\int\mathrm{d}^4x\left\{\sum_n\frac{\delta F_n}{\delta\phi_n}+i\left[\frac{\delta S}{\delta\phi_n(x)}+J_n(x)\right]F_n\right\}=0.
+$$
+
+### 4.1 Ward identity
+Consider only transformation that depends only on space-time coordinate
+$$
+\phi_n(x)\to\phi_n(x)+\epsilon_n(x).
+$$
+Then the partation gives
+$$
+\int[D\phi_n]\exp\left(iS[\phi_n]+i\int\mathrm{d}^4yJ_n\phi_n\right)\left[\frac{\delta S}{\delta\phi_n(x)}+J_n(x)\right]=0.
+$$
+
+With this identity, one can calculate
+$$
+\braket{\Omega|T\frac{\delta S}{\delta\phi_n(x)}\phi_{n_1}(x_1)\cdots\phi_{n_N}(x_N)|\Omega}=i\sum_{k=1}^N\delta^{(4)}(x-x_k)\delta_{n,n_k}\braket{\Omega|T\phi_{n_1}(x_1)\cdots(\text{no }\phi_{n_k}\text{ term})|\Omega}.
+$$

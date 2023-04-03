@@ -53,7 +53,7 @@ Any representation can be written as a direct sum of irreducible representations
 #### 1.1.5 Schur's lemma
 *Schur's lemma* is an important lemma in representation theory. It states that for two irreducible representations $V$ and $W$ of $G$ and a homomorphism $\varphi:V\to W$, the following statements hold:
 - Either $\varphi$ is an isomorphism or $\varphi=0$.
-- If $V=W$ then $\varphi=\lambda\cdot 1$, where $\lambda\in\mathbb{C}$ and $1$ is the identity map.
+- If $V=W$ then $\varphi=\lambda\cdot 1_V$, where $\lambda\in\mathbb{C}$ and $1_V$ is the identity map.
 
 Using Schur's lemma, one can prove that for any representation $V$ of $G$, there is a unique way to deecomposite it into direct sum of irreducible representations
 $$V=\bigoplus_iV_i^{\oplus a_i}.$$
@@ -85,12 +85,14 @@ Take the [[Abstract group theory#4.1 Symmetric group|symmetric group]] $S_3$ as 
 - the *standard representation* $V$, which is a two dimensional representation decomposed from the permutation representation. It maps according to the permutation of $\{\ket{e_1},\ket{e_2},-(\ket{e_1}+\ket{e_2})\}$.
 
 The character table of $S_3$ looks like
+
 |            $S_3$ | $1_S$ | $(12)$ | $(123)$ |
 | ----------------:| -----:| ------:| -------:|
 |                  |     1 |      3 |       2 |
 |      trivial $U$ |     1 |      1 |       1 |
 | alternating $U'$ |     1 |     -1 |       1 |
 |     standard $V$ |     2 |      0 |      -1 |
+
 The first two rows have the group name and list the representitive element and size of all the conjugacy classes. Below are different irreducible representations and their characters.
 
 Character table can be used to work out the decomposition of an arbitary representation basing on the fact that
