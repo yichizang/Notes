@@ -12,19 +12,19 @@ banner_y: 0.304
 ## 1 Introduction
 *Dirac algebra* is a subalgebra of Clifford algebra $\mathrm{Cl}_{1,3}(\mathbb{C})$. The basis of Dirac algebra is listed as follow.
 
-| Type          | Element(s)                                                          | Total number |
-| ------------- | ------------------------------------------------------------------- | ------------ |
-| Scalar        | $1_\gamma$                                                          | $1$          |
-| Vectors       | $\gamma^\mu:\{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu}\times1_\gamma$ | $4$          |
-| Pseudoscalar  | $\gamma^5\doteq i\gamma^0\gamma^1\gamma^2\gamma^3$                  | $1$          |
-| Pseudovectors | $\gamma^\mu\gamma^5$                                                | $4$          |
-| Tensors       | $\sigma^{\mu\nu}\doteq\dfrac{i}{2}[\gamma^\mu,\gamma^\nu]$          | $6$          | 
+| Type          | Element(s)                                                           | Total number |
+| ------------- | -------------------------------------------------------------------- | ------------ |
+| Scalar        | $1_\gamma$                                                           | $1$          |
+| Vectors       | $\gamma^\mu:\{\gamma^\mu,\gamma^\nu\}=-2\eta^{\mu\nu}\times1_\gamma$ | $4$          | 
+| Pseudo-scalar  | $\gamma^5\doteq i\gamma^0\gamma^1\gamma^2\gamma^3$                   | $1$          |
+| Pseudo-vectors | $\gamma^\mu\gamma^5$                                                 | $4$          |
+| Tensors       | $\sigma^{\mu\nu}\doteq\dfrac{i}{2}[\gamma^\mu,\gamma^\nu]$           | $6$          |
 
 The $\gamma^\mu$ and $\gamma^5$ are also called *Dirac matrix*.
 
 ## 2 Calculation rules
 ### 2.1 Fierz identity
-Denote the 16 elements as $\Gamma^i$. They form a complete basis of $4\times 4$ matrix with two [[Representation of Lorentz algebra#2.4 Spinor representation|Dirac spinor]] indices. That is
+Denote the 16 elements as $\Gamma^i$. They form a complete basis of $4\times 4$ matrix with two [[Representation of Lorentz algebra#2.2.1 Dirac spinor|Dirac spinor]] indices. That is
 $$
 \Gamma=\sum_iA_i\Gamma^i.
 $$
@@ -41,7 +41,11 @@ which is called the *Fierz identity*.
 ### 2.2 Multiplication
 The multiplication of Dirac matrix satisfies
 $$
-(\gamma^\mu)^2=\eta^{\mu\mu}\times1_\gamma,\quad(\gamma^5)^2=1_\gamma.
+(\gamma^\mu)^2=-\eta^{\mu\mu}\times1_\gamma,\quad(\gamma^5)^2=1_\gamma.
+$$
+Therefore, when considering Dirac matrics as linear operators, the eigenvalue of $\gamma^0$ is $\pm1$ and that of $\gamma^i$ is $\pm i$. Then one can require
+$$
+(\gamma^0)^\dagger=\gamma^0,\quad(\gamma^i)^\dagger=-\gamma^i,\quad(\gamma^5)^\dagger=\gamma^5.
 $$
 
 The (anti)commutators satisfy
@@ -78,6 +82,18 @@ $$
 \end{aligned}
 $$
 
+### 2.5 Similarity transformation
+There is the following similarity trandformation relation
+$$
+\begin{aligned}
+\mathcal{B}\gamma_\mu\mathcal{B}^{-1}&=(\gamma_\mu)^\dagger\\
+\gamma^5\gamma_\mu(\gamma^5)^{-1}&=-\gamma_\mu\\
+\mathcal{C}\gamma_\mu\mathcal{C}^{-1}&=-(\gamma_\mu)^T\\
+\mathcal{BC}\gamma_\mu(\mathcal{BC})^{-1}&=-(\gamma_\mu)^\ast,
+\end{aligned}
+$$
+where $\mathcal{B}=\gamma^0$ and $\mathcal{C}$ satisfies $\mathcal{CC}^\dagger=1_\gamma$ and $\mathcal{C}=-\mathcal{C}^T$. $\mathcal{C}$ is called *charge conjugation matrix*. In 4 dimensional case, $\mathcal{BC}=i\gamma^2$.
+
 ## 3 Lorentz transformation
 There is an important identity for the Lorentz transformation of Dirac matrix
 $$
@@ -96,8 +112,8 @@ $$
 where the $\sigma^\mu$ and $\bar{\sigma}^\mu$ are defined as
 $$
 \begin{aligned}
-\sigma^\mu&\doteq(\mathbb{1}_2,\pmb{\sigma}),\\
-\bar{\sigma}^\mu&\doteq(\mathbb{1}_2,-\pmb{\sigma}).
+\sigma^\mu&\doteq(-\mathbb{1}_2,\pmb{\sigma}),\\
+\bar{\sigma}^\mu&\doteq(-\mathbb{1}_2,-\pmb{\sigma}).
 \end{aligned}
 $$
 Here the $\pmb{\sigma}$ is the Pauli matrix, defined as
@@ -114,10 +130,19 @@ i & 0
 \end{pmatrix}.
 $$
 
-In this way, the pseudoscalar $\gamma^5$ is
+In this way, the pseudo-scalar $\gamma^5$ is
 $$
 \gamma^5\mapsto\begin{pmatrix}
--\mathbb{1}_2 & 0\\
-0 & \mathbb{1}_2
+\mathbb{1}_2 & 0\\
+0 & -\mathbb{1}_2
+\end{pmatrix}.
+$$
+The charge conjugation matrix is
+$$
+\mathcal{C}\mapsto\begin{pmatrix}
+0 & 1 & 0 & 0\\
+-1 & 0 & 0 & 0\\
+0 & 0 & 0 & -1\\
+0 & 0 & 1 & 0
 \end{pmatrix}.
 $$

@@ -90,7 +90,6 @@ $$
 
 There are many equivalent axioms for the axiom of choice, for example the well-ordering axiom. This axiom is independent of the rest axioms. The axiom system that does not accept AC is is called *ZF axiom system*.
 
----
 ### 1.2 Basic concept
 #### 1.2.1 Empty set
 For a fomula $\varphi(u)$, if there is a set $X$ that $\forall u(\varphi(u)\Rightarrow u\in X)$, then define
@@ -188,7 +187,6 @@ $$
 (X\subset Y)\Leftrightarrow(X\cap Y=X)\Leftrightarrow(X\cup Y=Y)\Leftrightarrow(X-Y=\varnothing).
 $$
 
----
 ### 1.3 Relation
 #### 1.3.1 Cartesian product
 For two sets $a$ and $b$, their *ordered pair* is defined as the set
@@ -283,9 +281,13 @@ $$
 $$
 is called a *partition* of $X$. The equivalence classes on $X$ is a partition of $X$ and any partition of $X$ defines an equivalence relation.
 
-#### 1.3.6 Order
-For a set $X$, a *partial order* is a binary relation $\le$ that satisfies [[#1.3.3 Possible properties of binary relation|reflexivity, anti-symmetry and transitivity]]. If its also [[#1.3.3 Possible properties of binary relation|total]], then it is called a *total order*. If $\le$ is a partial order (total order) on $X$, then it is denoted as $(X,\le)$. The set $X$ is called a *partial ordered set* (*total ordered set*).
+### 1.4 Order
+#### 1.4.1 Partial/total order
+For a set $X$, a *partial order* is a binary relation $\le$ that satisfies [[#1.3.3 Possible properties of binary relation|reflexivity, anti-symmetry and transitivity]]. If its also [[#1.3.3 Possible properties of binary relation|total]], then it is called a *total order* or *line order*.
 
+If $\le$ is a partial order (total order) on $X$, then it is denoted as $(X,\le)$. The set $X$ is called a *partial ordered set* (*total ordered set*).
+
+#### 1.4.2 Strict order
 For a set $X$, a *strict partial order* is a binary relation $<$ that satisfies [[#1.3.3 Possible properties of binary relation|irreflexivity, asymmetry and transitivity]]. If it is also [[#1.3.3 Possible properties of binary relation|connected]], then it is called a *strict total order*.
 
 For any order $\le$, there is an *associated strict order* $<$ defined as
@@ -296,7 +298,7 @@ And vise versa.
 
 One also denote $<^{-1}$ as $>$ and $\le^{-1}$ as $\ge$.
 
-#### 1.3.7 Extremal, extremum and bound
+#### 1.4.3 Extremal, extremum and bound
 For $(X,\le)$, an element $x\in X$ is called a *minimal* if $\forall y\in X$ there is $\lnot(x>y)$, and it's called a *maximal* if $\lnot(x<y)$.
 
 The element $x\in X$ is called a *minimum* if $\forall y\in X$ there is $x\le y$, and is called a *maximum* if $x\ge y$. The extremums are unique if exists.
@@ -305,9 +307,15 @@ In the case of total ordered set, the minimal is the minimum and the maximal is 
 
 For a subset $X_0\subset X$, if there is a $y\in X$ that $\forall x\in X_0$ there is $y\ge x$, then $y$ is called an *upper bound* of $X_0$. The minimum in the set of all upper bounds of $X_0$, if exists, is called the *supremum* of $X_0$, denoted as $\sup X_0$. Conversely one can define the *lower bound* and *infimum* of $X_0$, the later denoted as $\inf X_0$.
 
----
-### 1.4 Map
-#### 1.4.1 Map
+#### 1.4.4 Well order
+For a total order $\le$ on the set $A$, if it also satisfies that
+$$
+\forall A_0\subset A,(A_0\ne\varnothing\Leftrightarrow\exists\min A_0),
+$$
+then it is called a *well order*. Such $(A,\le)$ is called a *well ordered set*.
+
+### 1.5 Map
+#### 1.5.1 Map
 An [[#1.3.3 Possible properties of binary relation|univalent]] binary relation is called a *partial function*. A binary relation that is both [[#1.3.3 Possible properties of binary relation|univalent and total]] is called a *map* or *function*. Here $y$ is called the *value* of $f$ at $x$. One usually denote $(x,y)\in f$ as $f(x)=y$.
 
 If $\mathrm{dom}(f)=X$ and $\mathrm{ran}(f)\subset Y$ and one have $f(x)=y$, then it is also denoted as
@@ -330,7 +338,7 @@ For a map $f:X\to Y$, if for any two $x_1,x_2\in X$, $x_1\ne x_2\Rightarrow f(x_
 
 If the inverse of a map is also a map, then this map is called *invertible*. A map is invertible if and only if it is injective.
 
-#### 1.4.2 Restriction and expansion
+#### 1.5.2 Restriction and expansion
 For a map $f$ and a set $A$, define the *restriction* of $f$ on $A$ as
 $$
 f\restriction A\doteq\{(x,y)\in f:x\in A\}.
@@ -339,7 +347,7 @@ If $g=f\restriction A$, then $f$ is called the *extension* of $g$.
 
 For two maps $f$ and $g$, they are called *compatible* if for all $x\in(\mathrm{dom}(f)\cap\mathrm{dom}(g))$ one have $f(x)=g(x)$. The intersection of two maps is also a map. The union of two compatible maps is also a map. It is a extension of both maps.
 
-#### 1.4.3 Index system
+#### 1.5.3 Index system
 A map $i\mapsto X_i$ with $X_i$ being a set and $i\in I$ is called an *index system* of sets. $I$ is called an *index set*. Such an index system is usually written as $X\doteq\{X_i\}_{i\in I}$ or $\{X_i\}_I$.
 
 For an index system $X=\{X_i\}_I$, its *general Cartesian product* is defined as
@@ -354,7 +362,6 @@ p_i:&&\prod_{j\in I}X_j&\to X_i\\
 \end{aligned}
 $$
 
----
 ## 2 Number
 ### 2.1 Natural number
 #### 2.1.1 Induction
@@ -373,8 +380,34 @@ The elements of $\mathbb{N}$ is called *natural number*. This is a set according
 
 In $\mathbb{N}$, $\varnothing$ is usually denoted as $0$ and for any $n\in\mathbb{N}$, $S(n)$ is usually denoted as $n+1$.
 
-#### 2.1.3 Induction principle
+#### 2.1.3 Order of natural number
+One can use $\in$ as an order on $\mathbb{N}$. Further define $\underline{\in}$ as
+$$
+x\underline{\in}y\Leftrightarrow(x\in y\lor x=y).
+$$
+Denote $\in$ as $<$ and $\underline{\in}$ as $\leq$. It can be proved that $\underline{\in}$ is a well order on $\mathbb{N}$.
+
+#### 2.1.4 Induction principle
 For any property $\varphi(p)$, if it satisfies
 - $\varphi(0)$,
 - $\varphi(n)\Rightarrow\varphi(n+1)$,
+
 then for any natural number $n\in\mathbb{N}$, $\varphi(n)$. This is called the *induction principle* on $\mathbb{N}$.
+
+If a property $\varphi(p)$ satisfies for any $n\in\mathbb{N}$
+$$
+\forall k<n,\varphi(k)\Rightarrow\varphi(n),
+$$
+then for any natural number $n\in\mathbb{N}$, $\varphi(n)$. This is called the *second induction principle* on $\mathbb{N}$.
+
+#### 2.1.5 Recursive principle
+A map with domain $n$ or $\mathbb{N}$ is called a *sequence*. The former called a *finite sequence* with *length* $n$. The latter called *infinite sequence*.
+
+For any set $A$, any map $a:P\to A$ and $g:P\times A\times\mathbb{N}\to A$, there is one unique map $f:P\times\mathbb{N}\to A$ that
+- for all $p\in P$, $f(p,0)=a(p)$;
+- for any $n\in\mathbb{N}$ and $p\in P$, $f(p,n+1)=g(p,f(p,n),n)$.
+
+This is called the *recursive principle with parameter*. The version with $P=\{\varnothing\}$ is called *recursive principle*.
+
+#### 2.1.6 Addition and multiplication
+With the recursive principle with parameter, one can prove that there is one unique function

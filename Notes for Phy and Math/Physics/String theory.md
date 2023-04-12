@@ -5,7 +5,7 @@ banner_y: 0.228
 
 >[!abstract]- Pre-knowledge
 >- [[../Mathematics/Differential geometry|Differential geometry]]
->- [[Quantum field theory]]
+>- [[Gauge field theory]]
 >- [[Representation of Lorentz algebra]]
 >- General relativity
 

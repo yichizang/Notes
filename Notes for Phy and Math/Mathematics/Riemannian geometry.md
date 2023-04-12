@@ -12,53 +12,34 @@ banner_y: 0.492
 The *Riemannian metrics* $g$ on a manifold $M$ is a bilinear form $g:T_pM\times T_pM\to\mathbb{R}$ for any $p\in M$ that satisfies the following.
 - Symmetric, that is for all $X_p,Y_p\in T_pM$, there is $g(X_p,Y_p)=g(Y_p,X_p)$;
 - Positive-definite, that is for all $X_p\in T_pM$, there is $g(X_p,X_p)\geqslant0$;
-- Non-degenerate, which means ?
+- Non-degenerate, that is for any $X_p\ne0$, there is a $Y_p\in T_pM$ that $g(X_p,Y_p)\ne0$.
 
 If for any smooth $X,Y\in\mathfrak{X}(M)$, the map $p\mapsto g(X_p,Y_p)$ is also smooth, then $g$ is called *smooth*.
 
 >[!note]+ Physicists' notation:
 >The metrics map is $g_{ij}X^iY^j$.
 
-The pair $(M,g)$ is called a *Riemannian manifold*.
+>[!note]
+>Note that in physics, a metrics isn't necessarily positive-definite. The number of negative eigenvalues of a metrics is called its *signature*.
+>- In the case of positive-definite metrics, the manifold is called *Riemannian*.
+>- When the signature is $1$, it is called *Lorentzian*.
 
-Note that in physics, a metrics isn't necessarily positive-definite. The number of negative eigenvalues of a metrics is called its *signature*.
-
-The component of a metrics is defined as
+### 1.2 Line element
+The metrics can also be written in the form of *line element*
+$$
+\mathrm{d}s^2\doteq g_{ij}\mathrm{d}x^i\otimes\mathrm{d}x^j,
+$$
+where
 $$
 g_{ij}\doteq g\left(\frac{\partial}{\partial x^i},\frac{\partial}{\partial x^j}\right).
 $$
-Treating $g_{ij}$ as (elements of) a matrix, one can denote (elements of) its inverse as $g^{ij}$. This means that
+
+Consider $g_{ij}$ as a matrix, then its inverse is denoted as $g^{ij}$. It satisfies
 $$
-g^{ij}g_{jk}=\delta^i{}_k.
+g_{ij}g^{jk}=\delta^k_i.
 $$
 
-### 1.2 Length
-With the metrics defined, one can define the *length* of a tangent vector $X_p\in T_pM$ as
-$$
-|X_p|\doteq\sqrt{g(X_p,X_p)}.
-$$
-Therefore, for a curve $\gamma:(-1,1)\to M$, the length of the curve can be defined as
-$$
-L(\gamma)=\int_{-1}^1\mathrm{d}t\ |\dot{\gamma}(t)|=\int_{-1}^1\mathrm{d}t\sqrt{g_{ij}\frac{\mathrm{d}x^i}{\mathrm{d}t}\frac{\mathrm{d}x^j}{\mathrm{d}t}}.
-$$
-
-### 1.3 Killing vector field
-For two Riemannian manifolds $(M,g)$ and $(N,h)$, a map $f:M\to N$ is called an *isometry* if it is a diffeomorphism and that $f^\ast h=g$, which means
-$$
-h(f_\ast X_p,f_\ast Y_p)=g(X_p,Y_p).
-$$
-For two isometries $f_1,f_2$, their composition $f_1\circ f_2$ is also an isometry. Therefore, the set of isometries forms an *isometry group*.
-
-A vector field $X\in\mathfrak{X}(M)$ is called a *Killing vector field* if its flow is an isometry $\varphi_t^\ast g=g$, which means
-$$
-\mathcal{L}_Xg=0.
-$$
-This equation is called the *Killing equation*. When considering a local chart, it can be written as
-$$
-X^k\partial_kg_{ij}+g_{kj}\partial_iX^k+g_{ik}\partial_jX^k=0.
-$$
-
-### 1.4 Isomorphism between cotangent and tangent vector
+### 1.3 Isomorphism between cotangent and tangent vector
 The metrics naturally induces an isomorphism between vector field and one-form
 $$
 \hat{g}:\mathfrak{X}(M)\cong\Omega^1(M)
@@ -81,6 +62,7 @@ $$
 >- $g_{ij}X^j=X_i$;
 >- $g^{ij}W_j=W^i$.
 
+#### 1.3.1 Gradient vector field
 For $f\in C^\infty(M)$, the *gradient vector field* of $f$ is the vector field mapped to $\mathrm{d}f$ by $\hat{g}$. That is to say
 $$
 \forall X\in\mathfrak{X}(M),\quad g(\mathrm{grad}\ f,X)=\mathrm{d}f(X)=X(f).
@@ -93,6 +75,44 @@ $$
 >[!note]+ Physicists' notation:
 >$(\mathrm{grad}\ f)^i=g^{ij}\partial_jf$, sometimes also denoted simply as $\partial^if$.
 
+### 1.4 Length
+With the metrics defined, one can define the *length* of a tangent vector $X_p\in T_pM$ as
+$$
+|X_p|\doteq\sqrt{g(X_p,X_p)}.
+$$
+Therefore, for a curve $\gamma:(-1,1)\to M$, the length of the curve can be defined as
+$$
+L(\gamma)=\int_{-1}^1\mathrm{d}t\ |\dot{\gamma}(t)|=\int_{-1}^1\mathrm{d}t\sqrt{g_{ij}\frac{\mathrm{d}x^i}{\mathrm{d}t}\frac{\mathrm{d}x^j}{\mathrm{d}t}}.
+$$
+
+### 1.5 Vielbeins
+Consider a set of basis $\{e_a\}$ of $T_pM$. If they satisfy
+$$
+g(e_a,e_b)=\delta_{ab},
+$$
+then this set of basis is called an *vielbein*. One can also define the corresponding set of basis $\{e^a\}$ of $T_p^\ast M$ as $e^a\doteq\hat{g}(e_a)$.
+
+Write the vielbein under local chart $e_a=e_a^\mu\partial_\mu$ and $e^a=e^a_\mu\mathrm{d}x^\mu$. It satisfies
+$$
+e^\mu_ae^a_\nu=\delta^\mu_\nu,\quad e^\mu_ae^b_\mu=\delta^b_a.
+$$
+
+### 1.6 Killing vector field
+For two Riemannian manifolds $(M,g)$ and $(N,h)$, a map $f:M\to N$ is called an *isometry* if it is a diffeomorphism and that $f^\ast h=g$, which means
+$$
+h(f_\ast X_p,f_\ast Y_p)=g(X_p,Y_p).
+$$
+For two isometries $f_1,f_2$, their composition $f_1\circ f_2$ is also an isometry. Therefore, the set of isometries forms an *isometry group*.
+
+A vector field $X\in\mathfrak{X}(M)$ is called a *Killing vector field* if its flow is an isometry $\varphi_t^\ast g=g$, which means
+$$
+\mathcal{L}_Xg=0.
+$$
+This equation is called the *Killing equation*. When considering a local chart, it can be written as
+$$
+X^k\partial_kg_{ij}+g_{kj}\partial_iX^k+g_{ik}\partial_jX^k=0.
+$$
+
 ## 2 Hodge theorem
 ### 2.1 Hodge $\ast$-operator
 Define the *Hodge $\ast$-operator* as the map
@@ -102,14 +122,8 @@ $$
 &&e^1\wedge\cdots\wedge e^k&\mapsto e^{k+1}\wedge\cdots\wedge e^n.
 \end{aligned}
 $$
-In particular, one can define the *volume form*
-$$
-\mathrm{vol}\doteq\ast1=e^1\wedge\cdots\wedge e^n.
-$$
-On a local chart, this can be written as
-$$
-\mathrm{vol}=\sqrt{\det g_{ij}}\ \mathrm{d}x^1\wedge\cdots\wedge\mathrm{d}x^n.
-$$
+Apparently $\ast(\ast\omega)=-\omega$.
+
 For a general $k$-form
 $$
 \omega=\sum_I\omega_I\ e^{i_1}\wedge\cdots\wedge e^{i_k},
@@ -127,7 +141,17 @@ $$
 (\ast\omega)_{I_2}=\frac{1}{k!\sqrt{\det g}}\epsilon^{J_1,J_2}\omega_{J_1}g_{J_2,I_2}.
 $$
 
-### 2.2 Laplace-Beltrami operator
+### 2.2 Volume form
+One can define the *volume form*
+$$
+\mathrm{vol}\doteq\ast1=e^1\wedge\cdots\wedge e^n.
+$$
+On a local chart, this can be written as
+$$
+\mathrm{vol}=\sqrt{\det g_{ij}}\ \mathrm{d}x^1\wedge\cdots\wedge\mathrm{d}x^n.
+$$
+
+### 2.3 Laplace-Beltrami operator
 Define the map $\delta:\Omega^k(M)\to\Omega^{k-1}(M)$ as
 $$
 \delta:\omega\mapsto(-1)^{nk+k+1}\ast\mathrm{d}\ \ast.
@@ -146,7 +170,7 @@ $$
 \Delta\omega=0\quad\Leftrightarrow\quad(\delta\omega=0)\lor(\mathrm{d}\omega=0).
 $$
 
-### 2.3 Inner product
+### 2.4 Inner product
 Since Hodge $\ast$ maps a $k$-form to an $(n-k)$-form, $\omega\wedge\ast\omega$ is an $n$-form. Therefore, one can define a positive-defined inner product on $\Omega^k(M)$ as
 $$
 (\omega,\eta)\doteq\int_M\omega\wedge\ast\eta=\int_M\eta\wedge\ast\omega.
@@ -161,7 +185,7 @@ $$
 (\Delta\omega,\eta)=(\omega,\Delta\eta).
 $$
 
-### 2.4 Hodge decomposition
+### 2.5 Hodge decomposition
 Define the set of harmonic $k$-form as
 $$
 \mathbb{H}^k(M)\doteq\{\omega:\omega\in\Omega^k(M),\Delta\omega=0\}.

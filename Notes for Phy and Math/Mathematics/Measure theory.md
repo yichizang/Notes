@@ -11,35 +11,44 @@ banner_y: 0.28
 ## 1 Measure and outer measure
 ### 1.1 Definition of measure
 #### 1.1.1 Ring of sets
-For an arbitary set $X$, a *collection* is a set whose elements are [[Set theory#1.2.5 Subset|subsets]] of $X$.
+For an arbitary set $X$, a *collection* $\pmb{E}$ is a set whose elements are [[Set theory#1.2.5 Subset|subsets]] of $X$.
 
-For a collection $R$, it is called a *ring* if it satisfies that $\forall E,F\in R$,
+For a collection $\pmb{R}$, it is called a *ring* if it satisfies that $\forall E,F\in\pmb{R}$,
 $$
 \begin{aligned}
-&E\cup F\in R,\\
-&E-F\in R.
+&E\cup F\in\pmb{R}\\
+&E-F\in\pmb{R}.
 \end{aligned}
 $$
 Since
 $$
 E\cap F=E\cup F-(E-F)-(F-E),
 $$
-apparently $E\cap F\in R$ for a ring.
+apparently $E\cap F\in\pmb{R}$ for a ring. If $X\in\pmb{R}$, then $\pmb{R}$ is called an *algebra* on $X$.
 
 >[!warning]
->The ring defined here is different from the ring in Algebra.
+>The terms here have different meanings as in algebra.
 
-#### 1.1.2 $\sigma$-ring
-For a collection $R$, it is called a *$\sigma$-ring* if it satisfies
-$$
-\begin{aligned}
-&\forall E,F\in R,&&E-F\in R,\\
-&\forall\{E_n\}_{\mathbb{N}}\subset R,&&\bigcup\{E_n\}\in R.
-\end{aligned}
-$$
+#### 1.1.2 Span of ring
+One can prove that for any collection $\pmb{E}$ of $X$, there is a ring (algebra) $\pmb{R}_0$ that
+- $\pmb{E}\subset\pmb{R}_0$;
+- for any ring (algebra) $\pmb{R}\supset\pmb{E}$, there is $\pmb{R}_0\subset\pmb{R}$.
+
+This is called the ring (algebra) *spanned* by $\pmb{E}$, denoted as $\pmb{R}(\pmb{E})$.
+
+#### 1.1.3 $\sigma$-ring
+For a collection $\pmb{R}$, it is called a *$\sigma$-ring* if it satisfies
+- $\forall E,F\in\pmb{R}$, $E-F\in\pmb{R}$;
+- $\forall\{E_n\}_{\mathbb{N}}\subset\pmb{R}$, its union $\bigcup\{E_n\}\in\pmb{R}$.
+
 A *$\sigma$-ring* is also a ring.
 
-#### 1.1.3 Measure
+One can also define the span of $\sigma$-ring. Denote such span as $\pmb{S}(E)$. One can prove that
+$$
+\pmb{S}(\pmb{E})=\pmb{S}(\pmb{R}(\pmb{E})).
+$$
+
+#### 1.1.4 Measure
 For a *ring* $R$ on $X$, a *pre-measure* on the ring is a [[Set theory#1.4.1 Map|map]] $\mu$ defined as
 $$
 \mu:R\to[0,+\infty].
@@ -52,7 +61,7 @@ The last property is called *$\sigma$-additivity*.
 
 A pre-measure on a $\sigma$-ring is called a *measure*.
 
-#### 1.1.4 Outer measure
+#### 1.1.5 Outer measure
 For a *$\sigma$-ring* $S$ on $X$, an *outer measure* is defined as a map
 $$
 \mu^\ast:S\to[0,+\infty]

@@ -118,16 +118,25 @@ The Poisson bracket satisfies the following.
 - Jacobi identity: $\{f,\{g,h\}\}+\{g,\{h,f\}\}+\{h,\{f,g\}\}=0$;
 - Leibniz rule: $\{fg,h\}=f\{g,h\}+g\{f,h\}$.
 
-### 2.2 Noether theorem
 One can prove that
 $$
 [X_f,X_g]=X_{\{f,g\}}.
 $$
 
+### 2.2 Canonical equation
 In classical mechanics, the Hamiltonian $H\in C^\infty(M)$ defines the *Hamiltonian vector field* $X_H$, which generates a flow $\varphi_t$. Then for a scalar function $f\in C^\infty(M)$, its derivative along the flow is given by
 $$
 \frac{\mathrm{d}f}{\mathrm{d}t}=\{H,f\}.
 $$
+As a special case, the local coordinate $(x^i,p_i)$ satisfies
+$$
+\begin{aligned}
+&\frac{\mathrm{d}x^i}{\mathrm{d}t}=\frac{\partial H}{\partial p_i}\\
+&\frac{\mathrm{d}p_i}{\mathrm{d}t}=-\frac{\partial H}{\partial x^i}.
+\end{aligned}
+$$
+This is called the *canonical equation*.
+
 Especially when $\{f,H\}=0$, the function $f$ is a constant along the flow
 $$
 \frac{\mathrm{d}f}{\mathrm{d}t}=\{H,f\}=0.
@@ -141,10 +150,24 @@ $$
 $$
 is called *analytically independent*. For a $2n$-dimensional symplectic manifold, the maximum size of a set of analytically independent that are also Poisson commute $\{H_i,H_j\}=0$ is $n$. Such a manifold is called a *completely integrable system*.
 
-For such a completely integrable system, the preimage of any non-singular point of map
+For such a completely integrable system, the (compact connected component of) preimage of any non-singular point of map
 $$
 \pi\doteq(H_1,\cdots,H_n):M\to\mathbb{R}^n
 $$
 is a Lagrangian submanifold that is diffeomorphic to a torus $T^n$. This is the *Arnold-Liouville theorem*.
 
 ### 2.4 Angle-action coordinate
+For the preimage $L\doteq\pi^{-1}(p)\cong T^n$ of point $p$, one can take the angle coordinate
+$$
+(\phi_1,\cdots,\phi_n):L\to T^n
+$$
+where each $\phi_i$ runs from $0$ to $2\pi$. This is a set of coordinate on the Lagrangian submanifold $L$. One can further take the local chart $(\phi_1,\cdots,\phi_n,I_1,\cdots,I_n)$ so that the symplectic form becomes
+$$
+\omega=\sum_i\mathrm{d}I_i\wedge\mathrm{d}\phi_i,
+$$
+where on each $L$ the $I_i$ are constants. Such coordinate is called *angle-action coordinate*.
+
+The integral of the Liouville 1-form on $L$ satisfies
+$$
+\frac{1}{(2\pi)^n}\int_L\theta=\frac{1}{(2\pi)^n}\int_L\sum_iI_i\mathrm{d}\phi_i=\sum_iI_i.
+$$

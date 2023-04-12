@@ -19,8 +19,14 @@ If map $\varphi$ is its own adjoint map, then it is called a *self-adjoint map*.
 # Linear algebra
 ## 1 Vector space
 ### 1.1 Definition
-A *vector space* is a set $V$ equipped with an *addition* $+:V\times V\to V$ and a *scalar multiplication* $\cdot:\mathbb{F}\times V\to V$ on a field $\mathbb{F}$. It's an [[ Abstract group theory#1.4 Abelian group|Abelian]] [[ Abstract group theory#1.2 Group|group]] under addition operation. It also satisfies that $\forall \lambda,\xi\in\mathbb{F},\forall\ket{u},\ket{v}\in V$
-$$\begin{aligned}\lambda(\xi\ket{v})&=(\lambda\xi)\ket{v}\\(\lambda+\xi)\ket{v}&=\lambda\ket{v}+\xi\ket{v}\\\lambda(\ket{u}+\ket{v})&=\lambda\ket{u}+\lambda\ket{v}\end{aligned}$$
+A *vector space* is a set $V$ equipped with an *addition* $+:V\times V\to V$ and a *scalar multiplication* $\cdot:\mathbb{F}\times V\to V$ on a field $\mathbb{F}$. It's an [[ Abstract group theory#1.4 Abelian group|Abelian]] [[ Abstract group theory#1.2 Group|group]] under addition operation. Denote the addition identity  as $0$. The scalar multiplication satisfies $\forall \lambda,\xi\in\mathbb{F},\forall\ket{u},\ket{v}\in V$
+$$
+\begin{aligned}
+\lambda(\xi\ket{v})&=(\lambda\xi)\ket{v}\\
+(\lambda+\xi)\ket{v}&=\lambda\ket{v}+\xi\ket{v}\\
+\lambda(\ket{u}+\ket{v})&=\lambda\ket{u}+\lambda\ket{v}.
+\end{aligned}
+$$
 For a set $S$, one can varify that the set of all maps from $S$ to $\mathbb{F}$ forms a vector space on $\mathbb{F}$, denoted as $\mathbb{F}^S$.
 
 ### 1.2 Subspace and sum of subspace
@@ -33,7 +39,7 @@ The *sum* of two subspaces $U$ and $W$ is defined as the set of all possible sum
 $$U+W\doteq\{\ket{v}:\ket{v}=\ket{u}+\ket{w}\}.$$
 The sum of subspaces $\{U_i\}$ is the smallest subspace that contains all the $U_i$.
 
-For two subspaces $U$ and $W$ of $V$, if every element $\ket{v}$ in $U+W$ can be uniquely decomposed into $\ket{v}=\ket{u}+\ket{w}$, then $U+W$ is called the *direct sum* of $U$ and $W$, denoted as $U\oplus W$. It can be proved that $U+W$ is a direct sum if and only if $U\cap V=\{\ket{0}\}$. ^fd1ad8
+For two subspaces $U$ and $W$ of $V$, if every element $\ket{v}$ in $U+W$ can be uniquely decomposed into $\ket{v}=\ket{u}+\ket{w}$, then $U+W$ is called the *direct sum* of $U$ and $W$, denoted as $U\oplus W$. It can be proved that $U+W$ is a direct sum if and only if $U\cap V=\{0\}$. ^fd1ad8
 
 For any [[Linear algebra#^63b8c6|finite-dimensional]] vector space $V$ and its subspace $U$, one can always find a $W\subset V$ so that $V=U\oplus W$.
 
@@ -46,7 +52,7 @@ If a vector space can be spanned by a set of vectors in it, then it is called a 
 
 ### 1.4 Linear dependence and basis
 A set of vectors $\{\ket{v_i}\}$ is called *linear independent* if they satisfy
-$$\sum_i\lambda_i\ket{v_i}=\ket{0}\quad\Rightarrow\quad\forall i,\lambda_i=0.$$
+$$\sum_i\lambda_i\ket{v_i}=0\quad\Rightarrow\quad\forall i,\lambda_i=0.$$
 Otherwise it is called *linear dependent*.
 
 In a finite-dimensional vector space $V$, the length of a linear independent set of vectors is no greater than the length of the set of vectors that spans $V$.
@@ -227,7 +233,7 @@ $$\forall\ket{u}\in U,\quad T\ket{u}\in U.$$
 This means that $T$ is an operator on $U$.
 
 For an operator $T$, the following are $T$-invarient subspaces of $V$.
-- $\{\ket{0}\}$;
+- $\{0\}$;
 - $V$;
 - $\mathrm{Ker}\ T$;
 - $\mathrm{Im}\ T$.
@@ -247,10 +253,10 @@ $$\exists\ket{v}\in V,\quad T\ket{v}=\lambda\ket{v}.$$
 
 Any subset of $V$ of the form
 $$U=\{\lambda\ket{v}\}=\mathrm{span}(\ket{v})$$
-with $\ket{v}\ne\ket{0}$ is a one dimensional subspace of $V$, and clearly every one dimensional subspace of $V$ has a form of this. So $V$ has a one dimensional $T$-invarient subspace if and only if $T$ has an eigenvalue.
+with $\ket{v}\ne0$ is a one dimensional subspace of $V$, and clearly every one dimensional subspace of $V$ has a form of this. So $V$ has a one dimensional $T$-invarient subspace if and only if $T$ has an eigenvalue.
 
 ### 6.3 Eigenvector
-For an operator $T$ with eigenvalue $\lambda$, its corresponding *eigenvector* is $\ket{v}\ne\ket{0}$ that
+For an operator $T$ with eigenvalue $\lambda$, its corresponding *eigenvector* is $\ket{v}\ne0$ that
 $$
 T\ket{v}=\lambda\ket{v}.
 $$

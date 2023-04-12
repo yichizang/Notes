@@ -20,7 +20,7 @@ We say that $\rho$ gives $V$ a *$G$-module* structure.
 
 Sometimes we call $V$ itself the representation of $G$, in which case we denote $\rho(g)(\ket{v})$ as $g\cdot\ket{v}$ or $g\ket{v}$. The [[Linear algebra#1.5 Dimensionality|dimension]] of $V$ is sometimes called the *degree* of the representation.
 
-For two representations $V$ and $W$, a map $\varphi:V\to W$ is called a *$G$-linear map* if it [[Abstract group theory#1.4 Abelian group|commutes]] with all $g\in G$.
+For two representations $V$ and $W$ of $G$, a map $\varphi:V\to W$ is called a *$G$-linear map* if it [[Abstract group theory#1.4 Abelian group|commutes]] with all $g\in G$.
 
 A *subrepresentation* of $V$ is the representation on $V$'s $G$-invariant subspace $W$. If $V$ has no proper non-zero subrepresentation, then it is an *irreducible* representation.
 
