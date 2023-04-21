@@ -76,11 +76,70 @@ $$
 \ket{\psi(t)}=U(t,t_0)\ket{\psi(t_0)}.
 $$
 
-#### 1.1.4 Eigenstates under different pictures
+#### 1.1.4 Transition between pictures
+Setting the initial condition
+$$
+O_S=O_H(0),\quad\ket{\psi}_H=\ket{\psi(0)}_S,
+$$
+one can write the transition between Schrodinger picture and Heisenberg picture
+$$
+\begin{aligned}
+O_H(t)&=e^{iHt}O_Se^{-iHt},\\
+\ket{\psi(t)}_S&=e^{-iHt}\ket{\psi}_H.
+\end{aligned}
+$$
 
+#### 1.1.5 Eigenstate under pictures
+Under Heisenberg picture, consider a state $\ket{\phi,t_0}_H$ that satisfies
+$$
+\phi_H(\pmb{x},t_0)\ket{\phi,t_0}_H=\phi(\pmb{x},t_0)\ket{\phi,t_0}_H.
+$$
+Such a state is an [[../Mathematics/Linear algebra#6.3 Eigenvector|eigenstate]] of field operator at time $t=t_0$.
+
+>[!note]
+>The state $\ket{\phi,t_0}_H$ does not evolve with time since it's under Heisenberg picture. The $t_0$ is simply to label of which operator this eigenstate is.
+
+Under Schrodinger picture, an eigenstate is $\ket{\phi}_S$ that
+$$
+\phi_S(\pmb{x})\ket{\phi(t)}_S=\phi(\pmb{x},t)\ket{\phi(t)}_S.
+$$
+
+These two are related by
+$$
+\ket{\phi(t)}_S=e^{-iHt}\ket{\phi,t}_H.
+$$
 
 ## 2 Path integral formalism
 ### 2.1 Path integral
+#### 2.1.1 Feynman kernal
+Write the transition amplitude of two eigenstates as
+$$
+U(\phi_f,t_f;\phi_0,t_0)\doteq{}_H\braket{\phi_f,t_f|\phi_0,t_0}_H.
+$$
+This is called the *Feynman kernal*. Under Schrodinger picture, it can be written as
+$$
+U(\phi_f,t_f;\phi_0,t_0)\doteq{}_S\braket{\phi_f|e^{-iH(t_f-t_0)}|\phi_0}_S.
+$$
+
+#### 2.1.2 Path integral
+Using the resolution of identity for both field and momentum, one can get
+$$
+\begin{aligned}
+U(\phi_f,t_f;\phi_0,t_0)&=\lim_{n\to\infty}\braket{\phi_f|(1-iH\delta)^n|\phi_0}\\
+&=\lim_{n\to\infty}\int[\mathrm{d}\phi]\prod_{i=1}^n\braket{\phi_i|(1-iH\delta t)|\phi_{i-1}}\\
+&=\lim_{n\to\infty}\int[\mathrm{d}\phi][\mathrm{d}\pi]\prod_{i=1}^n\braket{\phi_i|\pi_{i-1}}\braket{\pi_{i-1}|(1-iH\delta t)|\phi_{i-1}},
+\end{aligned}
+$$
+where the integral $[\mathrm{d}\phi]$ and $[\mathrm{d}\pi]$ integrates over all fields and momenta except $\phi_0$ and $\phi_n\doteq\phi_f$.
+
+>[!warning]
+>NOT FINISHED
+
+Expressing the Hamiltonian as a function of $\phi$ and $\pi$, the Feynman kernal can be written as
+$$
+U(\phi_f,t_f;\phi_0,t_0)=\int[D\phi][D\pi]\exp\left\{i\int_{t_0}^{t_f}\mathrm{d}^4x\left[\pi\dot{\phi}-\mathcal{H}(\phi,\pi)\right]\right\}.
+$$
+The terms on the index are all numbers instead of operators.
 
 ## 3 Renormalization and regularization
 ### 3.1 Regularization
@@ -104,7 +163,7 @@ and $\Delta$ is some function independent of $k$. This step may require some cha
 
 The $f(k^\mu,\cdots)$ on the numerator can be written as $f(k^2,\cdots)$ using the identity
 $$
-\int\frac{\mathrm{d}^4k}{(2\pi)^4}\frac{k^\mu}{D^3}=0,\qquad\int\frac{\mathrm{d}^4k}{(2\pi)^4}\frac{k^\mu k^\nu}{D^3}=\int\frac{\mathrm{d}^4k}{(2\pi)^4}\frac{1}{4}\frac{\eta^{\mu\nu}k^2}{D^3}.
+\int\frac{\mathrm{d}^4k}{(2\pi)^4}\frac{k^\mu}{D^3}=0,\qquad\int\frac{\mathrm{d}^4k}{(2\pi)^4}\frac{k^\mu k^\nu}{D^3}=\int\frac{\mathrm{d}^4k}{(2\pi)^4}\frac{1}{d}\frac{\eta^{\mu\nu}k^2}{D^3}.
 $$
 
 #### 3.1.2 Wick rotation

@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Physics/Gauge field theory.md",
-                "mode": "source",
+                "file": "Mathematics/Symplectic geometry.md",
+                "mode": "preview",
                 "backlinks": true,
                 "source": false
               }
@@ -73,7 +73,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -103,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mathematics/Topology.md"
+                "file": "Physics/Quantum field theory.md"
               }
             }
           },
@@ -166,7 +166,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mathematics/Topology.md",
+                "file": "Physics/Quantum field theory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -183,7 +183,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mathematics/Topology.md",
+                "file": "Physics/Quantum field theory.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -228,13 +228,14 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "af606e195ed5ce0a",
+  "active": "6625047b1790e10e",
   "lastOpenFiles": [
+    "Mathematics/Symplectic geometry.md",
+    "Physics/Gauge field theory.md",
     "Physics/Quantum field theory.md",
     "Mathematics/Topology.md",
     "Mathematics/Set theory.md",
     "Mathematics/Differential geometry.md",
-    "Physics/Gauge field theory.md",
     "Mathematics/Riemannian geometry.md",
     "Mathematics/Measure theory.md",
     "Physics/Conformal symmetry.md",
@@ -243,7 +244,6 @@
     "Physics/String theory.md",
     "Mathematics/Linear algebra.md",
     "Mathematics/Representation theory.md",
-    "Mathematics/Symplectic geometry.md",
     "Physics/Physicists' notation for Riemannian Geo.md",
     "Mathematics/Abstract group theory.md",
     "Conventions.md",
