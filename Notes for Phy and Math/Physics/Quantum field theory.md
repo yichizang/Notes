@@ -121,16 +121,15 @@ $$
 U(\phi_f,t_f;\phi_0,t_0)\doteq{}_S\braket{\phi_f|e^{-iH(t_f-t_0)}|\phi_0}_S.
 $$
 
-#### 2.1.2 Path integral
 Using the resolution of identity for both field and momentum, one can get
 $$
 \begin{aligned}
 U(\phi_f,t_f;\phi_0,t_0)&=\lim_{n\to\infty}\braket{\phi_f|(1-iH\delta)^n|\phi_0}\\
-&=\lim_{n\to\infty}\int[\mathrm{d}\phi]\prod_{i=1}^n\braket{\phi_i|(1-iH\delta t)|\phi_{i-1}}\\
-&=\lim_{n\to\infty}\int[\mathrm{d}\phi][\mathrm{d}\pi]\prod_{i=1}^n\braket{\phi_i|\pi_{i-1}}\braket{\pi_{i-1}|(1-iH\delta t)|\phi_{i-1}},
+&=\lim_{n\to\infty}\int\mathrm{d}\phi\prod_{i=1}^n\braket{\phi_i|(1-iH\delta t)|\phi_{i-1}}\\
+&=\lim_{n\to\infty}\int\mathrm{d}\phi\mathrm{d}\pi\prod_{i=1}^n\braket{\phi_i|\pi_{i-1}}\braket{\pi_{i-1}|(1-iH\delta t)|\phi_{i-1}},
 \end{aligned}
 $$
-where the integral $[\mathrm{d}\phi]$ and $[\mathrm{d}\pi]$ integrates over all fields and momenta except $\phi_0$ and $\phi_n\doteq\phi_f$.
+where the integral $\mathrm{d}\phi$ and $\mathrm{d}\pi$ integrates over all fields and momenta except $\phi_0$ and $\phi_n\doteq\phi_f$.
 
 >[!warning]
 >NOT FINISHED
@@ -139,7 +138,12 @@ Expressing the Hamiltonian as a function of $\phi$ and $\pi$, the Feynman kernal
 $$
 U(\phi_f,t_f;\phi_0,t_0)=\int[D\phi][D\pi]\exp\left\{i\int_{t_0}^{t_f}\mathrm{d}^4x\left[\pi\dot{\phi}-\mathcal{H}(\phi,\pi)\right]\right\}.
 $$
-The terms on the index are all numbers instead of operators.
+The terms on the index are all numbers instead of operators. Here the normalization factors are absorbed in $[D\phi]$ and $[D\pi]$.
+
+#### 2.1.2 Lagrangian formalism
+
+#### 2.1.3 Time ordering
+
 
 ## 3 Renormalization and regularization
 ### 3.1 Regularization

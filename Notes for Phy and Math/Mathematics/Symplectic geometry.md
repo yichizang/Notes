@@ -31,6 +31,7 @@ $$
 $$
 is a symplectic form on $\mathbb{R}^{2n}$.
 
+### 1.3 Darboux theorem
 The *Darboux's theorem* states that for a $2n$-dimensional symplectic manifold $(M,\omega)$ and an arbitary point $p\in M$, there is always a local chart at $p$ $(x^1,\cdots,x^n,p_1,\cdots,p_n)$ that
 $$
 \omega=\sum_i\mathrm{d}p_i\wedge\mathrm{d}x^i.
@@ -39,7 +40,7 @@ Such coordinate is called *Darboux coordinate*.
 
 This theorem proves that the local behavior of symplectic manifold is trivial (same as $\mathbb{R}^{2n}$). Therefore, more interests lies in the global behavior.
 
-### 1.3 Liouville 1-form
+### 1.4 Liouville 1-form
 A symplectic manifold is called *exact* if there exists a 1-form $\theta$ such that $\omega=\mathrm{d}\theta$. This $\theta$ is called *Liouville 1-form*. The vector field $Z$ that satisfies
 $$
 i(Z)\omega=\theta
@@ -58,7 +59,7 @@ is called the *Liouville vector field*.
 >$$
 >is a symplectic form on $T^\ast M$.
 
-### 1.4 Symplectomorphism
+### 1.5 Symplectomorphism
 A [[Differential geometry#1.1.3 Smooth map|diffeomorphism]] $\psi:M\to N$ between two symplectic manifold that satisfies
 $$
 \psi^\ast\omega_N=\omega_M
@@ -77,7 +78,7 @@ J\doteq\begin{pmatrix}
 \end{pmatrix}.
 $$
 
-### 1.5 Moser stability theorem
+### 1.6 Moser stability theorem
 The *Moser stability theorem* states that for a symplectic manifold $M$ with a 1-parameter family of symplectic forms $\omega_t$, there is a 1-parameter family of symplectomorphism $\psi_t:M\to M$ that
 $$
 \psi_t^\ast\omega_t=\omega_0,\quad\psi_0=1_M.
@@ -85,7 +86,7 @@ $$
 
 This theorem means that one cannot change the symplectic form to certain degree.
 
-### 1.6 Lagrangian submanifold
+### 1.7 Lagrangian submanifold
 A *Lagrangian submanifold* is a submanifold $L\subset M$ of a symplectic manifold $(M,\omega)$ such that
 $$
 \omega|_L=0,\qquad\dim L=\frac{1}{2}\dim M.

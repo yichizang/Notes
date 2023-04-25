@@ -7,6 +7,7 @@ banner_y: 0.268
 >- [[Abstract group theory]]
 >- Lie group and Lie algebra
 >- [[Topology]]
+>- [[Algebraic topology]]
 
 # Differential geometry
 ## 1 Manifold
@@ -68,7 +69,7 @@ $\partial M$ is an $(n-1)$-dimensional submanifold of $M$.
 >[!note]+
 >The above definition is basically replacing $\mathbb{R}^n$ to $\mathbb{H}^n$ in the definition of manifold.
 
-A [[Topology#1.3 Compactness|compact]] manifold $M$ is called *closed* if $\partial M=\varnothing$.
+A [[Topology#1.4 Compactness|compact]] manifold $M$ is called *closed* if $\partial M=\varnothing$.
 
 ### 1.2 Vector
 #### 1.2.1 Tangent vector
@@ -426,7 +427,7 @@ Since $\mathrm{d}^2=0$, all exact $k$-forms are closed, which means $B^k(M)\subs
 $$
 H_{\text{dR}}^k(M)\doteq Z^k(M)/B^k(M).
 $$
-Its dimension is called the *$k$-th Betti number* of $M$. This is a cohomology group of the following structure called *de Rham complex* $(\Omega^\bullet(M),\mathrm{d})$
+Its dimension is called the *$k$-th Betti number* of $M$. This is a [[Algebraic topology#2.1 Cochain group|cohomology group]] of the following structure called *de Rham complex* $(\Omega^\bullet(M),\mathrm{d})$
 $$
 0\to\Omega^1(M)\stackrel{\mathrm{d}}{\to}\Omega^2(M)\stackrel{\mathrm{d}}{\to}\cdots\stackrel{\mathrm{d}}{\to}\Omega^n(M)\to 0.
 $$

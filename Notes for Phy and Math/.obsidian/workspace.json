@@ -8,32 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "5e7861bec5a01eb0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Mathematics/Symplectic geometry.md",
-                "mode": "preview",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "07232430de17b87b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Physics/String theory.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "085f2fedf4503558",
             "type": "leaf",
             "state": {
@@ -71,9 +45,35 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "f4cedad2be5661cb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Something.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "482736c3f9d02534",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Mathematics/Algebraic topology.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -103,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Physics/Quantum field theory.md"
+                "file": "Mathematics/Algebraic topology.md"
               }
             }
           },
@@ -166,7 +166,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Physics/Quantum field theory.md",
+                "file": "Mathematics/Algebraic topology.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -183,7 +183,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Physics/Quantum field theory.md",
+                "file": "Mathematics/Algebraic topology.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -228,14 +228,16 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "6625047b1790e10e",
+  "active": "482736c3f9d02534",
   "lastOpenFiles": [
     "Mathematics/Symplectic geometry.md",
-    "Physics/Gauge field theory.md",
-    "Physics/Quantum field theory.md",
+    "Mathematics/Algebraic topology.md",
+    "Something.md",
     "Mathematics/Topology.md",
-    "Mathematics/Set theory.md",
     "Mathematics/Differential geometry.md",
+    "Physics/Quantum field theory.md",
+    "Physics/Gauge field theory.md",
+    "Mathematics/Set theory.md",
     "Mathematics/Riemannian geometry.md",
     "Mathematics/Measure theory.md",
     "Physics/Conformal symmetry.md",
@@ -257,8 +259,6 @@
     "Paper_reading/Supersymmetry and Morse theory.md",
     "test.md",
     "Paper_reading",
-    "Mathematics/Mathematical logic.md",
-    "Mathematics/Brief intro on elliptic curve.md",
-    "Mathematics/Complex function.md"
+    "Mathematics/Mathematical logic.md"
   ]
 }
