@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Mathematics/Differential geometry.md",
-                "mode": "source",
+                "mode": "preview",
                 "backlinks": true,
                 "source": false
               }
@@ -34,25 +34,12 @@
             }
           },
           {
-            "id": "c32cc87eaa7b4174",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Mathematics/Topology.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "f4cedad2be5661cb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Something.md",
+                "file": "Abelian CS theory.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -66,6 +53,19 @@
               "type": "markdown",
               "state": {
                 "file": "Mathematics/Algebraic topology.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "56dc4b9351763cf6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Mathematics/Lie algebra and Lie group.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -73,7 +73,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -230,35 +230,35 @@
   },
   "active": "482736c3f9d02534",
   "lastOpenFiles": [
-    "Mathematics/Symplectic geometry.md",
+    "Abelian CS theory.md",
     "Mathematics/Algebraic topology.md",
-    "Something.md",
-    "Mathematics/Topology.md",
     "Mathematics/Differential geometry.md",
+    "Mathematics/Lie algebra and Lie group.md",
     "Physics/Quantum field theory.md",
+    "Physics/Quantum field theory 2023-04-27 15.46.31.excalidraw.md",
+    "Physics/SUSY.md",
+    "Physics/String theory.md",
+    "Physics/Representation of Lorentz algebra.md",
+    "Physics/Physicists' notation for Riemannian Geo.md",
+    "Physics/Lie superalgebra.md",
     "Physics/Gauge field theory.md",
-    "Mathematics/Set theory.md",
-    "Mathematics/Riemannian geometry.md",
-    "Mathematics/Measure theory.md",
+    "Physics/Electrodynamics.md",
     "Physics/Conformal symmetry.md",
     "Physics/Dirac algebra.md",
-    "Physics/Representation of Lorentz algebra.md",
-    "Physics/String theory.md",
-    "Mathematics/Linear algebra.md",
+    "Physics/Classical field theory.md",
+    "Paper_reading/Supersymmetry and Morse theory.md",
+    "Mathematics/Vector analysis.md",
+    "Mathematics/Topology.md",
+    "Mathematics/The great C isomorphism theorem.md",
+    "Mathematics/Symplectic geometry.md",
+    "Mathematics/Set theory.md",
+    "Mathematics/Riemannian geometry.md",
     "Mathematics/Representation theory.md",
-    "Physics/Physicists' notation for Riemannian Geo.md",
-    "Mathematics/Abstract group theory.md",
-    "Conventions.md",
-    "Physics/SUSY.md",
+    "Mathematics/Measure theory.md",
+    "Mathematics/Matrix theory.md",
     "pics/106010900_p0.png",
     "pics/105622306_p0.jpg",
-    "Physics/Lie superalgebra.md",
-    "Physics/Classical field theory.md",
-    "Untitled 1.md",
     "Untitled",
-    "Paper_reading/Supersymmetry and Morse theory.md",
-    "test.md",
-    "Paper_reading",
-    "Mathematics/Mathematical logic.md"
+    "Paper_reading"
   ]
 }

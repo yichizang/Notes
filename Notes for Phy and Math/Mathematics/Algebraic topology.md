@@ -95,9 +95,6 @@ $$
 
 This group is called the *fundamental group* at basepoint $x_0$.
 
-For two [[Topology#1.5 Connectivity|path connected]] topological spaces $X$ and $Y$, $\pi_1(X\times Y)$ is isomorphic to $\pi_1(X)\times\pi_1(Y)$.
-
-#### 2.2.2 Independency on basepoint
 For two fundamental groups $\pi_1(X,x_0)$ and $\pi_1(X,x_1)$, there is an isomorphism
 $$
 \begin{aligned}
@@ -107,15 +104,37 @@ $$
 $$
 where $h(0)=x_0$ and $h(1)=x_1$. Therefore, one can simply denote as $\pi_1(X)$.
 
+For two [[Topology#1.5 Connectivity|path connected]] topological spaces $X$ and $Y$, $\pi_1(X\times Y)$ is isomorphic to $\pi_1(X)\times\pi_1(Y)$.
+
 >[!example]
 >The fundamental group of $S^1$ is $\pi_1(S^1)\cong\mathbb{Z}$. For $n>1$, $\pi_1(S^n)=0$.
 >
 >This can be used to prove several interesting theorems. (LEFT FOR LATER)
 
-#### 2.2.3 Simply connected
+#### 2.2.2 Simply connected
 A topological space $X$ is called *simply connected* if it is path connected and its fundamental group is trivial.
 
 It can be understood as there is no "hole" in the space so that a loop can continuously sweep over the entire space.
+
+#### 2.2.3 Induced homomorphism
+Consider a map $\varphi:X\to Y$ that maps $x_0\in X$ to $y_0\in Y$. It induces a homomorphism
+$$
+\begin{aligned}
+\varphi_\ast:&&\pi_1(X,x_0)&\to\pi_1(Y,y_0)\\
+&&[f]&\mapsto[\varphi\circ f].
+\end{aligned}
+$$
+
+For a topological space $X$ and its subspace $A\subset X$, the inclusion map $i:A\hookrightarrow X$ induces a homomorphism $i_\ast:\pi_1(A)\to\pi_1(X)$.
+- If $X$ retracts onto $A$, then $i_\ast$ is injective;
+- If $X$ deformation retracts onto $A$ then $i_\ast$ is isomorphism.
+
+Generally, a homotopy equivalence induces an isomorphism.
+
+### 2.3 Van Kampen's theorem
+
+>[!warning]
+>Fix later
 
 ## 3 Simplical homology
 ### 3.1 $q$-simplex

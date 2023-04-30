@@ -140,10 +140,8 @@ U(\phi_f,t_f;\phi_0,t_0)=\int[D\phi][D\pi]\exp\left\{i\int_{t_0}^{t_f}\mathrm{d}
 $$
 The terms on the index are all numbers instead of operators. Here the normalization factors are absorbed in $[D\phi]$ and $[D\pi]$.
 
-#### 2.1.2 Lagrangian formalism
-
-#### 2.1.3 Time ordering
-
+#### 2.1.2 Time ordering
+Consider the time-ordered Green function $\braket{\phi_f,t_f|T\phi(\pmb{x}_1,t_1)\phi(\pmb{x}_2,t_2)|\phi_i,t_i}$.
 
 ## 3 Renormalization and regularization
 ### 3.1 Regularization
