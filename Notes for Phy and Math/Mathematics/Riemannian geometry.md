@@ -154,7 +154,7 @@ $$
 ### 2.3 Laplace-Beltrami operator
 Define the map $\delta:\Omega^k(M)\to\Omega^{k-1}(M)$ as
 $$
-\delta:\omega\mapsto(-1)^{nk+k+1}\ast\mathrm{d}\ \ast.
+\delta:\omega\mapsto(-1)^{nk+k+1}\ast\mathrm{d}\ast\omega.
 $$
 Such a map satisfies
 - $\delta^2=0$;

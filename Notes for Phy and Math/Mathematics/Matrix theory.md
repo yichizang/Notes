@@ -93,7 +93,7 @@ The trace of a matrix has the following properties.
 - For two square matrices $A$ and $B$ of the same order, $\mathrm{Tr}(A+B)=\mathrm{Tr}\ A+\mathrm{Tr}\ B$.
 
 ### 1.8 Determinant
-A permutation of $n$ is an element of [[Abstract group theory#4.1 Symmetric group|symmetric group]] $S_n$. Its sign is given by [[Abstract group theory#^3aa69c|sign homomorphism]] $\epsilon_{a_1a_2\cdots a_n}$. With this one can define the *determinant* of a square matrix $A$ of order $n$ as
+A permutation of $n$ is an element of [[Abstract group theory#4.1 Symmetric group|symmetric group]] $S_n$. Its sign is given by [[Abstract group theory#4.5 Odd and even|sign homomorphism]] $\epsilon_{a_1a_2\cdots a_n}$. With this one can define the *determinant* of a square matrix $A$ of order $n$ as
 $$
 \det A\doteq\sum\epsilon_{a_1a_2\cdots a_n}A_{a_1,1}A_{a_2,2}\cdots A_{a_n,n}.
 $$

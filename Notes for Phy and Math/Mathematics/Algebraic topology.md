@@ -111,6 +111,9 @@ For two [[Topology#1.5 Connectivity|path connected]] topological spaces $X$ and 
 >
 >This can be used to prove several interesting theorems. (LEFT FOR LATER)
 
+>[!note]
+>As a general case, the set of homotopic equivalence classes of $S^n$ on a topological space is the $n$-th homotopic group $\pi_n(X)$.
+
 #### 2.2.2 Simply connected
 A topological space $X$ is called *simply connected* if it is path connected and its fundamental group is trivial.
 
@@ -132,9 +135,27 @@ For a topological space $X$ and its subspace $A\subset X$, the inclusion map $i:
 Generally, a homotopy equivalence induces an isomorphism.
 
 ### 2.3 Van Kampen's theorem
+Let $\{A_i\}$ be a set of path connected open set that all contains $x_0$ and $X\doteq\bigcup\{A_i\}$. Each intersection $A_i\cap A_j$ and $A_i\cap A_j\cap A_k$ is also path connected. One can prove that
+$$
+N\doteq\{i_{i\ast}(f)i_{j\ast}(f)^{-1}:f\in\pi_1(A_i\cap A_j)\}
+$$
+is a [[Abstract group theory#6.5 Normal subgroups and quotient group|normal subgroup]] of $(\pi_1(A_1)\ast\pi_1(A_2)\cdots)$. The *van Kampen's theorem* states that there is an isomorphism
+$$
+\pi_1(X)\cong(\pi_1(A_1)\ast\pi_1(A_2)\cdots)/N.
+$$
 
->[!warning]
->Fix later
+A simpler version states that if $X=A_1\cup A_2$ with $A_i$ path connected and $A_1\cap A_2$ simply connected, then
+$$
+\pi_1(X)\cong\pi_1(A_1)\ast\pi_1(A_2).
+$$
+
+>[!note]
+>The normal subgroup $N$ is here to define how to "identity" elements in $\pi_1(A_i)$.
+
+### 2.4 Covering space
+#### 2.4.1 Covering space
+A *covering space* of a space $X$ is another space $\tilde{X}$ with a map $p:\tilde{X}\to X$ that satisfies
+
 
 ## 3 Simplical homology
 ### 3.1 $q$-simplex
@@ -195,18 +216,18 @@ $$
 $$
 Therefore, one can define $H_q(M;\mathbb{Z})$ as a topological invariant of $M$.
 
->[!note] Eular characteristic
->Consider the background ring $\mathbb{R}$. The dimension of $H_q(M;\mathbb{R})$ is called the $q$-th *Betti number*. Its alternative sum is the *Eular characteristic* of $M$
->$$
->\chi(M)\doteq\sum_q(-1)^q\dim H_q(M;\mathbb{R}).
->$$
->One can prove that this is equivalent to
->$$
->\chi(M)=\sum_q(-1)^q\dim C_q(K;\mathbb{R}),
->$$
->which is a generalization of the 2-dimensional case $\chi=\mathrm{V}-\mathrm{E}+\mathrm{F}$.
+### 3.5 Eular characteristic
+Consider the background ring $\mathbb{R}$. The dimension of $H_q(M;\mathbb{R})$ is called the $q$-th *Betti number*. Its alternative sum is the *Eular characteristic* of $M$
+$$
+\chi(M)\doteq\sum_q(-1)^q\dim H_q(M;\mathbb{R}).
+$$
+One can prove that this is equivalent to
+$$
+\chi(M)=\sum_q(-1)^q\dim C_q(K;\mathbb{R}),
+$$
+which is a generalization of the 2-dimensional case $\chi=\mathrm{V}-\mathrm{E}+\mathrm{F}$.
 
-### 3.5 Simplicial map
+### 3.6 Simplicial map
 For two simplicial complex $K_1$ and $K_2$, a *simplicial map* is a map $f:K_1\to K_2$ that if $\braket{a_1,\cdots,a_l}$ is a simplex in $K_1$, then $\braket{f(a_1),\cdots,f(a_l)}$ is a simplex in $K_2$.
 
 A simplicial map induces a homomorphism between chain groups
@@ -292,7 +313,26 @@ $$
 [N_1]\cdot[N_2]\doteq\int_M\vartheta(N_1)\wedge\vartheta(N_2).
 $$
 
-## 5 Lefschetz fixed point theorem
+## 5 Mapping degree
+### 5.1 Mapping degree
+For two $n$ dimensional smooth oriented connected closed manifolds $M$ and $N$, a smooth map $f:M\to N$ induces a homomorphism $f_\ast:H_\bullet(M;\mathbb{Z})\to H_\bullet(N;\mathbb{Z})$. The *mapping degree* of $f$ is defined as
+$$
+\deg f\doteq\frac{\displaystyle\int_Mf^\ast\mathrm{vol}_N}{\displaystyle\int_N\mathrm{vol}_N}.
+$$
+
+### 5.2 Linking number
+For two knots $K_i:S^1\to\mathbb{R}^3$, one can define a map
+$$
+\begin{aligned}
+F:&&S^1\times S^1&\to S^2\\
+&&(x_1,x_2)&\mapsto\frac{x_1-x_2}{|x_1-x_2|}.
+\end{aligned}
+$$
+The mapping degree of the map $F$ is the *linking number* of the two knots
+$$
+\mathrm{Lk}(K_1,K_2)\doteq\deg F=\frac{1}{4\pi}\int_{S^1}\mathrm{d}x_1^i\int_{S^1}\mathrm{d}x_2^j\frac{(x_1-x_2)^k}{|x_1-x_2|^3}\epsilon_{ijk},
+$$
+where $\mathrm{vol}_{S^2}=\dfrac{1}{2}\epsilon_{ijk}x^i\mathrm{d}x^j\wedge\mathrm{d}x^k$.
 
 ## 6 Mayer-Vietoris exact sequence
 ### 6.1 Exact sequence

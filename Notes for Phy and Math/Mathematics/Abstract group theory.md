@@ -47,7 +47,7 @@ $$\begin{aligned}&\mathrm{O}(n,\mathbb{F})\doteq\{A\in\mathrm{GL}(n,\mathbb{F}):
 - (special) unitary group
 $$\begin{aligned}&\mathrm{U}(n)\doteq\{A\in\mathrm{GL}(n,\mathbb{C}):AA^H=\mathbb{1}\},\\&\mathrm{SU}(n)\doteq\{A\in\mathrm{U}(n):\det A=1\};\end{aligned}$$
 - symplectic group
-$$\mathrm{Sp}(2n,\mathbb{F})\doteq\{A\in\mathrm{GL}(2n,\mathbb{F}):A^TJA=\mathbb{1}\},$$
+$$\mathrm{Sp}(2n,\mathbb{F})\doteq\{A\in\mathrm{GL}(2n,\mathbb{F}):A^TJA=J\},$$
 where $J$ is *standard symplectic form* on $\mathbb{R}^{2n}$, defined as
 $$J\doteq\begin{pmatrix}0 & \mathbb{1}_n\\-\mathbb{1}_n & 0\end{pmatrix}.$$
 
@@ -62,7 +62,6 @@ $$(f_1\ast f_2)(x)\doteq f_1(x)\times_G f_2(x);$$
 - The power set $\mathcal{P}(X)$ of a set $X$ also forms a group. The group multiplication is the symmetric difference of two subsets
 $$Y_1\cdot Y_2\doteq(Y_1-Y_2)\cup(Y_2-Y_1).$$
 
----
 ## 2 Homomorphism and isomorphism
 ### 2.1 Definition
 For two groups $G(\times)$ and $H(\ast)$, a *homomorphism* is a map $\phi:G\to H$ that preserves the group structure
@@ -87,7 +86,6 @@ a subgroup of $G_1\times G_2$ can be constructed as
 $$G_1\times_{\phi_1,\phi_2}G_2\doteq\{(g_1,g_2)|\phi_1(g_1)=\phi_2(g_2)\}.$$
 This is called their *fiber product*.
 
----
 ## 3 Group action
 ### 3.1 Left group action
 A *left group action* of a group $G$ on a set $X$ is a map $\cdot:G\times X\to X$ that satisfies
@@ -119,7 +117,6 @@ $$(g\cdot F)(x)\doteq F(g^{-1}\cdot x).$$
 The inverse here is to ensure the group action is associative for non-abelian group
 $$(g\cdot(h\cdot F))(x)=(h\cdot F)(g^{-1}\cdot x)=F(h^{-1}\cdot g^{-1}\cdot x)=((g\cdot h)\cdot F)(x).$$
 
----
 ## 4 Permutation group
 ### 4.1 Symmetric group
 Recall that a permutation group $S_X$ on a set $X$ is the group of invertible maps from $X$ to itself. If $X=\{1,2,\cdots,n\}$, then $S_X$ is called a *symmetric group*, denoted as $S_n$. Its element can be denoted as
@@ -132,7 +129,7 @@ $$\phi^{-1}=\begin{pmatrix}\phi_1 & \phi_2 & \cdots & \phi_n\\1 & 2 & \cdots & n
 
 To prove this note that multiplying a group element $g$ on the entire group
 $$g\cdot G\doteq\{g\cdot g_1,g\cdot g_2,\cdots\}$$
-is equivalent to applying a permutation since $g\cdot g_1\ne g\cdot g_2$ if $g_1=g_2$. This is called the *rearrangement lemma*. Thus an element of $G$ can be mapped to an element of $S_G$. ^4e9ddd
+is equivalent to applying a permutation since $g\cdot g_1\ne g\cdot g_2$ if $g_1=g_2$. This is called the *rearrangement lemma*. Thus an element of $G$ can be mapped to an element of $S_G$.
 
 ### 4.3 Cyclic permutation
 For $m$ elements $\{a_1,a_2,\cdots,a_m\}$, consider the permutation
@@ -157,11 +154,12 @@ A permutation can be decomposed into transpositions in different ways, but the n
 The *sign homomorphism* is the homomorphism
 $$\mathrm{sgn}:S_n\to\mathbb{Z}_2$$
 that maps even permutations to $+1$ and odd permutations to $-1$. This is sometimes denoted as the Levi-Civita symbol $\epsilon_{a_1a_2\cdots a_n}$, which means the sign of
-$$\begin{pmatrix}1 & 2 & \cdots & n\\a_1 & a_2 & \cdots & a_n\end{pmatrix}.$$ ^3aa69c
+$$
+\begin{pmatrix}1 & 2 & \cdots & n\\a_1 & a_2 & \cdots & a_n\end{pmatrix}.
+$$
 
 The *alternating group* $A_n$ is a subgroup of $S_n$ consisting of even permutations.
 
----
 ## 5 Generator
 ### 5.1 Generator
 The *generating set* is a subset $S\subset G$ that every element in $G$ can be written as a product of elements in $S$
@@ -184,7 +182,6 @@ Two free groups of the same order are isomorphism.
 - If $R_i\cdot s^{-1}$ can be derived from basic relations, then add it to the basic relations and add $s$ to the generating set;
 - If $R_i\cdot s^{-1}$ is a basic relation and $s$ is a generator, then remove $s$ from the generating set, remove $R_i\cdot s^{-1}$ from the basic relations, and replace $s$ in other basic relations with $R_i$.
 
----
 ## 6 Coset and conjugacy
 ### 6.1 Coset
 For a subgroup $H$ of $G$, the *left-coset* of $H$ is defined as
@@ -193,13 +190,13 @@ Two left-cosets are either identical or disjoint, and every group element is in 
 
 The set of cosets of $H$ in $G$ is called a *homogeneous space*, denoted as $G/H$. This is the orbit under right $H$ action on $G$. The order of $G/H$ is called the *index of $H$ in $G$*, denoted as $[G:H]$.
 
-### 6.2 Order of a group, again
+### 6.2 Lagrangian theorem
 For a finite group $G$ and its subgroup $H$, their orders satisfy $|G|/|H|\in\mathbb{N}$. This is called the *Lagrange theorem*. As a corollary, a group with prime order $p$ is isomorphic to $\mathbb{Z}_p$ and has no non-trivial subgroup.
 
 For a prime number $p$, if $|G|/p^k\in\mathbb{N}$, then $G$ has a subgroup $H$ of order $p^k$. This is called the *Sylow's (first) theorem*.
 
 ### 6.3 Conjugacy
-Two group elements $g_1$ and $g_2$ are called *conjugate* if there is an $h\in G$ that $g_1=hg_2h^{-1}$. Conjugacy defines an equivalence relation and the corresponding equivalence class is called *conjugacy class*. A function of conjugacy classes is called a *class function*. ^e1a076
+Two group elements $g_1$ and $g_2$ are called *conjugate* if there is an $h\in G$ that $g_1=hg_2h^{-1}$. Conjugacy defines an equivalence relation and the corresponding equivalence class is called *conjugacy class*. A function of conjugacy classes is called a *class function*.
 
 Two subgroups $H$ and $K$ of $G$ are called *conjugate* if there is a $g\in G$ that
 $$K=gHg^{-1}\doteq\{ghg^{-1}\}.$$
@@ -208,7 +205,20 @@ $$
 \forall h\in H,\quad \phi(h)=g\cdot\varphi(h)\cdot g^{-1}.
 $$
 
-### 6.4 Normal subgroups and quotient group
+### 6.4 Conjugacy classes of $S_n$
+For a cycle of length $k$ $(a_1a_2\cdots a_k)\in S_n$, its conjugate $g(a_1a_2\cdots a_k)g^{-1}$ is also a cycle of length $k$
+$$
+g(a_1\cdots a_k)g^{-1}=(b_1\cdots b_k),
+$$
+where $b_i$ is the image of $a_i$ under permutation $g$. One can further prove that any cycle with same length are conjugate.
+
+Then the conjugacy classes of $S_n$ can be labelled with $n$ integers $\ell_k$, which is the number of cycles with length $k$ in the cycle decomposition of elements in the conjugacy class. It satisfies
+$$
+n=\sum_kk\ell_k.
+$$
+Therefore the conjugacy classes of $S_n$ has a one-one map with the partition of $n$.
+
+### 6.5 Normal subgroups and quotient group
 A *normal subgroup* or *invarient subgroup* is a subgroup $N$ that satisfies
 $$\forall g\in G,\quad gNg^{-1}=N.$$
 Sometimes this is denoted as $N\triangleleft G$.
@@ -224,7 +234,7 @@ $$
 N=\{g:gHg^{-1}=H\}.
 $$
 
-### 6.5 Commutator subgroup
+### 6.6 Commutator subgroup
 For two elements $g_1$ and $g_2$ in a group $G$, the *group commutator* is defined as
 $$
 [g_1,g_2]\doteq g_1g_2g_1^{-1}g_2^{-1}.
@@ -235,21 +245,3 @@ The set of all group commutators is a subgroup of $G$ called the *commutator sub
 
 A *perfect* group is a group that satisfies $G=[G,G]$.
 
-### 6.6 An example: Elliptic curve
-Consider $\mathbb{C}$ as an addition group and $\tau\in\mathbb{C}$ with nonzero imaginary part, then $\Lambda\doteq\mathbb{Z}+\tau\mathbb{Z}$ is a subgroup of $\mathbb{C}$ in the form of a 2-dimensional lattice.
-
-Since $\mathbb{C}$ is abelian, one have the quotient group $\mathbb{C}/(\mathbb{Z}+\tau\mathbb{Z})$ in the form of a torus. This quotient group is isomorphic to $U(1)\times U(1)$.
-
-On the other hand, consider the algebraic equation
-$$
-y^2=x^3+fx+g,
-$$
-where $(x,y)\in\mathbb{C}^2$ and $f,g\in\mathbb{C}$. The solution space of this equation can be identified as the torus minus the origin $\mathbb{C}/(\mathbb{Z}+\tau\mathbb{Z})-\{0\}$. This identification is done through the following holomorphic function known as the *Weierstrass function*
-$$
-\wp(z|\tau)\doteq\frac{1}{z^2}+\sum_{w\in(\Lambda-\{0\})}\left[\frac{1}{(z-w)^2}-\frac{1}{w^2}\right].
-$$
-Here $z\notin\Lambda$. This series converges absolutely and it is doubly-periodic as
-$$
-\forall m,n\in\mathbb{Z},\quad\wp(z+m+n\tau|\tau)=\wp(z|\tau).
-$$
-Therefore, it is a meromorphic function on $\mathbb{C}/(\mathbb{Z}+\tau\mathbb{Z})$ with a second order pole on $z=0$.

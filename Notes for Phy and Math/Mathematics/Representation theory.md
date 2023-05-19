@@ -9,9 +9,10 @@ banner_y: 0.184
 
 # Representation theory
 ## 1 Finite group
-In this chapter, groups are finite by default.
 
----
+>[!note]
+>In this chapter, groups are finite by default.
+
 ### 1.1 Representation of finite group
 #### 1.1.1 Definition of representation
 A *representation* of a group $G$ on a finite dimensional complex vector space $V$ is defined as a [[Abstract group theory#2.1 Definition|homomorphism]] $\rho$
@@ -59,12 +60,11 @@ Using Schur's lemma, one can prove that for any representation $V$ of $G$, there
 $$V=\bigoplus_iV_i^{\oplus a_i}.$$
 Note that the decomposition of the $n$th term into $a_n$ copies of $V_n$ is not unique if $a_n>1$.
 
----
 ### 1.2 Character
 #### 1.2.1 Definition of character
 For a representation $V$ of $G$, its *character* $\chi_V$ is defined as a function on $G$
 $$\chi_V(g)\doteq\mathrm{Tr}\ \rho(g).$$
-Character is a [[Abstract group theory#^e1a076|class function]], and $\chi_V(1_G)=\dim V$.
+Character is a [[Abstract group theory#6.3 Conjugacy|class function]], and $\chi_V(1_G)=\dim V$.
 
 For two representations $V$ and $W$ of $G$, their characters satisfy
 $$
@@ -81,7 +81,7 @@ A *character table* is a table with information about different representations 
 
 Take the [[Abstract group theory#4.1 Symmetric group|symmetric group]] $S_3$ as an example. It has three irreducible representations, namely,
 - the *trivial representation* $U$;
-- the *alternating representation* $U'$, which maps like the [[Abstract group theory#^3aa69c|sign homomorphism]];
+- the *alternating representation* $U'$, which maps like the [[Abstract group theory#4.5 Odd and even|sign homomorphism]];
 - the *standard representation* $V$, which is a two dimensional representation decomposed from the permutation representation. It maps according to the permutation of $\{\ket{e_1},\ket{e_2},-(\ket{e_1}+\ket{e_2})\}$.
 
 The character table of $S_3$ looks like
@@ -109,7 +109,7 @@ This is the direct sum of all trivial subrepresentations of $V$. To find $V^G$, 
 $$
 \mathrm{End}(V)\ni\varphi\doteq\frac{1}{|G|}\sum_{g\in G}g.
 $$
-It is a $G$-linear map that projects $V$ to $V^G$. To prove this note that according to [[Abstract group theory#^4e9ddd|rearrangement lemma]], one have
+It is a $G$-linear map that projects $V$ to $V^G$. To prove this note that according to [[Abstract group theory#4.2 Cayley's theorem|rearrangement lemma]], one have
 $$
 h\sum g=\sum g.
 $$
