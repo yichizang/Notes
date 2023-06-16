@@ -137,6 +137,7 @@ $$
 \mathrm{d}\pmb{l}=g_a\mathrm{d}x^a\pmb{e}_a.
 $$
 The index of $g_a$ is not counted as proper index when doing Einstein summation. Some examples of $g_a$ are shown as follow.
+
 | coordinate             | $x^1,x^2,x^3$   | $g_1,g_2,g_3$     |
 | ---------------------- | --------------- | ----------------- |
 | Cartesian coordinate   | $x,y,z$         | $1,1,1$           |

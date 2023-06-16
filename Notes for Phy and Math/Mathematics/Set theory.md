@@ -46,10 +46,10 @@ The axiom of union states that *for any set $X$, there is a $Y$ that $u\in Y$ if
 $$
 \forall X\exists Y\forall u(u\in Y\Leftrightarrow\exists z(z\in X\land u\in z)).
 $$
-Such a $Y$ is unique and is called the *union* of $X$, denoted as $\bigcup X$. From this axiom one can define the [[Set theory#2.3 Intersection and union|union]] of sets $X\cup Y$.
+Such a $Y$ is unique and is called the *union* of $X$, denoted as $\bigcup X$. From this axiom one can define the [[Set theory#1.2.3 Set operation|union]] of sets $X\cup Y$.
 
 #### 1.1.6 Axiom of power set
-With [[Set theory#2.5 Subset|subset]] defined, the axiom of power set states that *for any set $X$, there exists a set $Y$ that $u\in Y$ if and only if $u\subset X$*
+With [[Set theory#1.2.5 Subset|subset]] defined, the axiom of power set states that *for any set $X$, there exists a set $Y$ that $u\in Y$ if and only if $u\subset X$*
 $$
 \forall X\exists Y\forall u(u\in Y\Leftrightarrow u\subset X).
 $$
@@ -251,18 +251,19 @@ For a set $X$ and a binary relation $R$ on $X$, the following are the possible p
 #### 1.3.4 Equivalence relation
 For a set $X$, an *equivalence relation* is a binary relation $R\subset X^2$ that satisfies [[#1.3.3 Possible properties of binary relation|reflexivity, symmetry and transitivity]]. An equivalence relation is often denoted as $\sim$. Note that equivalence relation is not always equality.
 
-For a set $X$ and $\mathcal{I}\subset\mathcal{P}(X)$, if $\mathcal{I}$ satisfies
-$$
-\begin{aligned}
-&\varnothing\in\mathcal{I},\\
-&(A\subset B\land B\in\mathcal{I})\Rightarrow A\in\mathcal{I},\\
-&A,B\in\mathcal{I}\Rightarrow A\cup B\in\mathcal{I},
-\end{aligned}
-$$
-then it is called an *ideal* on $X$. If $X\notin\mathcal{I}$ then it is called a *proper ideal*. The following binary relation defined by an ideal is an equivalence relation
-$$
-R\doteq\{(A,B)\in\mathcal{P}(\mathcal{I})^2:A\bigtriangleup B\in\mathcal{I}\}.
-$$
+>[!example]
+>For a set $X$ and $\mathcal{I}\subset\mathcal{P}(X)$, if $\mathcal{I}$ satisfies
+>$$
+>\begin{aligned}
+>&\varnothing\in\mathcal{I},\\
+>&(A\subset B\land B\in\mathcal{I})\Rightarrow A\in\mathcal{I},\\
+>&A,B\in\mathcal{I}\Rightarrow A\cup B\in\mathcal{I},
+>\end{aligned}
+>$$
+>then it is called an *ideal* on $X$. If $X\notin\mathcal{I}$ then it is called a *proper ideal*. The following binary relation defined by an ideal is an equivalence relation
+>$$
+>R\doteq\{(A,B)\in\mathcal{P}(\mathcal{I})^2:A\bigtriangleup B\in\mathcal{I}\}.
+>$$
 
 #### 1.3.5 Equivalence class
 With an equivalence relation $\sim$ on a set $X$, one can define *equivalence class* $[a]$
@@ -334,11 +335,12 @@ $$
 \end{aligned}
 $$
 
+#### 1.5.2 Injection, surjection and bijection
 For a map $f:X\to Y$, if for any two $x_1,x_2\in X$, $x_1\ne x_2\Rightarrow f(x_1)\ne f(x_2)$, then $f$ is called an *injective*. If $\mathrm{ran}(f)=Y$, then $f$ is called a *surjective*. If $f$ is both an injective and a surjective, then it is called a *bijective*.
 
 If the inverse of a map is also a map, then this map is called *invertible*. A map is invertible if and only if it is injective.
 
-#### 1.5.2 Restriction and expansion
+#### 1.5.3 Restriction and expansion
 For a map $f$ and a set $A$, define the *restriction* of $f$ on $A$ as
 $$
 f\restriction A\doteq\{(x,y)\in f:x\in A\}.
@@ -347,7 +349,7 @@ If $g=f\restriction A$, then $f$ is called the *extension* of $g$.
 
 For two maps $f$ and $g$, they are called *compatible* if for all $x\in(\mathrm{dom}(f)\cap\mathrm{dom}(g))$ one have $f(x)=g(x)$. The intersection of two maps is also a map. The union of two compatible maps is also a map. It is a extension of both maps.
 
-#### 1.5.3 Index system
+#### 1.5.4 Index system
 A map $i\mapsto X_i$ with $X_i$ being a set and $i\in I$ is called an *index system* of sets. $I$ is called an *index set*. Such an index system is usually written as $X\doteq\{X_i\}_{i\in I}$ or $\{X_i\}_I$.
 
 For an index system $X=\{X_i\}_I$, its *general Cartesian product* is defined as
@@ -410,4 +412,98 @@ For any set $A$, any map $a:P\to A$ and $g:P\times A\times\mathbb{N}\to A$, ther
 This is called the *recursive principle with parameter*. The version with $P=\{\varnothing\}$ is called *recursive principle*.
 
 #### 2.1.6 Addition and multiplication
-With the recursive principle with parameter, one can prove that there is one unique function
+With the recursive principle with parameter, one can prove that there is one unique function (*addition*)
+$$
++:\mathbb{N}\times\mathbb{N}\to\mathbb{N}
+$$
+that satisfies
+- for all $n\in\mathbb{N}$, $+(n,0)=n$;
+- for any $m,n\in\mathbb{N}$, $+(m,n+1)=+(m,n)+1$.
+
+And there is also one unique function (*multiplication*)
+$$
+\cdot:\mathbb{N}\times\mathbb{N}\to\mathbb{N}
+$$
+that satisfies
+- for all $n\in\mathbb{N}$, $\cdot(n,0)=0$;
+- for any $m,n\in\mathbb{N}$, $\cdot(m,n+1)=+(\cdot(m,n),m)$.
+
+One often write $+(m,n)=m+n$ and $\cdot(m,n)=m\cdot n$.
+
+### 2.2 Integer and rational number
+#### 2.2.1 Integer
+Define an equivalence relation $\sim$ on $\mathbb{N}\times\mathbb{N}$ as follows
+$$
+(m_1,n_1)\sim(m_2,n_2)\quad\Leftrightarrow\quad m_1+n_2=m_2+n_1.
+$$
+Define the quotient set under $\sim$ as the *set of integers*, denoted as $\mathbb{Z}\doteq(\mathbb{N}\times\mathbb{N})/\sim$.
+
+Denote $0_\mathbb{Z}\doteq[(0,0)]$.
+
+>[!note]
+>Here one view $\mathbb{Z}$ as an extension of $\mathbb{N}$. However, $\mathbb{N}\not\subset\mathbb{Z}$. Rather it is "embedded" in $\mathbb{Z}$ by the map
+>$$
+>\begin{aligned}
+>f:&&\mathbb{N}&\to\mathbb{Z}\\
+>&&n&\mapsto[(n,0)].
+>\end{aligned}
+>$$
+
+#### 2.2.2 Order and operation on $\mathbb{Z}$
+The *order* on $\mathbb{Z}$ is defined as
+$$
+[(m_1,n_1)]\le_\mathbb{Z}[(m_2,n_2)]\quad\Leftrightarrow\quad m_1+n_2\le_\mathbb{N}m_2+n_1.
+$$
+
+The *addition* and *multiplication* on $\mathbb{Z}$ is defined as
+$$
+[(m_1,n_1)]+_\mathbb{Z}[(m_2,n_2)]\doteq[(m_1+m_2,n_1+n_2)]
+$$
+and
+$$
+[(m_1,n_1)]\cdot_\mathbb{Z}[(m_2,n_2)]\doteq[(m_1\cdot m_2+n_1\cdot n_2,m_1\cdot n_2+m_2\cdot n_1)].
+$$
+
+One can prove that for any $a\in\mathbb{Z}$, there is one unique element $a'\in\mathbb{Z}$ such that
+$$
+a+a'=0_\mathbb{Z}.
+$$
+Denote this element as $-a$.
+
+### 2.3 Cardinality
+#### 2.3.1 Equivalent set
+If there is a bijection that maps $X$ to $Y$, then they are called *equivalent set*, denoted as
+$$
+|X|=|Y|.
+$$
+
+If there is an injection $f:X\to Y$, then it is denoted as
+$$
+|X|\le|Y|.
+$$
+This means that $\exists Z\subset Y$ such that $|X|=|Z|$.
+
+#### 2.3.2 Cantor-Bernstein theorem
+The *Cantor-Bernstein theorem* states that
+$$
+(|X|\le|Y|\land|Y|\le|X|)\Rightarrow|X|=|Y|.
+$$
+
+This proves that $\le$ forms a partial order.
+
+#### 2.3.3 Finite and infinite set
+For any set $X$, if there is an $n\in\mathbb{N}$ such that $|X|=|n|$, then the set is called a *finite set*. Otherwise it is called an *infinite set*.
+
+If $|X|=|\mathbb{N}|$, then the set is called *countable*. Otherwise it is called *uncountable*.
+
+>[!note] Pigeonhole principle
+>The *pigeonhole principle* states that for any finite set $X$, there is no bijection between $X$ and its proper subset.
+
+>[!note]
+>One way to define a finite set without the concept of $\mathbb{N}$ is that the followings are equivalent.
+>- $X$ is finite;
+>- There is a total order on $X$ such that any nonempty subset of $X$ has maximum and minimum element;
+>- Every nonempty set of subsets of $X$ has maximum element under $\subset$;
+>- There is no bijection between $X$ and its proper subset.
+>
+>The last statement is called *Dedekind finite*.

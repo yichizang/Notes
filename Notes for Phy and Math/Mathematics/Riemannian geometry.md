@@ -122,7 +122,7 @@ $$
 &&e^1\wedge\cdots\wedge e^k&\mapsto e^{k+1}\wedge\cdots\wedge e^n.
 \end{aligned}
 $$
-Apparently $\ast(\ast\omega)=-\omega$.
+Apparently $\ast(\ast\omega)=(-1)^{k(n-k)}\omega$.
 
 For a general $k$-form
 $$
@@ -154,7 +154,7 @@ $$
 ### 2.3 Laplace-Beltrami operator
 Define the map $\delta:\Omega^k(M)\to\Omega^{k-1}(M)$ as
 $$
-\delta:\omega\mapsto(-1)^{nk+k+1}\ast\mathrm{d}\ast\omega.
+\delta:\omega\mapsto(-1)^{nk+n+1}\ast\mathrm{d}\ast\omega.
 $$
 Such a map satisfies
 - $\delta^2=0$;
@@ -185,15 +185,30 @@ $$
 (\Delta\omega,\eta)=(\omega,\Delta\eta).
 $$
 
-### 2.5 Hodge decomposition
+### 2.5 Poincare duality
+The inner product naturally induces an isomorphism
+$$
+H_{\mathrm{dR}}^{n-k}(M)\cong(H_{\mathrm{dR}}^k)^\ast(M),
+$$
+which is called the *Poincare duality*.
+
+### 2.6 Hodge decomposition
 Define the set of harmonic $k$-form as
 $$
 \mathbb{H}^k(M)\doteq\{\omega:\omega\in\Omega^k(M),\Delta\omega=0\}.
 $$
-The *Hodge decomposition* states that any
+The *Hodge decomposition* states that for an orientied compact Riemannian manifold $M$, its $k$-forms can be decomposed into
+$$
+\Omega^k(M)=\mathbb{H}^k(M)\oplus\mathrm{d}\Omega^{k-1}(M)\oplus\delta\Omega^{k+1}(M).
+$$
 
->[!warning]
->Not finished yet.
+### 2.7 Hodge theorem
+The *Hodge theorem* states that on an oriented compact Riemannian manifold $M$, there is a natural isomorphism
+$$
+\mathbb{H}^k(M)\cong H_{\mathrm{dR}}^k(M).
+$$
+
+The Hodge theorem indicates that for any nontrivial $[\omega]\in H_{\mathrm{dR}}^k(M)$, one can find a harmonic $\omega\in\Omega^k(M)$ as the representitive element.
 
 ## 3 Connection and derivative
 ### 3.1 Connection

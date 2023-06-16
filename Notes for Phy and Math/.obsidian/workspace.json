@@ -8,19 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "085f2fedf4503558",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Mathematics/Differential geometry.md",
-                "mode": "preview",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "56dc4b9351763cf6",
             "type": "leaf",
             "state": {
@@ -34,12 +21,12 @@
             }
           },
           {
-            "id": "2da25dee85258b8b",
+            "id": "e62cfeff4bec17e9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/Fiber bundle.md",
+                "file": "Mathematics/Measure theory.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -47,12 +34,12 @@
             }
           },
           {
-            "id": "c35375f70a5d19a8",
+            "id": "1d9be14b6b718e8c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/Linear algebra.md",
+                "file": "Mathematics/Point set on line.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -60,7 +47,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -90,7 +77,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mathematics/Fiber bundle.md"
+                "file": "Mathematics/Measure theory.md"
               }
             }
           },
@@ -161,7 +148,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mathematics/Fiber bundle.md",
+                "file": "Mathematics/Measure theory.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -178,7 +165,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mathematics/Fiber bundle.md",
+                "file": "Mathematics/Measure theory.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -223,35 +210,35 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "2da25dee85258b8b",
+  "active": "e62cfeff4bec17e9",
   "lastOpenFiles": [
-    "Mathematics/Linear algebra.md",
+    "Mathematics/Set theory.md",
+    "Mathematics/Measure theory.md",
+    "Mathematics/Point set on line.md",
     "Mathematics/Fiber bundle.md",
-    "Mathematics/Differential geometry.md",
-    "Mathematics/Lie algebra and Lie group.md",
+    "Mathematics/Vector analysis.md",
+    "Physics/Electrodynamics.md",
+    "Physics/Abelian CS theory.md",
     "Mathematics/Abstract group theory.md",
-    "Untitled.md",
+    "Mathematics/Representation theory.md",
+    "Group theory fast version.md",
+    "Mathematics/Lie algebra and Lie group.md",
+    "Mathematics/Symplectic geometry.md",
     "Mathematics/Riemannian geometry.md",
+    "Mathematics/Differential geometry.md",
+    "Mathematics/Linear algebra.md",
     "Mathematics/Algebraic topology.md",
     "Physics/Classical field theory.md",
     "Untitled.canvas",
     "Physics/Quantum field theory.md",
     "Mathematics/Matrix theory.md",
-    "Mathematics/Representation theory.md",
     "Mathematics/General Gaussian integral.md",
-    "Mathematics/Symplectic geometry.md",
-    "Physics/Abelian CS theory.md",
     "Physics/Quantum field theory 2023-04-27 15.46.31.excalidraw.md",
     "Physics/SUSY.md",
     "Physics/String theory.md",
     "Physics/Representation of Lorentz algebra.md",
     "Physics/Physicists' notation for Riemannian Geo.md",
     "Physics/Lie superalgebra.md",
-    "Physics/Gauge field theory.md",
-    "Physics/Electrodynamics.md",
-    "Physics/Conformal symmetry.md",
-    "Physics/Dirac algebra.md",
-    "Paper_reading/Supersymmetry and Morse theory.md",
     "pics/106010900_p0.png",
     "pics/105622306_p0.jpg",
     "Untitled",

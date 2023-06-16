@@ -206,7 +206,7 @@ $$
 $$
 
 ### 6.4 Conjugacy classes of $S_n$
-For a cycle of length $k$ $(a_1a_2\cdots a_k)\in S_n$, its conjugate $g(a_1a_2\cdots a_k)g^{-1}$ is also a cycle of length $k$
+For a cycle $(a_1a_2\cdots a_k)\in S_n$ of length $k$, its conjugate $g(a_1a_2\cdots a_k)g^{-1}$ is also a cycle of length $k$
 $$
 g(a_1\cdots a_k)g^{-1}=(b_1\cdots b_k),
 $$
