@@ -4,8 +4,9 @@ banner_y: 0.236
 ---
 
 >[!abstract]- Pre-knowledge
->- Lie algebra
->- Representation theory
+>- [[../Mathematics/Lie algebra and Lie group|Lie algebra and Lie group]]
+>- [[../Mathematics/Representation theory|Representation theory]]
+>- [[Representation of Lorentz algebra]]
 
 >[!note]+
 >The prefix super is sometimes called $\mathbb{Z}_2$-graded.
@@ -44,9 +45,11 @@ In analogue to Lie algebra, one can define a *Lie superbracket* $\{,]$ to be an 
 $$
 \{x,y]=-(-1)^{\eta(x)\eta(y)}\{y,x];
 $$
-- Super Jacobi identity$$
-\{x,\{y,z]]\pm\{x,\{y,z]]\pm\{x,\{y,z]]=0,
-$$where the sign before each term is defined according to the number of fermonic interchanges required to turn the first term into the concerning term.
+- Super Jacobi identity
+$$
+\{x,\{y,z]](-1)^{\eta(x)\eta(z)}+\{y,\{z,x]](-1)^{\eta(y)\eta(x)}+\{z,\{x,y]](-1)^{\eta(z)\eta(y)}=0,
+$$
+where the sign before each term is defined according to the number of fermonic interchanges required to turn the first term into the concerning term.
 
 Denote the Lie superalgebra as $\mathfrak{g}=\mathfrak{g}_0\oplus\mathfrak{g}_1$, one can prove that $\mathfrak{g}_0$ is an ordinary Lie algebra and $\mathfrak{g}_1$ is a representation of $\mathfrak{g}_0$.
 
@@ -129,7 +132,7 @@ Finally, there are some internal symmetry $B_l$ that don't commute with $Q_\alph
 |                | $\bar{Q}_{\dot{\alpha}A}$          | $-(\bar{\sigma}^{\mu\nu})_{\dot{\alpha}}{}^{\dot{\beta}}\bar{Q}_{\dot{\beta}A}$ |
 | $Q_\alpha{}^A$ |                                    |                                                                                 |
 
-## 2 Representation of sypersymmetry algebra
+## 2 Representation of supersymmetry algebra
 ### 2.1 Representation of supersymmetry algebra
 To find a representation of supersymmetry algebra, one first find an irreducible representation of Poincare group, which is a single-particle state $\ket{\psi}$. Then by applying $Q_\alpha$ and $\bar{Q}_{\tilde{\alpha}}$ on $\ket{\psi}$, one get the full irreducible representation of supersymmetry algebra.
 

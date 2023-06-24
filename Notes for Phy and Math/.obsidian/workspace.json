@@ -21,12 +21,12 @@
             }
           },
           {
-            "id": "e62cfeff4bec17e9",
+            "id": "10a9a2625c808d63",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/Measure theory.md",
+                "file": "Physics/Representation of Lorentz algebra.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -34,12 +34,25 @@
             }
           },
           {
-            "id": "1d9be14b6b718e8c",
+            "id": "5020edcf5bbdc757",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/Point set on line.md",
+                "file": "Physics/Lie superalgebra.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "013f2c6da0a6e7c0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Physics/Grassmann variables.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -47,7 +60,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -77,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mathematics/Measure theory.md"
+                "file": "Physics/Grassmann variables.md"
               }
             }
           },
@@ -112,8 +125,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "ec2a585c0e71f23d",
@@ -148,7 +160,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mathematics/Measure theory.md",
+                "file": "Physics/Grassmann variables.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,7 +177,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mathematics/Measure theory.md",
+                "file": "Physics/Grassmann variables.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -210,11 +222,15 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "e62cfeff4bec17e9",
+  "active": "013f2c6da0a6e7c0",
   "lastOpenFiles": [
-    "Mathematics/Set theory.md",
+    "Physics/Lie superalgebra.md",
+    "Physics/Grassmann variables.md",
+    "Physics/Representation of Lorentz algebra.md",
+    "Mathematics/Lie algebra and Lie group.md",
     "Mathematics/Measure theory.md",
     "Mathematics/Point set on line.md",
+    "Mathematics/Set theory.md",
     "Mathematics/Fiber bundle.md",
     "Mathematics/Vector analysis.md",
     "Physics/Electrodynamics.md",
@@ -222,7 +238,6 @@
     "Mathematics/Abstract group theory.md",
     "Mathematics/Representation theory.md",
     "Group theory fast version.md",
-    "Mathematics/Lie algebra and Lie group.md",
     "Mathematics/Symplectic geometry.md",
     "Mathematics/Riemannian geometry.md",
     "Mathematics/Differential geometry.md",
@@ -236,9 +251,6 @@
     "Physics/Quantum field theory 2023-04-27 15.46.31.excalidraw.md",
     "Physics/SUSY.md",
     "Physics/String theory.md",
-    "Physics/Representation of Lorentz algebra.md",
-    "Physics/Physicists' notation for Riemannian Geo.md",
-    "Physics/Lie superalgebra.md",
     "pics/106010900_p0.png",
     "pics/105622306_p0.jpg",
     "Untitled",

@@ -174,7 +174,8 @@ One can prove that $\pmb{R}^\ast$ is a $\sigma$-ring and $\mu^\ast$ is a measure
 
 One can also prove that for any $E\in\pmb{\sigma}(\pmb{R})$ that satisfies $\mu^\ast(E)=0$, $E\in\pmb{R}^\ast$.
 
-#### 1.3.5 Complete measure
+### 1.4 Property of measure
+#### 1.4.1 Complete measure
 For a measure $\mu$ on a ring $\pmb{R}$, the set $E\in\pmb{R}$ that satisfies $\mu(E)=0$ is called a *$\mu$-zero set* or *zero set*.
 
 The subset of a zero set, if also in $\pmb{R}$, is also a zero set. If a measure $\mu$ satisfies that any subset of a zero set is also in $\pmb{R}$, then the measure is called a *complete measure*.
@@ -182,54 +183,151 @@ The subset of a zero set, if also in $\pmb{R}$, is also a zero set. If a measure
 >[!example]
 >The extended measure $\mu^\ast$ is a complete measure on $\pmb{R}^\ast$.
 
-### 1.4 Lebesgue-Stieltjes measure
-#### 1.4.1 A ring structure on $\mathbb{R}$
-Consider $X=\mathbb{R}$. Define a ring on $X$ as
+#### 1.4.2 Finiteness of measure
+For a measure $\mu$ on a ring $\pmb{R}$, if a set $E\in\pmb{R}$ satisfies $\mu(E)<\infty$, then $E$ has *finite measure*. If any set $E\in\pmb{R}$ has finite measure, then the measure $\mu$ is called a *finite measure*.
+
+If a set $E\in\pmb{R}$ satisfies that there exists a list $\{E_n\}\subset\pmb{R}$ of sets with finite measure that
 $$
-R\doteq\left\{\bigcup\{E_i\}_N:\{E_i\}_N\subset P\right\}
+E\subset\bigcup_{n=1}^\infty E_n,
 $$
-where
+then $E$ has *$\sigma$-finite measure*. If any set $E\in\pmb{R}$ has $\sigma$-finite measure, then the measure $\mu$ is called a *$\sigma$-finite measure*.
+
+If $\mu$ is $\sigma$-finite on $\pmb{R}$, then $\mu^\ast$ is $\sigma$-finite on $\pmb{R}^\ast$.
+
+### 1.5 Lebesgue-Stieltjes measure
+
+>[!recall]+
+>Recall the $m$ measure and the $g$ measure on $\pmb{R}_0$.
+>- [[Measure theory#1.2.3 $m$ measure on $ pmb{R}_0$|m measure]]: $m(E)=\sum(b_i-a_i)$;
+>- [[Measure theory#1.2.4 $g$ measure on $ pmb{R}_0$|g measure]]: $\mu_g(E)=\sum[g(b_i)-g(a_i)]$.
+>
+>Below denote $g\doteq\mu_g$ when there is no ambiguity.
+
+#### 1.5.1 Lebesgue measure
+Consider the induced outer measure $m^\ast$ on $\pmb{\sigma}(\pmb{R}_0)=\mathcal{P}(\mathbb{R})$. An $m^\ast$-measurable is also called a *Lebesgue measurable* or *L-measurable*. The set of all L-measurables is denoted as $\pmb{L}$.
+
+One can prove that the measure $m^\ast$ can be written as
 $$
-P\doteq\{(a,b]:\forall a,b\in\mathbb{R}\}.
+m^\ast(E)=\inf\{m(O):O\supset E\text{ is an open set}\}.
 $$
-One can prove that any $E\in R$ can be finitely decomposed into $E=\bigcup\{E_i\}$ where
+
+As mentioned in the general case, $\pmb{L}$ is a $\sigma$-algebra and $m^\ast$ is a complete measure on $\pmb{L}$. This measure is called the *Lebesgue measure*. When there is no ambiguity, denote $m\doteq m^\ast$.
+
+Replacing $m$ with $g$ gives the definition of *Lebesgue-Stieltjes measurable* and the *Lebesgue-Stieltjes measure*. The set of all L-S measurable sets is denoted as $\pmb{L}^g$.
+
+#### 1.5.2 Borel set
+Since $\pmb{L}^g$ depends on specific choice of function $g$, and $\pmb{L}^g\supset\pmb{S}(\pmb{R}_0)$, one can consider only L-S measure restricted on $\pmb{S}(\pmb{R}_0)$. A set in $\pmb{S}(\pmb{R}_0)$ is called a *Borel set* and denote $\pmb{B}\doteq\pmb{S}(\pmb{R}_0)$.
+
+Some of Borel sets are listed here.
+
+| Set name                                 | Expression          | Lebesgue measure                  |
+| ---------------------------------------- | ------------------- | --------------------------------- |
+| Point sets (and at most countable union) | $\{x_n\}$           | $0$                               |
+| Intervals                                | $\braket{a,b}$      | $b-a$                             |
+| Open sets                                | $\bigcup(a_i,b_i)$  | $\sum(b_i-a_i)$                   |
+| Closed sets                              | $F\subset(a,b)$     | $(b-a)-m((a,b)-F)$                |
+| -                                        | $F\not\subset(a,b)$ | $\lim_{n\to\infty}m(F\cap[-n,n])$ |
+
+
+#### 1.5.3 Lebesgue measurable
+A set $E\in\mathbb{R}$ is an L-measurable if and only if any of the following.
+- For any $\epsilon>0$, there is an open set $O\supset E$ that satisfies
+$$
+m^\ast(O-E)<\epsilon;
+$$
+- For any $\epsilon>0$, there is a closed set $F\subset E$ that satisfies
+$$
+m^\ast(E-F)<\epsilon;
+$$
+- For any $\epsilon>0$, there is an open set and a closed set $F\subset E\subset O$ that satisfies
+$$
+m^\ast(O-F)<\epsilon.
+$$
+
+#### 1.5.4 Invariance of L-measure
+Consider the *translation map*
 $$
 \begin{aligned}
-&\{E_i\}\subset R,\\
-\forall i\ne j,\ &E_i\cap E_j=\varnothing.
+\tau_\alpha:&&\mathcal{P}(\mathbb{R})&\to\mathcal{P}(\mathbb{R})\\
+&&E&\mapsto\{x+\alpha:x\in E\}
+\end{aligned}
+$$
+and the *reflection map*
+$$
+\begin{aligned}
+\tau:&&\mathcal{P}(\mathbb{R})&\to\mathcal{P}(\mathbb{R})\\
+&&E&\mapsto\{-x:x\in E\}.
 \end{aligned}
 $$
 
-#### 1.4.2 Pre-measure of $R$
-A monotone right-continuous function $g(x)$ naturally generates the following map on $P$
+One can prove that L-measure is invariant under these two maps
 $$
-\begin{aligned}
-\mu_P:& &P&\to\mathbb{R}\\
-&&(a,b]&\mapsto g(b)-g(a).
-\end{aligned}
+m^\ast(E)=m^\ast(\tau_\alpha(E))=m^\ast(\tau(E)).
 $$
-Using the decomposition of $E\in R$, one can extend the definition of $\mu_P$ onto $R$ as
-$$
-\begin{aligned}
-\mu:& &R&\to\mathbb{R}\\
-&&\bigcup\{E_i\}&\mapsto\sum_i\mu_P(E_i).
-\end{aligned}
-$$
-This is a well-defined map despite that there are more than one way to decomposite a given $E\in R$. One can prove that $\mu$ is a pre-measure on $R$.
+Moreover, when $E\in\pmb{L}$, $\tau_\alpha(E)\in\pmb{L}$ and $\tau(E)\in\pmb{L}$.
 
-#### 1.4.3 Lebesgue-Stieltjes measure
-As a general process of Caratheodory extension, one construct a $\sigma$-ring
-$$
-\sigma(R)\doteq\left\{E\subset X:\exists\{E_n\}_\mathbb{N}\subset R,E\subset\bigcup_{n=1}^\infty E_n\right\}.
-$$
-One can prove that this is just the [[Set theory#1.1.6 Axiom of power set|power set]] $\mathcal{P}(\mathbb{R})$. The outer measure generated is
-$$
-\mu^\ast(E)\doteq\inf\left\{\sum_{n=1}^\infty\mu(E_n):E\subset\bigcup\{E_n\}_{\mathbb{N}}\right\}.
-$$
-This is a measure of Caratheodory measurable $R^\ast$ called *Lebesgue-Stieltjes measure*.
+#### 1.5.5 Lebesgue immeasurable
+To construct an L-immeasurable set $Z$, consider a list of number $\{a_n\}$. Denote $Z_n\doteq\tau_{a_n}(Z)$. If it satisfies
+- $\bigcup Z_n$ contains an interval;
+- each $Z_n$ is non-intersecting with others;
+- $\bigcup Z_n$ is [[Point set on line#2.1.2 Bounded set|bounded]],
 
->[!example]
->- Closed interval $\mu([a,b])=g(b)-g(a-0)$;
->- Open interval $\mu((a,b))=g(b-0)-g(a)$;
->- Point set $\mu(\{a\})=g(a)-g(a-0)$;
->- etc.
+then one can prove that
+$$
+m\left(\bigcup Z_n\right)=\sum_{n=1}^\infty m(Z)
+$$
+has to be a finite non-zero value, which is impossible. This means that $Z$ is immeasurable.
+
+One can prove that
+$$
+x\sim y\quad\Leftrightarrow\quad x-y\in\mathbb{Q}
+$$
+is an [[Set theory#1.3.4 Equivalence relation|equivalance relation]] on $[0,1]$. Take a representitive element in each [[Set theory#1.3.5 Equivalence class|equivalance class]] to define the set $Z$. One can prove that this satisfies the conditions if take
+$$
+\{a_n\}=\mathbb{Q}\cap[0,1].
+$$
+Therefore, this $Z$ is an Lebesgue immeasurable set.
+
+>[!note]
+>This construction would require the [[Set theory#1.1.10 Axiom of choice|axiom of choice]].
+
+## 2 Measurable function and integral
+### 2.1 Measurable function
+#### 2.1.1 Measurable space
+For a $\sigma$-ring $\pmb{S}$ on $X$, if it satisfies
+$$
+X=\bigcup_{E\in\pmb{S}}E,
+$$
+then $(X,\pmb{S})$ is called a *measurable space*. An element $E\in\pmb{S}$ is called a *measurable set* on $(X,\pmb{S})$.
+
+As a special case, $(\mathbb{R},\pmb{L})$ is called *Lebesgue measurable space*, $(\mathbb{R},\pmb{L}^g)$ is called *Lebesgue-Stieltjes measurable space* and $(\mathbb{R},\pmb{B})$ is called *Borel measurable space*.
+
+#### 2.1.2 Measurable function
+Consider a measurable space $(X,\pmb{S})$, a subset $E\subset X$ and a real function $f:E\to\mathbb{R}$. If for any $c\in\mathbb{R}$, the set
+$$
+E(c\leqslant f)\doteq\{x\in E:c\leqslant f(x)\}
+$$
+is a measurable set on $(X,\pmb{S})$, then $f$ is called a *measurable function* on $E$ (with respect to $(X,\pmb{S})$).
+
+The following are equivalent definitions.
+- For any $c\in\mathbb{R}$, $E(c<f)$ is measurable set;
+- For any $c\in\mathbb{R}$, $E(c>f)$ is measurable set;
+- For any $c\in\mathbb{R}$, $E(c\geqslant f)$ is measurable set;
+- For any $c,d\in\mathbb{R}$, $E(f\in\braket{c,d})$ is measurable set.
+
+#### 2.1.3 Property of measurable function
+For a measurable space $(X,\pmb{S})$, measurable functions $f,g$ on $E\subset X$ satisfies
+- for any $a,b\in\mathbb{R}$, $af+bg$ is a measurable function;
+- $f\cdot g$ is a measurable function;
+- if $f$ is nonzero on $E$, then $1/f$ is a measurable function;
+- $\max\{f,g\}$ and $\min\{f,g\}$ are measurable functions.
+
+Consider the limit of measurable functions. For a list of measurable functions $\{f_n\}$ on $E\subset X$, the supremum, infimum
+$$
+\sup f_n\doteq\lim_{n\to\infty}\max\{f_1,\cdots,f_n\},\quad\inf f_n\doteq\lim_{n\to\infty}\min\{f_1,\cdots,f_n\}
+$$
+and the upper/lower limit
+$$
+\lim_{n\to\infty}\lim_{m\to\infty}\max\{f_n,\cdots,f_m\},\quad\lim_{n\to\infty}\lim_{m\to\infty}\min\{f_n,\cdots,f_m\}
+$$
+are measurable functions if they are finite respectively.

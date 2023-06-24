@@ -54,7 +54,8 @@ $$
 $$
 
 ## 2 Point set on line
-### 2.1 Interval
+### 2.1 Intervals
+#### 2.1.1 Interval
 An interval is the most common type of point set on line ($\mathbb{R}$).
 - An *open interval* is the set $(a,b)\doteq\{x:a<x<b\}$ where $-\infty\leqslant a<b\leqslant+\infty$;
 - A *half-open interval* include 2 types of sets:
@@ -66,7 +67,7 @@ As 2 special cases, $[a,a]=\{a\}$ and $[a,a)=(a,a]=\varnothing$.
 
 Denote all these intervals as $\braket{a,b}$.
 
-### 2.2 Bounded set
+#### 2.1.2 Bounded set
 For a subset $A\subset\mathbb{R}$, if there is $c\in\mathbb{R}$ such that for any $x\in A$, $x\leqslant c$, then $A$ is called a *right-bounded set*. For such right-bounded set, there is one unique $m\in\mathbb{R}$ that
 - for any $x\in A$, there is $x\leqslant m$;
 - for any $\epsilon>0$, there is $x\in A$ such that $x>m-\epsilon$.
@@ -75,7 +76,7 @@ This number is called the *supremum* of $A$, denoted as $\sup A$.
 
 In the same manner, one can define a *left-bounded set* and the *infimum* of the set, denoted as $\inf A$.
 
-### 2.3 Neighbourhood
+#### 2.1.3 Neighbourhood
 For a point $x\in\mathbb{R}$, an open interval $(a,b)$ that contains $x$ is called a *neighbourhood* of $x$. As a special case, for an $\epsilon>0$, the interval $(x-\epsilon,x+\epsilon)$ is called the *$\epsilon$-neighbourhood* of $x$, denoted as $O(x,\epsilon)$.
 
 For a nonempty set $A\subset\mathbb{R}$ and a point $x\in A$, if there is a neighbourhood $x\in(a,b)\subset A$, then $x$ is called an *interior point* of $A$.
@@ -83,7 +84,7 @@ For a nonempty set $A\subset\mathbb{R}$ and a point $x\in A$, if there is a neig
 >[!example]
 >As an example, any point in $\braket{a,b}$ except $a$ and $b$ is an interior point of $\braket{a,b}$.
 
-### 2.4 Open set
+#### 2.1.4 Open set
 For a nonempty set $A\subset\mathbb{R}$, if every point $x\in A$ is an interior point of $A$, then the set is called an *open set*. As a special case, $\varnothing$ is an open set.
 
 Open sets satisfy
@@ -95,3 +96,24 @@ One can prove that any nonempty open set $A$ on $\mathbb{R}$ can be written as (
 $$
 A=\bigcup_i(a_i,b_i),\quad \forall i\ne j,(a_i,b_i)\cap(a_j,b_j)=\varnothing.
 $$
+
+### 2.2 Closed set
+#### 2.2.1 Limit point
+Consider a point set $A\subset\mathbb{R}$, and a point $x\in\mathbb{R}$. If any neighbourhood of $x$ satisfies
+$$
+((a,b)-\{x\})\cap A\ne\varnothing,
+$$
+then $x$ is called the *limit point* of $A$.
+
+>[!example]
+>For any interval $\braket{a,b}$ that satisfies $-\infty<a<b<+\infty$, $a$ and $b$ are both limit point of $\braket{a,b}$.
+
+#### 2.2.2 Closed set
+The set of all limit points of $A$ is called the *induced set* of $A$, denoted as $A'$.
+
+If all limit points of $A$ are in $A$, which means $A'\subset A$, then $A$ is called a *closed set*. $A$ is a closed set if and only if $\mathbb{R}-A$ is an open set.
+
+Closed sets satisfy
+- $\varnothing$ and $\mathbb{R}$ are both closed sets;
+- the union of an arbitrary set of closed sets is an closed set;
+- the finite intersection of closed sets is an closed set.

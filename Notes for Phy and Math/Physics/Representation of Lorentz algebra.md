@@ -4,7 +4,7 @@ banner_y: 0.42
 ---
 
 >[!abstract]- Pre-knowledge
->- Lie algebra
+>- [[../Mathematics/Lie algebra and Lie group|Lie algebra and Lie group]]
 >- [[../Mathematics/Abstract group theory|Abstract group theory]]
 >- [[../Mathematics/Representation theory|Representation theory]]
 >- [[Dirac algebra]]
@@ -24,16 +24,36 @@ T(\Lambda_1,a_1)T(\Lambda_2,a_2)=T(\Lambda_1\Lambda_2,\Lambda_1a_2+a_1).
 $$
 
 ### 1.2 Lorentz group
-The subgroup of Poincare group with $a^\mu=0$ is called *Lorentz group*, denoted as $O(1,3)$. It has four disconnected branches.
+The subgroup of Poincare group with $a^\mu=0$ is called *Lorentz group*
+$$
+L=\rm{O}(1,3)\doteq\{\Lambda\in\mathrm{GL}(4,\mathbb{R}):\Lambda^T\eta\Lambda=\eta\}.
+$$
+It has four disconnected branches. To distinguish them, denote the following
+- the *proper Lorentz transformations* are the ones with determinant $1$
+$$
+L_+=\mathrm{SO}(1,3)\doteq\{\Lambda\in L:\det\Lambda=+1\};
+$$
+- the *improper Lorentz transformations* are the ones with determinant $-1$
+$$
+L_-\doteq\{\Lambda\in L:\det\Lambda=-1\};
+$$
+- the *orthochronous Lorentz transformations* are the ones with positive time component
+$$
+L^\uparrow\doteq\{\Lambda\in L:\Lambda^0{}_0\geqslant1\};
+$$
+- the *non-orthochronous Lorentz transformations* are the ones with negative time component
+$$
+L^\downarrow\doteq\{\Lambda\in L:\Lambda^0{}_0\leqslant-1\}.
+$$
 
-The branch with $\det\Lambda=1$ and $\Lambda^0{}_0\geqslant1$ is a subgroup called the *restricted Lorentz group*, denoted as $SO(1,3)$. It's group elements are Lorentz transformations that preserve the time direction and space orientation. Sometimes one simply refer to $SO(1,3)$ as Lorentz group.
+Especially, the branch with $\det\Lambda=1$ and $\Lambda^0{}_0\geqslant1$ is a subgroup called the *restricted Lorentz group*, denoted as $L_+^\uparrow$. It's group elements are Lorentz transformations that preserve the time direction and space orientation. Sometimes one simply refer to $L_+^\uparrow$ as Lorentz group.
 
 ### 1.3 Lorentz Lie algebra
 An infinitesimal Poincare transformation $T(\Lambda,a)$ can be written as
 $$
 T(\Lambda,a)=\exp\left(-\frac{i}{2}\omega_{\mu\nu}J^{\mu\nu}+ia_\mu P^\mu\right)=1-\frac{i}{2}\omega_{\mu\nu}J^{\mu\nu}+ia^\mu P^\mu,
 $$
-where $\omega_{\mu\nu}$ has antisymmetric index. Therefore, the generators of Pincare transformation are $J^{\mu\nu}$ and $P^\mu$. They form the *Poincare Lie algebra*. Through multiplication rules of Poincare group, one can work out the structure constant of Poincare Lie algebra
+where $\omega_{\mu\nu}$ has antisymmetric index. Therefore, the generators of Poincare transformation are $J^{\mu\nu}$ and $P^\mu$. They form the *Poincare Lie algebra*. Through multiplication rules of Poincare group, one can work out the structure constant of Poincare Lie algebra
 $$
 \begin{aligned}[]
 [J^{\mu\nu},J^{\rho\sigma}]&=i(\eta^{\nu\rho}J^{\mu\sigma}-\eta^{\mu\rho}J^{\nu\sigma}-\eta^{\nu\sigma}J^{\mu\rho}+\eta^{\mu\sigma}J^{\nu\rho}),\\
@@ -167,7 +187,6 @@ with condition $(\mathcal{BC})^\ast\mathcal{BC}=1_\gamma$. When taking minus sig
 In $d=2\mod 8$, the Majorana and Weyl projection commutes. Therefore one can define the *Majorana-Weyl spinor* representation.
 
 ### 2.3 Relationship with $\mathfrak{su}(2)$
-
 #### 2.3.1 Structure of $\mathfrak{so}(1,3)$
 Since the indices of $J^{\mu\nu}$ are anticommutating, one can define
 $$
@@ -187,9 +206,9 @@ $$
 $$
 This implies that $M_i$ and $N_i$ generates an $\mathfrak{su}(2)$ subalgebra respectively. Therefore one can write
 $$
-\mathfrak{so}(1,3)=\mathfrak{su}(2)\oplus\mathfrak{su}(2).
+\mathfrak{so}(1,3)^{\mathbb{C}}=\mathfrak{su}(2)\oplus\mathfrak{su}(2).
 $$
-Note that there are actually some ambiguity about complexation of $\mathfrak{so}(1,3)$ here.
+Note that this requires a complexation of $\mathfrak{so}(1,3)$ here. But one can prove that there is a one-one correspondence between the representation of a complex Lie algebra and the representation of its real form. Therefore, it makes no difference.
 
 #### 2.3.2 Irreducible representations of $\mathfrak{su}(2)$
 An irreducible representation of $\mathfrak{su}(2)$ is a representation on the vector space spanned by $\ket{j,m}$. The Casimir operator $J^2$ acting on $\ket{j,m}$ gives
@@ -237,27 +256,7 @@ $$
 \end{pmatrix}.
 $$
 
-#### 2.3.6 Dotted-undotted notation
-Denote the left/right handed Weyl spinor as $(\psi_L)_a$ and $(\psi_R)_A$ respectively, with the spinor index given explicitly. One can lower or raise the index by Levi-Civita symbol
-$$
-(\psi_L)^a\doteq\epsilon^{ab}(\psi_L)_b,\quad(\psi_R)^A\doteq-\epsilon^{AB}(\psi_R)_B.
-$$
-Under the *dotted-undotted notation*, one denote a right handed upper index as a dotted lower index
-$$
-(\psi_R)_{\dot{a}}\doteq(\psi_R)^A.
-$$
-This is attached with the restriction that a dotted index can only contract with another dotted index, vise versa. Doing conjugate of Weyl spinor will also change the dottedness of index
-$$
-((\psi_L)_a)^\ast=(\psi_L^\ast)_{\dot{a}}.
-$$
-
-Since Pauli matrix can turn a left (right) handed spinor into the conjugate of a right (left) handed spinor, its index is written as
-$$
--i(\sigma^2)_{a\dot{a}}(\psi_R)^{\dot{a}}=((\psi_L)_a)^\ast.
-$$
-What a terrible notation!
-
-#### 2.3.7 Vector representation
+#### 2.3.6 Vector representation
 The representation $(1/2,1/2)=(1/2,0)\otimes(0,1/2)$ is the *vector representation*. The transformation matrix is just the ordinary Lorentz transformation matrix $\Lambda^a{}_b$. The generator of vector representation is given by
 $$
 (J^{\rho\sigma})^\mu{}_\nu=i(\eta^{\rho\mu}\delta^\sigma{}_\nu-\eta^{\sigma\mu}\delta^\rho{}_\nu).
