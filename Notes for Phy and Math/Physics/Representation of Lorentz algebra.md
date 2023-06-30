@@ -8,6 +8,7 @@ banner_y: 0.42
 >- [[../Mathematics/Abstract group theory|Abstract group theory]]
 >- [[../Mathematics/Representation theory|Representation theory]]
 >- [[Dirac algebra]]
+>- [[Grassmann variables]]
 
 # Representation of Lorentz algebra
 ## 1 Poincare group
@@ -222,9 +223,6 @@ $$
 (j_1,j_2)\doteq(j_1)_{\mathfrak{su}(2)}\otimes(j_2)_{\mathfrak{su}(2)}.
 $$
 
->[!warning]
->This section requires perfection.
-
 #### 2.3.3 Scalar representation
 The trivial representation $(0,0)$ is also called the *scalar representation* of $\mathfrak{so}(1,3)$. It corresponds to the Lorentz scalar which is invarient under Lorentz transformation.
 
@@ -265,3 +263,72 @@ Therefore an infinitesimal transformation is simply
 $$
 \Lambda^\mu{}_\nu=\delta^\mu{}_\nu-\frac{i}{2}\omega_{\rho\sigma}(J^{\rho\sigma})^\mu{}_\nu=\delta^\mu{}_\nu+\omega^\mu{}_\nu.
 $$
+
+### 2.4 Dotted-undotted notation
+#### 2.4.1 $\mathrm{SL}(2;\mathbb{C})$ and Lorentz group
+Consider the vector space of $2\times 2$ complex Hermitian metrics
+$$
+\mathbb{H}(2;\mathbb{C})\doteq\{X\in\mathrm{GL}(2;\mathbb{C}):X=X^\dagger\}=\mathrm{span}\{\sigma^\mu\}.
+$$
+There is a one-one map from Minkowski space-time $\mathbb{R}^{1,3}$ to $\mathbb{H}(2;\mathbb{C})$
+$$
+x^\mu\mapsto x^\mu\sigma_\mu.
+$$
+The norm on $\mathbb{H}(2;\mathbb{C})$ is
+$$
+\det X=x_\mu x^\mu.
+$$
+Therefore, the adjoint group action of $\mathrm{SL}(2;\mathbb{C})$ on $\mathbb{H}(2;\mathbb{C})$
+$$
+X\mapsto MXM^\dagger,
+$$
+preserving norm (determinant) corresponds to the Lorentz group action on $\mathbb{R}^{1,3}$. The correspondence is given by
+$$
+\Lambda^\mu{}_\nu(M)=\frac{1}{2}\mathrm{Tr}(\sigma^\mu M\bar\sigma_\nu M^\dagger).
+$$
+
+#### 2.4.2 Weyl spinor
+Consider two representations of $\mathrm{SL}(2;\mathbb{C})$. For self representation $\rho(M)=M$, the representation space is denoted as $F$. The $\mathrm{SL}(2;\mathbb{C})$ action on an element $\psi\in F$ is denoted as
+$$
+\psi'_A=M_A{}^B\psi_B.
+$$
+This is called the *left-handed Weyl spinor*.
+
+For the complex conjugate self representation $\rho(M)=M^\ast$, the representation space is denoted as $\dot{F}$. The group action on an element $\bar{\psi}\in\dot{F}$ is denoted as
+$$
+\bar{\psi}'_{\dot{A}}=(M^\ast)_{\dot{A}}{}^{\dot{B}}\bar{\psi}_{\dot{B}}.
+$$
+This is called the *right-handed Weyl spinor*.
+
+#### 2.4.3 Grassmann numbers as component
+The representation space $F$ and $\dot{F}$ are "2 dimensional vector spaces". What's special is that the components are all [[Grassmann variables]] with dimension $n=2$.
+
+When there are multiple spinors, they are considered in different spaces like $F_1,F_2,\dot{F}_3$ etc. In this case, the Grassmann variables have dimension $n=2N$.
+
+#### 2.4.4 Changing indices
+Using Levi-Civita symbol $\epsilon^{AB}$ and $\bar{\epsilon}^{\dot{A}\dot{B}}$, one can raise the indices of Weyl spinor
+$$
+\psi^A=\epsilon^{AB}\psi_B,\quad\bar\psi^{\dot{A}}=\bar\epsilon^{\dot{A}\dot{B}}\bar\psi_{\dot{B}}.
+$$
+This is acturally mapping to dual spaces $F\to F^\ast$ and $\dot{F}\to\dot{F}^\ast$. In the same way, $\epsilon_{AB}$ and $\bar{\epsilon}_{\dot{A}\dot{B}}$ can be used to lower indices. The convention is to take $\epsilon^{12}=\bar\epsilon^{\dot{1}\dot{2}}=-\epsilon_{12}=-\bar\epsilon_{\dot{1}\dot{2}}=+1$.
+
+There also exists a map $\bar\sigma^0:F\to\dot{F}^\ast$ and its inverse map $\sigma^0:\dot{F}^\ast\to F$ that maps as
+$$
+\bar\psi^{\dot{A}}=(\bar\sigma^0)^{\dot{A}B}(\psi_B)^\ast,\quad\psi_A=(\sigma_0)_{A\dot{B}}(\bar\psi^{\dot{B}})^\ast.
+$$
+So does the other Pauli matrics.
+
+#### 2.4.5 Quadratic form and Fierz reordering
+Denote the contraction of two Weyl spinor as
+$$
+(\psi\chi)\doteq\psi^A\chi_A,\quad(\bar\psi\bar\chi)\doteq\bar\psi_{\dot{A}}\bar\chi^{\dot{A}}.
+$$
+These are [[Grassmann variables#1.4 C-number and a-number|c-numbers]] which commutes with other Grassmann variables. These are also $\mathrm{SL}(2;\mathbb{C})$ invariant terms.
+
+From the properties of Grassmann variables, one can write
+- $(\psi\chi)=(\chi\psi)$ and $(\bar\psi\bar\chi)=(\bar\chi\bar\psi)$;
+- $\theta_A\theta_B=\frac{1}{2}\epsilon_{AB}(\theta\theta)$, $\bar\theta_{\dot{A}}\bar\theta_{\dot{B}}=-\frac{1}{2}\epsilon_{\dot{A}\dot{B}}(\bar\theta\bar\theta)$;
+- $(\theta\phi)(\theta\psi)=-\frac{1}{2}(\theta\theta)(\phi\psi)$;
+- $(\phi\psi)\bar\chi_{\dot{A}}=\frac{1}{2}(\phi\sigma^\mu\bar\chi)(\psi\sigma_\mu)_{\dot{A}}$.
+
+The last two properties are called *Fierz reordering formula*.

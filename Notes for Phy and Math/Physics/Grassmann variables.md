@@ -38,6 +38,8 @@ A different convention is to define $(\theta_k)^\ast=i\theta_k$.
 ### 1.4 C-number and a-number
 The products of even numbers of generators $(\theta_{i_1}\cdots\theta_{i_{2n}})$ and their linear combinations are called  *c-numbers*. And the products of odd numbers of generators $(\theta_{i_1}\cdots\theta_{i_{2n+1}})$ and their linear combinations are called *a-numbers*.
 
-A c-number commutes with any Grassmann number, while a-numbers anticommute with each other. Therefore, this forms a [[Lie superalgebra#1 Basic concept|superalgebra]].
+A c-number commutes with any Grassmann number, while a-numbers anticommute with each other. Therefore, this forms a [[Supersymmetry algebra#1 Basic concept|superalgebra]].
 
 ## 2 Analysis
+### 2.1 Grassmann function
+Generally, a Grassmann function (with a Grassmann number value) has the form
