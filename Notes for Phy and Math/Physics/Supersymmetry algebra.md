@@ -10,8 +10,8 @@ banner_y: 0.236
 
 # Supersymmetry algebra
 ## 1 Lie superalgebra
-### 1.1 Supervectorspace
-A *supervectorspace* is a vector space $V$ that can be decomposed as
+### 1.1 Super vector space
+A *super vector space* is a vector space $V$ that can be decomposed as
 $$
 V=V_0\oplus V_1,
 $$

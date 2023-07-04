@@ -43,3 +43,20 @@ A c-number commutes with any Grassmann number, while a-numbers anticommute with 
 ## 2 Analysis
 ### 2.1 Grassmann function
 Generally, a Grassmann function (with a Grassmann number value) has the form
+$$
+f(\theta)=A\theta+B,\quad A,B\in\mathbb{C}
+$$
+since higher order terms vanishes.
+
+### 2.2 Integral and differential
+The integral and differential operator of Grassmann number are the same
+$$
+\frac{\partial}{\partial\theta}\theta=1,\quad\frac{\partial}{\partial\theta}1=0
+$$
+and
+$$
+\begin{aligned}
+\int1~\mathrm{d}\theta&=0,\\
+\int\theta~\mathrm{d}\theta&=1.
+\end{aligned}
+$$
